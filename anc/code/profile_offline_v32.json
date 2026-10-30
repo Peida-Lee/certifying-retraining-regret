@@ -1,7 +1,1 @@
-{
-  "status": "PASS",
-  "exact_original_schur_identities": 36,
-  "original_table_bound_checks": 36,
-  "invalid_metric_rejections": 3,
-  "raw_records_opened": false
-}
+{"status":"PASS","exact_original_schur_identities":36,"original_table_bound_checks":36,"invalid_metric_rejections":3,"raw_records_opened":false}

@@ -1,14 +1,1 @@
-{
-  "clock": "Dispatch input construction plus every delegated computation and exact bound evaluation; replay reported separately",
-  "compact": "v32 compressed root and observed-column/profile or row-slab cover",
-  "complete_cap_seconds": 9000,
-  "conditions": 60,
-  "dispatch": "Compare total symmetric cone entries: choose moment if smaller, otherwise compressed rows; depends only on p and row uncertain-cell counts",
-  "inputs": "Original60 conditions, original candidates, weights, feature intervals and penalties",
-  "moment": "64 witness starts,8 reference exchanges with32 starts;60s root/40s child proposal;one reference update;33 evaluated nodes",
-  "recorded_before_execution": true,
-  "structural": "Ranks1/2/3; tail budget2.5e-6; one-second retained search",
-  "target": 3e-06,
-  "threads": 1,
-  "version": "v33"
-}
+{"clock":"Dispatch input construction plus every delegated computation and exact bound evaluation; replay reported separately","compact":"v32 compressed root and observed-column/profile or row-slab cover","complete_cap_seconds":9000,"conditions":60,"dispatch":"Compare total symmetric cone entries: choose moment if smaller, otherwise compressed rows; depends only on p and row uncertain-cell counts","inputs":"Original60 conditions, original candidates, weights, feature intervals and penalties","moment":"64 witness starts,8 reference exchanges with32 starts;60s root/40s child proposal;one reference update;33 evaluated nodes","recorded_before_execution":true,"structural":"Ranks1/2/3; tail budget2.5e-6; one-second retained search","target":3e-06,"threads":1,"version":"v33"}

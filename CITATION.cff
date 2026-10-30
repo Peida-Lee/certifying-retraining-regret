@@ -5,6 +5,6 @@ authors:
   - family-names: Li
     given-names: Peida
     affiliation: "School of Basic Medical Sciences, Peking University"
-version: "v92-r6"
+version: "v92-r7"
 date-released: 2026-10-30
 repository-code: "https://github.com/Peida-Lee/certifying-retraining-regret"
