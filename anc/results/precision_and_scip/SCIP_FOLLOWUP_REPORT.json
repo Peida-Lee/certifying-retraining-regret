@@ -1,0 +1,140 @@
+{
+  "status": "PASS",
+  "preselected_cases": 4,
+  "runs": 12,
+  "results": [
+    {
+      "dataset": "concrete",
+      "budget_seconds": 10.0,
+      "objective_scale": 1000000.0,
+      "lower": 0.0005263323376779142,
+      "numeric_upper": 0.0005359153841943841,
+      "numeric_width": 9.583046516469895e-06,
+      "total_seconds": 0.22631539986468852,
+      "solver_status": "gaplimit",
+      "initial_solution_accepted": true
+    },
+    {
+      "dataset": "concrete",
+      "budget_seconds": 30.0,
+      "objective_scale": 1000000.0,
+      "lower": 0.0005263323376779142,
+      "numeric_upper": 0.0005359153841943841,
+      "numeric_width": 9.583046516469895e-06,
+      "total_seconds": 0.20020550000481308,
+      "solver_status": "gaplimit",
+      "initial_solution_accepted": true
+    },
+    {
+      "dataset": "concrete",
+      "budget_seconds": 10.0,
+      "objective_scale": 1.0,
+      "lower": 0.0005263320121886155,
+      "numeric_upper": 0.0005343123771588618,
+      "numeric_width": 7.980364970246287e-06,
+      "total_seconds": 1.0766176999313757,
+      "solver_status": "gaplimit",
+      "initial_solution_accepted": true
+    },
+    {
+      "dataset": "superconductivity",
+      "budget_seconds": 10.0,
+      "objective_scale": 1000000.0,
+      "lower": 0.0016892864167540077,
+      "numeric_upper": 0.0017255917313747566,
+      "numeric_width": 3.630531462074887e-05,
+      "total_seconds": 9.648816400091164,
+      "solver_status": "timelimit",
+      "initial_solution_accepted": true
+    },
+    {
+      "dataset": "superconductivity",
+      "budget_seconds": 30.0,
+      "objective_scale": 1000000.0,
+      "lower": 0.0016892864167540077,
+      "numeric_upper": 0.0017255917313747566,
+      "numeric_width": 3.630531462074887e-05,
+      "total_seconds": 30.03999740013387,
+      "solver_status": "timelimit",
+      "initial_solution_accepted": true
+    },
+    {
+      "dataset": "superconductivity",
+      "budget_seconds": 10.0,
+      "objective_scale": 1.0,
+      "lower": 0.0016892861859393556,
+      "numeric_upper": 0.001840778399877903,
+      "numeric_width": 0.00015149221393854747,
+      "total_seconds": 10.075100800138898,
+      "solver_status": "timelimit",
+      "initial_solution_accepted": true
+    },
+    {
+      "dataset": "airfoil",
+      "budget_seconds": 10.0,
+      "objective_scale": 1000000.0,
+      "lower": 0.0002861469069658367,
+      "numeric_upper": 0.00029315851658088306,
+      "numeric_width": 7.011609615046341e-06,
+      "total_seconds": 0.14319189987145364,
+      "solver_status": "gaplimit",
+      "initial_solution_accepted": true
+    },
+    {
+      "dataset": "airfoil",
+      "budget_seconds": 30.0,
+      "objective_scale": 1000000.0,
+      "lower": 0.0002861469069658367,
+      "numeric_upper": 0.00029315851658088306,
+      "numeric_width": 7.011609615046341e-06,
+      "total_seconds": 0.14087859995197505,
+      "solver_status": "gaplimit",
+      "initial_solution_accepted": true
+    },
+    {
+      "dataset": "airfoil",
+      "budget_seconds": 10.0,
+      "objective_scale": 1.0,
+      "lower": 0.0002861469069658367,
+      "numeric_upper": 0.00029315851658088306,
+      "numeric_width": 7.011609615046341e-06,
+      "total_seconds": 0.14049969997722656,
+      "solver_status": "gaplimit",
+      "initial_solution_accepted": true
+    },
+    {
+      "dataset": "powerplant",
+      "budget_seconds": 10.0,
+      "objective_scale": 1000000.0,
+      "lower": 0.0011356510606966642,
+      "numeric_upper": 0.0011418453269898803,
+      "numeric_width": 6.194266293216158e-06,
+      "total_seconds": 0.7879222999326885,
+      "solver_status": "gaplimit",
+      "initial_solution_accepted": true
+    },
+    {
+      "dataset": "powerplant",
+      "budget_seconds": 30.0,
+      "objective_scale": 1000000.0,
+      "lower": 0.0011356510606966642,
+      "numeric_upper": 0.0011418453269898803,
+      "numeric_width": 6.194266293216158e-06,
+      "total_seconds": 0.7878262000158429,
+      "solver_status": "gaplimit",
+      "initial_solution_accepted": true
+    },
+    {
+      "dataset": "powerplant",
+      "budget_seconds": 10.0,
+      "objective_scale": 1.0,
+      "lower": 0.0011356507307362788,
+      "numeric_upper": 0.001141845482701409,
+      "numeric_width": 6.194751965130302e-06,
+      "total_seconds": 0.7858650999842212,
+      "solver_status": "gaplimit",
+      "initial_solution_accepted": true
+    }
+  ],
+  "objective_audit": "scip_objective_audit.json"
+}

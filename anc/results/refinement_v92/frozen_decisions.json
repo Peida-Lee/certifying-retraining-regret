@@ -1,0 +1,989 @@
+[
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91411,
+    "instance": "pool0_91411_adaptive_energy",
+    "lower": 0.0024335683878788975,
+    "upper": 0.00243790999221225,
+    "absolute_gap": 4.341604333352612e-06,
+    "total_seconds": 10.066425199969672,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 10.009224400040694,
+    "nodes": 0,
+    "original_width": 4.341294835052793e-06,
+    "energy_width": 4.341604282669196e-06,
+    "energy_seconds": 10.009224400040694,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 10.009224400040694,
+        "lower": 0.0024335683878788975,
+        "upper": 0.00243790999221225,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": null,
+      "60": {
+        "seconds": 10.009224400040694,
+        "lower": 0.0024335683878788975,
+        "upper": 0.00243790999221225,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 10.009224400040694,
+        "lower": 0.0024335683878788975,
+        "upper": 0.00243790999221225,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 10.009224400040694,
+        "lower": 0.0024335683878788975,
+        "upper": 0.00243790999221225,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 10.009224400040694,
+        "lower": 0.0024335683878788975,
+        "upper": 0.00243790999221225,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91412,
+    "instance": "pool0_91412_adaptive_energy",
+    "lower": 0.0024279724151293177,
+    "upper": 0.002431624711555095,
+    "absolute_gap": 3.652296425777409e-06,
+    "total_seconds": 10.040964899933897,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 10.006838799919933,
+    "nodes": 0,
+    "original_width": 3.6522816822324826e-06,
+    "energy_width": 3.6522963751629486e-06,
+    "energy_seconds": 10.006838799919933,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 10.006838799919933,
+        "lower": 0.0024279724151293177,
+        "upper": 0.002431624711555095,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": null,
+      "60": {
+        "seconds": 10.006838799919933,
+        "lower": 0.0024279724151293177,
+        "upper": 0.002431624711555095,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 10.006838799919933,
+        "lower": 0.0024279724151293177,
+        "upper": 0.002431624711555095,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 10.006838799919933,
+        "lower": 0.0024279724151293177,
+        "upper": 0.002431624711555095,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 10.006838799919933,
+        "lower": 0.0024279724151293177,
+        "upper": 0.002431624711555095,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91413,
+    "instance": "pool0_91413_adaptive_energy",
+    "lower": 0.002421845778877983,
+    "upper": 0.0024261354187077194,
+    "absolute_gap": 4.289639829736271e-06,
+    "total_seconds": 10.047046800027601,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 10.01334130007308,
+    "nodes": 0,
+    "original_width": 4.289639519209493e-06,
+    "energy_width": 4.2896397791742855e-06,
+    "energy_seconds": 10.01334130007308,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 10.01334130007308,
+        "lower": 0.002421845778877983,
+        "upper": 0.0024261354187077194,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": null,
+      "60": {
+        "seconds": 10.01334130007308,
+        "lower": 0.002421845778877983,
+        "upper": 0.0024261354187077194,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 10.01334130007308,
+        "lower": 0.002421845778877983,
+        "upper": 0.0024261354187077194,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 10.01334130007308,
+        "lower": 0.002421845778877983,
+        "upper": 0.0024261354187077194,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 10.01334130007308,
+        "lower": 0.002421845778877983,
+        "upper": 0.0024261354187077194,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91414,
+    "instance": "pool0_91414_adaptive_energy",
+    "lower": 0.00242552421429169,
+    "upper": 0.0024293234101460713,
+    "absolute_gap": 3.7991958543814007e-06,
+    "total_seconds": 10.048583200084977,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 10.012286000070162,
+    "nodes": 0,
+    "original_width": 3.7991948952163616e-06,
+    "energy_width": 3.7991958036129835e-06,
+    "energy_seconds": 10.012286000070162,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 10.012286000070162,
+        "lower": 0.00242552421429169,
+        "upper": 0.0024293234101460713,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": null,
+      "60": {
+        "seconds": 10.012286000070162,
+        "lower": 0.00242552421429169,
+        "upper": 0.0024293234101460713,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 10.012286000070162,
+        "lower": 0.00242552421429169,
+        "upper": 0.0024293234101460713,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 10.012286000070162,
+        "lower": 0.00242552421429169,
+        "upper": 0.0024293234101460713,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 10.012286000070162,
+        "lower": 0.00242552421429169,
+        "upper": 0.0024293234101460713,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91415,
+    "instance": "pool0_91415_adaptive_energy",
+    "lower": 0.0024210626358868847,
+    "upper": 0.002425007979245635,
+    "absolute_gap": 3.9453433587502765e-06,
+    "total_seconds": 10.043336900067516,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 10.010760199977085,
+    "nodes": 0,
+    "original_width": 3.945342798355664e-06,
+    "energy_width": 3.94534330797015e-06,
+    "energy_seconds": 10.010760199977085,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 10.010760199977085,
+        "lower": 0.0024210626358868847,
+        "upper": 0.002425007979245635,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": null,
+      "60": {
+        "seconds": 10.010760199977085,
+        "lower": 0.0024210626358868847,
+        "upper": 0.002425007979245635,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 10.010760199977085,
+        "lower": 0.0024210626358868847,
+        "upper": 0.002425007979245635,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 10.010760199977085,
+        "lower": 0.0024210626358868847,
+        "upper": 0.002425007979245635,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 10.010760199977085,
+        "lower": 0.0024210626358868847,
+        "upper": 0.002425007979245635,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91411,
+    "instance": "pool1_91411_adaptive_energy",
+    "lower": 0.0023636151885194556,
+    "upper": 0.0023672391578187053,
+    "absolute_gap": 3.623969299249713e-06,
+    "total_seconds": 9.840230099973269,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 9.808557900018059,
+    "nodes": 0,
+    "original_width": 3.6239692518670423e-06,
+    "energy_width": 3.6239692518670423e-06,
+    "energy_seconds": 9.808557900018059,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 9.808557900018059,
+        "lower": 0.0023636151885194556,
+        "upper": 0.0023672391578187053,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 9.808557900018059,
+        "lower": 0.0023636151885194556,
+        "upper": 0.0023672391578187053,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 9.808557900018059,
+        "lower": 0.0023636151885194556,
+        "upper": 0.0023672391578187053,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 9.808557900018059,
+        "lower": 0.0023636151885194556,
+        "upper": 0.0023672391578187053,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 9.808557900018059,
+        "lower": 0.0023636151885194556,
+        "upper": 0.0023672391578187053,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 9.808557900018059,
+        "lower": 0.0023636151885194556,
+        "upper": 0.0023672391578187053,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91412,
+    "instance": "pool1_91412_adaptive_energy",
+    "lower": 0.0023640341581879676,
+    "upper": 0.002366992630772762,
+    "absolute_gap": 2.958472584794602e-06,
+    "total_seconds": 9.607603500015102,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 9.575466700014658,
+    "nodes": 0,
+    "original_width": 2.9584725373473127e-06,
+    "energy_width": 2.9584725373473127e-06,
+    "energy_seconds": 9.575466700014658,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 9.575466700014658,
+        "lower": 0.0023640341581879676,
+        "upper": 0.002366992630772762,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 9.575466700014658,
+        "lower": 0.0023640341581879676,
+        "upper": 0.002366992630772762,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 9.575466700014658,
+        "lower": 0.0023640341581879676,
+        "upper": 0.002366992630772762,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 9.575466700014658,
+        "lower": 0.0023640341581879676,
+        "upper": 0.002366992630772762,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 9.575466700014658,
+        "lower": 0.0023640341581879676,
+        "upper": 0.002366992630772762,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 9.575466700014658,
+        "lower": 0.0023640341581879676,
+        "upper": 0.002366992630772762,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91413,
+    "instance": "pool1_91413_adaptive_energy",
+    "lower": 0.002363865516859619,
+    "upper": 0.0023677923990826077,
+    "absolute_gap": 3.92688222298869e-06,
+    "total_seconds": 9.893609300022945,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 9.859117200016044,
+    "nodes": 0,
+    "original_width": 3.926882175289432e-06,
+    "energy_width": 3.926882175289432e-06,
+    "energy_seconds": 9.859117200016044,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 9.859117200016044,
+        "lower": 0.002363865516859619,
+        "upper": 0.0023677923990826077,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 9.859117200016044,
+        "lower": 0.002363865516859619,
+        "upper": 0.0023677923990826077,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 9.859117200016044,
+        "lower": 0.002363865516859619,
+        "upper": 0.0023677923990826077,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 9.859117200016044,
+        "lower": 0.002363865516859619,
+        "upper": 0.0023677923990826077,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 9.859117200016044,
+        "lower": 0.002363865516859619,
+        "upper": 0.0023677923990826077,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 9.859117200016044,
+        "lower": 0.002363865516859619,
+        "upper": 0.0023677923990826077,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91414,
+    "instance": "pool1_91414_adaptive_energy",
+    "lower": 0.002363582517251458,
+    "upper": 0.00236708929285617,
+    "absolute_gap": 3.5067756047118745e-06,
+    "total_seconds": 9.653131100116298,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 9.618663000059314,
+    "nodes": 0,
+    "original_width": 3.5067755571583335e-06,
+    "energy_width": 3.5067755571583335e-06,
+    "energy_seconds": 9.618663000059314,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 9.618663000059314,
+        "lower": 0.002363582517251458,
+        "upper": 0.00236708929285617,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 9.618663000059314,
+        "lower": 0.002363582517251458,
+        "upper": 0.00236708929285617,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 9.618663000059314,
+        "lower": 0.002363582517251458,
+        "upper": 0.00236708929285617,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 9.618663000059314,
+        "lower": 0.002363582517251458,
+        "upper": 0.00236708929285617,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 9.618663000059314,
+        "lower": 0.002363582517251458,
+        "upper": 0.00236708929285617,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 9.618663000059314,
+        "lower": 0.002363582517251458,
+        "upper": 0.00236708929285617,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91415,
+    "instance": "pool1_91415_adaptive_energy",
+    "lower": 0.00236757422603644,
+    "upper": 0.0023708613422175257,
+    "absolute_gap": 3.2871161810858404e-06,
+    "total_seconds": 9.855810299981385,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 9.824562399997376,
+    "nodes": 0,
+    "original_width": 3.287116133769523e-06,
+    "energy_width": 3.287116133769523e-06,
+    "energy_seconds": 9.824562399997376,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 9.824562399997376,
+        "lower": 0.00236757422603644,
+        "upper": 0.0023708613422175257,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 9.824562399997376,
+        "lower": 0.00236757422603644,
+        "upper": 0.0023708613422175257,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 9.824562399997376,
+        "lower": 0.00236757422603644,
+        "upper": 0.0023708613422175257,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 9.824562399997376,
+        "lower": 0.00236757422603644,
+        "upper": 0.0023708613422175257,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 9.824562399997376,
+        "lower": 0.00236757422603644,
+        "upper": 0.0023708613422175257,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 9.824562399997376,
+        "lower": 0.00236757422603644,
+        "upper": 0.0023708613422175257,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91411,
+    "instance": "pool2_91411_adaptive_energy",
+    "lower": 0.002790958684174728,
+    "upper": 0.0027999071248874024,
+    "absolute_gap": 8.94844071267463e-06,
+    "total_seconds": 10.040749799925834,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 10.010268099955283,
+    "nodes": 0,
+    "original_width": 8.948440436347491e-06,
+    "energy_width": 8.948440658243777e-06,
+    "energy_seconds": 10.010268099955283,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 10.010268099955283,
+        "lower": 0.002790958684174728,
+        "upper": 0.0027999071248874024,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": null,
+      "60": {
+        "seconds": 10.010268099955283,
+        "lower": 0.002790958684174728,
+        "upper": 0.0027999071248874024,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 10.010268099955283,
+        "lower": 0.002790958684174728,
+        "upper": 0.0027999071248874024,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 10.010268099955283,
+        "lower": 0.002790958684174728,
+        "upper": 0.0027999071248874024,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 10.010268099955283,
+        "lower": 0.002790958684174728,
+        "upper": 0.0027999071248874024,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91412,
+    "instance": "pool2_91412_adaptive_energy",
+    "lower": 0.0028096368565562746,
+    "upper": 0.0028100006313506527,
+    "absolute_gap": 3.6377479437814733e-07,
+    "total_seconds": 91.67203110014088,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 91.67202520009596,
+    "nodes": 1,
+    "original_width": 1.1412657398144743e-05,
+    "energy_width": 1.1412657583123511e-05,
+    "energy_seconds": 10.01336960005574,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 10.01336960005574,
+        "lower": 0.0028096347385503984,
+        "upper": 0.002821047396187858,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 10.710152100073174,
+        "lower": 0.002809636856553174,
+        "upper": 0.002821047396187858,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 91.67202520009596,
+        "lower": 0.0028096368565562746,
+        "upper": 0.0028100006313506527,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": null,
+      "60": {
+        "seconds": 10.710152100073174,
+        "lower": 0.002809636856553174,
+        "upper": 0.002821047396187858,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 91.67202520009596,
+        "lower": 0.0028096368565562746,
+        "upper": 0.0028100006313506527,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 91.67202520009596,
+        "lower": 0.0028096368565562746,
+        "upper": 0.0028100006313506527,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 91.67202520009596,
+        "lower": 0.0028096368565562746,
+        "upper": 0.0028100006313506527,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91413,
+    "instance": "pool2_91413_adaptive_energy",
+    "lower": 0.002797608746378034,
+    "upper": 0.00280663606735156,
+    "absolute_gap": 9.027320973525963e-06,
+    "total_seconds": 10.066974299843423,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 10.015952299931087,
+    "nodes": 0,
+    "original_width": 8.992980919517689e-06,
+    "energy_width": 9.02732091921394e-06,
+    "energy_seconds": 10.015952299931087,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 10.015952299931087,
+        "lower": 0.002797608746378034,
+        "upper": 0.00280663606735156,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": null,
+      "60": {
+        "seconds": 10.015952299931087,
+        "lower": 0.002797608746378034,
+        "upper": 0.00280663606735156,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 10.015952299931087,
+        "lower": 0.002797608746378034,
+        "upper": 0.00280663606735156,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 10.015952299931087,
+        "lower": 0.002797608746378034,
+        "upper": 0.00280663606735156,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 10.015952299931087,
+        "lower": 0.002797608746378034,
+        "upper": 0.00280663606735156,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91414,
+    "instance": "pool2_91414_adaptive_energy",
+    "lower": 0.002811435497883126,
+    "upper": 0.0028118845391976116,
+    "absolute_gap": 4.49041314485709e-07,
+    "total_seconds": 87.89857159997337,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 87.89856720005628,
+    "nodes": 1,
+    "original_width": 1.021433346927881e-05,
+    "energy_width": 1.0349714753124083e-05,
+    "energy_seconds": 10.015962700010277,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 10.015962700010277,
+        "lower": 0.0028114341099352014,
+        "upper": 0.002821783824742594,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 10.983103599981405,
+        "lower": 0.0028114354978816254,
+        "upper": 0.002821783824742594,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 87.89856720005628,
+        "lower": 0.002811435497883126,
+        "upper": 0.0028118845391976116,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": null,
+      "60": {
+        "seconds": 10.983103599981405,
+        "lower": 0.0028114354978816254,
+        "upper": 0.002821783824742594,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 87.89856720005628,
+        "lower": 0.002811435497883126,
+        "upper": 0.0028118845391976116,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 87.89856720005628,
+        "lower": 0.002811435497883126,
+        "upper": 0.0028118845391976116,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 87.89856720005628,
+        "lower": 0.002811435497883126,
+        "upper": 0.0028118845391976116,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 91415,
+    "instance": "pool2_91415_adaptive_energy",
+    "lower": 0.002803319680533081,
+    "upper": 0.002803710807833876,
+    "absolute_gap": 3.91127300794665e-07,
+    "total_seconds": 80.03298709995579,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 80.03298150002956,
+    "nodes": 1,
+    "original_width": 1.0885351657447494e-05,
+    "energy_width": 1.0885369390797872e-05,
+    "energy_seconds": 10.011884800042026,
+    "family": "frozen_decisions",
+    "trace": [
+      {
+        "seconds": 10.011884800042026,
+        "lower": 0.0028033178791558346,
+        "upper": 0.00281420324860113,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 10.790908099967055,
+        "lower": 0.0028033196805070733,
+        "upper": 0.00281420324860113,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 80.03298150002956,
+        "lower": 0.002803319680533081,
+        "upper": 0.002803710807833876,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": null,
+      "60": {
+        "seconds": 10.790908099967055,
+        "lower": 0.0028033196805070733,
+        "upper": 0.00281420324860113,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 80.03298150002956,
+        "lower": 0.002803319680533081,
+        "upper": 0.002803710807833876,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 80.03298150002956,
+        "lower": 0.002803319680533081,
+        "upper": 0.002803710807833876,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 80.03298150002956,
+        "lower": 0.002803319680533081,
+        "upper": 0.002803710807833876,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  }
+]

@@ -1,0 +1,108 @@
+{
+  "designs": [
+    {
+      "dataset": "superconductivity",
+      "lambda_value": 0.0009765625,
+      "width": 0.5,
+      "nuisance_width": 0.5,
+      "pool_seed": 84101,
+      "frozen_columns": {
+        "signal": 71,
+        "nuisance": [
+          54,
+          77,
+          74,
+          15,
+          16,
+          38,
+          5,
+          72
+        ]
+      },
+      "bits": 4,
+      "m": 16,
+      "spread": 8,
+      "eligible_factor": 2,
+      "iterations": 3
+    },
+    {
+      "dataset": "parkinsons",
+      "lambda_value": 0.0009765625,
+      "width": 0.5,
+      "nuisance_width": 0.25,
+      "pool_seed": 88201,
+      "frozen_columns": {
+        "signal": 1,
+        "nuisance": [
+          9,
+          12,
+          7,
+          10,
+          4,
+          6,
+          8
+        ]
+      },
+      "bits": 4,
+      "m": 16,
+      "spread": 8,
+      "eligible_factor": 2,
+      "iterations": 3
+    },
+    {
+      "dataset": "wine_white",
+      "lambda_value": 0.0009765625,
+      "width": 0.5,
+      "nuisance_width": 0.25,
+      "pool_seed": 88201,
+      "frozen_columns": {
+        "signal": 11,
+        "nuisance": [
+          3,
+          5,
+          9,
+          7,
+          10,
+          1,
+          8,
+          6
+        ]
+      },
+      "bits": 4,
+      "m": 16,
+      "spread": 8,
+      "eligible_factor": 2,
+      "iterations": 3
+    },
+    {
+      "dataset": "yacht",
+      "lambda_value": 0.03125,
+      "width": 0.5,
+      "nuisance_width": 0.25,
+      "pool_seed": 88101,
+      "frozen_columns": {
+        "signal": 6,
+        "nuisance": [
+          3,
+          5,
+          4,
+          1,
+          2
+        ]
+      }
+    }
+  ],
+  "mask_seeds": [
+    88211,
+    88212,
+    88213,
+    88214,
+    88215
+  ],
+  "rank": 3,
+  "complete_budget_seconds": 10.0,
+  "search_tolerance": 1e-10,
+  "final_width_target": 1e-05,
+  "strict_tail_target": 2.5e-06,
+  "description": "Four real-world regression tasks with all original model features retained; binary sex remains observed in Parkinsons."
+}

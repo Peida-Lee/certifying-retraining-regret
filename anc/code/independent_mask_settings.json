@@ -1,0 +1,25 @@
+{
+  "datasets": [
+    "superconductivity",
+    "parkinsons",
+    "wine_white",
+    "yacht"
+  ],
+  "seeds": [
+    91311,
+    91312,
+    91313,
+    91314,
+    91315
+  ],
+  "signal_and_nuisance_rows": "uniformly sampled without responses or residuals, with signal excluded from nuisance rows",
+  "columns_and_widths": "unchanged primary contraction_settings.json",
+  "candidate_bits": 4,
+  "signal_unknown_columns": 1,
+  "retained_rank": 3,
+  "methods": [
+    "adaptive_energy",
+    "moment_centered"
+  ],
+  "complete_budget_seconds": 10
+}

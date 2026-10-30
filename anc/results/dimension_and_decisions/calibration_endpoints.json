@@ -1,0 +1,1278 @@
+{
+  "conditions": [
+    {
+      "job": 0,
+      "pool_seed": 79011,
+      "uncertain_rows": 32,
+      "spread": "concentrated"
+    },
+    {
+      "job": 1,
+      "pool_seed": 79011,
+      "uncertain_rows": 32,
+      "spread": "dispersed"
+    },
+    {
+      "job": 2,
+      "pool_seed": 79011,
+      "uncertain_rows": 64,
+      "spread": "concentrated"
+    },
+    {
+      "job": 3,
+      "pool_seed": 79011,
+      "uncertain_rows": 64,
+      "spread": "dispersed"
+    },
+    {
+      "job": 4,
+      "pool_seed": 79023,
+      "uncertain_rows": 32,
+      "spread": "concentrated"
+    },
+    {
+      "job": 5,
+      "pool_seed": 79023,
+      "uncertain_rows": 32,
+      "spread": "dispersed"
+    },
+    {
+      "job": 6,
+      "pool_seed": 79023,
+      "uncertain_rows": 64,
+      "spread": "concentrated"
+    },
+    {
+      "job": 7,
+      "pool_seed": 79023,
+      "uncertain_rows": 64,
+      "spread": "dispersed"
+    },
+    {
+      "job": 8,
+      "pool_seed": 79037,
+      "uncertain_rows": 32,
+      "spread": "concentrated"
+    },
+    {
+      "job": 9,
+      "pool_seed": 79037,
+      "uncertain_rows": 32,
+      "spread": "dispersed"
+    },
+    {
+      "job": 10,
+      "pool_seed": 79037,
+      "uncertain_rows": 64,
+      "spread": "concentrated"
+    },
+    {
+      "job": 11,
+      "pool_seed": 79037,
+      "uncertain_rows": 64,
+      "spread": "dispersed"
+    }
+  ],
+  "endpoints": [
+    {
+      "job": 0,
+      "method": "anchor",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.6957432000199333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.07062690963182436
+      }
+    },
+    {
+      "job": 0,
+      "method": "anchor",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.6957432000199333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.07062690963182436
+      }
+    },
+    {
+      "job": 0,
+      "method": "gradient",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.6957432000199333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.07062690963182436
+      }
+    },
+    {
+      "job": 0,
+      "method": "gradient",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.6957432000199333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.07062690963182436
+      }
+    },
+    {
+      "job": 0,
+      "method": "metric_pod",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.6957432000199333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.07062690963182436
+      }
+    },
+    {
+      "job": 0,
+      "method": "metric_pod",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.6957432000199333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.07062690963182436
+      }
+    },
+    {
+      "job": 0,
+      "method": "metric_greedy",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.6957432000199333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.07062690963182436
+      }
+    },
+    {
+      "job": 0,
+      "method": "metric_greedy",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.6957432000199333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.07062690963182436
+      }
+    },
+    {
+      "job": 0,
+      "method": "full",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.6957432000199333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.07062690963182436
+      }
+    },
+    {
+      "job": 0,
+      "method": "full",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.6957432000199333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.07062690963182436
+      }
+    },
+    {
+      "job": 1,
+      "method": "anchor",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.326631600037217,
+        "lower_K2": 0.0,
+        "upper_K2": 0.04893062759979186
+      }
+    },
+    {
+      "job": 1,
+      "method": "anchor",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.326631600037217,
+        "lower_K2": 0.0,
+        "upper_K2": 0.04893062759979186
+      }
+    },
+    {
+      "job": 1,
+      "method": "metric_pod",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.326631600037217,
+        "lower_K2": 0.0,
+        "upper_K2": 0.04893062759979186
+      }
+    },
+    {
+      "job": 1,
+      "method": "metric_pod",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.326631600037217,
+        "lower_K2": 0.0,
+        "upper_K2": 0.04893062759979186
+      }
+    },
+    {
+      "job": 1,
+      "method": "metric_greedy",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.326631600037217,
+        "lower_K2": 0.0,
+        "upper_K2": 0.04893062759979186
+      }
+    },
+    {
+      "job": 1,
+      "method": "metric_greedy",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.326631600037217,
+        "lower_K2": 0.0,
+        "upper_K2": 0.04893062759979186
+      }
+    },
+    {
+      "job": 1,
+      "method": "full",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.326631600037217,
+        "lower_K2": 0.0,
+        "upper_K2": 0.04893062759979186
+      }
+    },
+    {
+      "job": 1,
+      "method": "full",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.326631600037217,
+        "lower_K2": 0.0,
+        "upper_K2": 0.04893062759979186
+      }
+    },
+    {
+      "job": 1,
+      "method": "gradient",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.326631600037217,
+        "lower_K2": 0.0,
+        "upper_K2": 0.04893062759979186
+      }
+    },
+    {
+      "job": 1,
+      "method": "gradient",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.326631600037217,
+        "lower_K2": 0.0,
+        "upper_K2": 0.04893062759979186
+      }
+    },
+    {
+      "job": 2,
+      "method": "anchor",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 3.661751599982381,
+        "lower_K2": 0.0,
+        "upper_K2": 0.3083408101900695
+      }
+    },
+    {
+      "job": 2,
+      "method": "anchor",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 3.661751599982381,
+        "lower_K2": 0.0,
+        "upper_K2": 0.3083408101900695
+      }
+    },
+    {
+      "job": 2,
+      "method": "metric_greedy",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 3.661751599982381,
+        "lower_K2": 0.0,
+        "upper_K2": 0.3083408101900695
+      }
+    },
+    {
+      "job": 2,
+      "method": "metric_greedy",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 9.986890700063668,
+        "lower_K2": 0.21062320365660978,
+        "upper_K2": 0.24194363619769974
+      }
+    },
+    {
+      "job": 2,
+      "method": "full",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 3.661751599982381,
+        "lower_K2": 0.0,
+        "upper_K2": 0.3083408101900695
+      }
+    },
+    {
+      "job": 2,
+      "method": "full",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 9.83499150001444,
+        "lower_K2": 0.2110250661166901,
+        "upper_K2": 0.3083408101900695
+      }
+    },
+    {
+      "job": 2,
+      "method": "gradient",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.9915499000344425,
+        "lower_K2": 0.21141664103095079,
+        "upper_K2": 0.27885297679563326
+      }
+    },
+    {
+      "job": 2,
+      "method": "gradient",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 9.985585000016727,
+        "lower_K2": 0.21141664103095079,
+        "upper_K2": 0.23498585424735682
+      }
+    },
+    {
+      "job": 2,
+      "method": "metric_pod",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.995194399962202,
+        "lower_K2": 0.21141664103095079,
+        "upper_K2": 0.3083408101900695
+      }
+    },
+    {
+      "job": 2,
+      "method": "metric_pod",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 9.993265999946743,
+        "lower_K2": 0.21141664103095079,
+        "upper_K2": 0.23764667978592297
+      }
+    },
+    {
+      "job": 3,
+      "method": "anchor",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.548315400024876,
+        "lower_K2": 0.0,
+        "upper_K2": 0.19505992927439966
+      }
+    },
+    {
+      "job": 3,
+      "method": "anchor",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.548315400024876,
+        "lower_K2": 0.0,
+        "upper_K2": 0.19505992927439966
+      }
+    },
+    {
+      "job": 3,
+      "method": "full",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.548315400024876,
+        "lower_K2": 0.0,
+        "upper_K2": 0.19505992927439966
+      }
+    },
+    {
+      "job": 3,
+      "method": "full",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.548315400024876,
+        "lower_K2": 0.0,
+        "upper_K2": 0.19505992927439966
+      }
+    },
+    {
+      "job": 3,
+      "method": "gradient",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.548315400024876,
+        "lower_K2": 0.0,
+        "upper_K2": 0.19505992927439966
+      }
+    },
+    {
+      "job": 3,
+      "method": "gradient",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.548315400024876,
+        "lower_K2": 0.0,
+        "upper_K2": 0.19505992927439966
+      }
+    },
+    {
+      "job": 3,
+      "method": "metric_pod",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.548315400024876,
+        "lower_K2": 0.0,
+        "upper_K2": 0.19505992927439966
+      }
+    },
+    {
+      "job": 3,
+      "method": "metric_pod",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.548315400024876,
+        "lower_K2": 0.0,
+        "upper_K2": 0.19505992927439966
+      }
+    },
+    {
+      "job": 3,
+      "method": "metric_greedy",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.548315400024876,
+        "lower_K2": 0.0,
+        "upper_K2": 0.19505992927439966
+      }
+    },
+    {
+      "job": 3,
+      "method": "metric_greedy",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.548315400024876,
+        "lower_K2": 0.0,
+        "upper_K2": 0.19505992927439966
+      }
+    },
+    {
+      "job": 4,
+      "method": "anchor",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.575755099998787,
+        "lower_K2": 0.0,
+        "upper_K2": 0.0795721409337853
+      }
+    },
+    {
+      "job": 4,
+      "method": "anchor",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.575755099998787,
+        "lower_K2": 0.0,
+        "upper_K2": 0.0795721409337853
+      }
+    },
+    {
+      "job": 4,
+      "method": "gradient",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.575755099998787,
+        "lower_K2": 0.0,
+        "upper_K2": 0.0795721409337853
+      }
+    },
+    {
+      "job": 4,
+      "method": "gradient",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.575755099998787,
+        "lower_K2": 0.0,
+        "upper_K2": 0.0795721409337853
+      }
+    },
+    {
+      "job": 4,
+      "method": "metric_pod",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.575755099998787,
+        "lower_K2": 0.0,
+        "upper_K2": 0.0795721409337853
+      }
+    },
+    {
+      "job": 4,
+      "method": "metric_pod",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.575755099998787,
+        "lower_K2": 0.0,
+        "upper_K2": 0.0795721409337853
+      }
+    },
+    {
+      "job": 4,
+      "method": "metric_greedy",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.575755099998787,
+        "lower_K2": 0.0,
+        "upper_K2": 0.0795721409337853
+      }
+    },
+    {
+      "job": 4,
+      "method": "metric_greedy",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.575755099998787,
+        "lower_K2": 0.0,
+        "upper_K2": 0.0795721409337853
+      }
+    },
+    {
+      "job": 4,
+      "method": "full",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.575755099998787,
+        "lower_K2": 0.0,
+        "upper_K2": 0.0795721409337853
+      }
+    },
+    {
+      "job": 4,
+      "method": "full",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.575755099998787,
+        "lower_K2": 0.0,
+        "upper_K2": 0.0795721409337853
+      }
+    },
+    {
+      "job": 5,
+      "method": "anchor",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.302864200086333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.051322301365297085
+      }
+    },
+    {
+      "job": 5,
+      "method": "anchor",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.302864200086333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.051322301365297085
+      }
+    },
+    {
+      "job": 5,
+      "method": "metric_pod",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.302864200086333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.051322301365297085
+      }
+    },
+    {
+      "job": 5,
+      "method": "metric_pod",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.302864200086333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.051322301365297085
+      }
+    },
+    {
+      "job": 5,
+      "method": "metric_greedy",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.302864200086333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.051322301365297085
+      }
+    },
+    {
+      "job": 5,
+      "method": "metric_greedy",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.302864200086333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.051322301365297085
+      }
+    },
+    {
+      "job": 5,
+      "method": "full",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.302864200086333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.051322301365297085
+      }
+    },
+    {
+      "job": 5,
+      "method": "full",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.302864200086333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.051322301365297085
+      }
+    },
+    {
+      "job": 5,
+      "method": "gradient",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.302864200086333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.051322301365297085
+      }
+    },
+    {
+      "job": 5,
+      "method": "gradient",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.302864200086333,
+        "lower_K2": 0.0,
+        "upper_K2": 0.051322301365297085
+      }
+    },
+    {
+      "job": 6,
+      "method": "anchor",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.721752000041306,
+        "lower_K2": 0.0,
+        "upper_K2": 0.3482415180049005
+      }
+    },
+    {
+      "job": 6,
+      "method": "anchor",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.721752000041306,
+        "lower_K2": 0.0,
+        "upper_K2": 0.3482415180049005
+      }
+    },
+    {
+      "job": 6,
+      "method": "metric_greedy",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.974592499900609,
+        "lower_K2": 0.24130382033058592,
+        "upper_K2": 0.3126043592074354
+      }
+    },
+    {
+      "job": 6,
+      "method": "metric_greedy",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 9.995247199898586,
+        "lower_K2": 0.24130382033058592,
+        "upper_K2": 0.27947216137489095
+      }
+    },
+    {
+      "job": 6,
+      "method": "full",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.942475600051694,
+        "lower_K2": 0.24130382033058592,
+        "upper_K2": 0.3482415180049005
+      }
+    },
+    {
+      "job": 6,
+      "method": "full",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 9.879084800020792,
+        "lower_K2": 0.24130382033058592,
+        "upper_K2": 0.3482415180049005
+      }
+    },
+    {
+      "job": 6,
+      "method": "gradient",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.979059400036931,
+        "lower_K2": 0.24130382033058592,
+        "upper_K2": 0.305634598657181
+      }
+    },
+    {
+      "job": 6,
+      "method": "gradient",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 9.988896599970758,
+        "lower_K2": 0.24130382033058592,
+        "upper_K2": 0.2696107806122138
+      }
+    },
+    {
+      "job": 6,
+      "method": "metric_pod",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.914367699995637,
+        "lower_K2": 0.24130382033058592,
+        "upper_K2": 0.32402261624987794
+      }
+    },
+    {
+      "job": 6,
+      "method": "metric_pod",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 9.940451599890366,
+        "lower_K2": 0.24130382033058592,
+        "upper_K2": 0.27457240017000195
+      }
+    },
+    {
+      "job": 7,
+      "method": "anchor",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 3.4259582998929545,
+        "lower_K2": 0.0,
+        "upper_K2": 0.2117053075485427
+      }
+    },
+    {
+      "job": 7,
+      "method": "anchor",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 3.4259582998929545,
+        "lower_K2": 0.0,
+        "upper_K2": 0.2117053075485427
+      }
+    },
+    {
+      "job": 7,
+      "method": "full",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 3.4259582998929545,
+        "lower_K2": 0.0,
+        "upper_K2": 0.2117053075485427
+      }
+    },
+    {
+      "job": 7,
+      "method": "full",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 3.4259582998929545,
+        "lower_K2": 0.0,
+        "upper_K2": 0.2117053075485427
+      }
+    },
+    {
+      "job": 7,
+      "method": "gradient",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 3.4259582998929545,
+        "lower_K2": 0.0,
+        "upper_K2": 0.2117053075485427
+      }
+    },
+    {
+      "job": 7,
+      "method": "gradient",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 3.4259582998929545,
+        "lower_K2": 0.0,
+        "upper_K2": 0.2117053075485427
+      }
+    },
+    {
+      "job": 7,
+      "method": "metric_pod",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 3.4259582998929545,
+        "lower_K2": 0.0,
+        "upper_K2": 0.2117053075485427
+      }
+    },
+    {
+      "job": 7,
+      "method": "metric_pod",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 3.4259582998929545,
+        "lower_K2": 0.0,
+        "upper_K2": 0.2117053075485427
+      }
+    },
+    {
+      "job": 7,
+      "method": "metric_greedy",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 3.4259582998929545,
+        "lower_K2": 0.0,
+        "upper_K2": 0.2117053075485427
+      }
+    },
+    {
+      "job": 7,
+      "method": "metric_greedy",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 3.4259582998929545,
+        "lower_K2": 0.0,
+        "upper_K2": 0.2117053075485427
+      }
+    },
+    {
+      "job": 8,
+      "method": "anchor",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.54140109999571,
+        "lower_K2": 0.0,
+        "upper_K2": 0.11420635434938387
+      }
+    },
+    {
+      "job": 8,
+      "method": "anchor",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 4.54140109999571,
+        "lower_K2": 0.0,
+        "upper_K2": 0.11420635434938387
+      }
+    },
+    {
+      "job": 8,
+      "method": "gradient",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.54140109999571,
+        "lower_K2": 0.0,
+        "upper_K2": 0.11420635434938387
+      }
+    },
+    {
+      "job": 8,
+      "method": "gradient",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 4.54140109999571,
+        "lower_K2": 0.0,
+        "upper_K2": 0.11420635434938387
+      }
+    },
+    {
+      "job": 8,
+      "method": "metric_pod",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.54140109999571,
+        "lower_K2": 0.0,
+        "upper_K2": 0.11420635434938387
+      }
+    },
+    {
+      "job": 8,
+      "method": "metric_pod",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 4.54140109999571,
+        "lower_K2": 0.0,
+        "upper_K2": 0.11420635434938387
+      }
+    },
+    {
+      "job": 8,
+      "method": "metric_greedy",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.54140109999571,
+        "lower_K2": 0.0,
+        "upper_K2": 0.11420635434938387
+      }
+    },
+    {
+      "job": 8,
+      "method": "metric_greedy",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 4.54140109999571,
+        "lower_K2": 0.0,
+        "upper_K2": 0.11420635434938387
+      }
+    },
+    {
+      "job": 8,
+      "method": "full",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.54140109999571,
+        "lower_K2": 0.0,
+        "upper_K2": 0.11420635434938387
+      }
+    },
+    {
+      "job": 8,
+      "method": "full",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 4.54140109999571,
+        "lower_K2": 0.0,
+        "upper_K2": 0.11420635434938387
+      }
+    },
+    {
+      "job": 9,
+      "method": "anchor",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.601946400012821,
+        "lower_K2": 0.0,
+        "upper_K2": 0.06812447413161907
+      }
+    },
+    {
+      "job": 9,
+      "method": "anchor",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.601946400012821,
+        "lower_K2": 0.0,
+        "upper_K2": 0.06812447413161907
+      }
+    },
+    {
+      "job": 9,
+      "method": "metric_pod",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.601946400012821,
+        "lower_K2": 0.0,
+        "upper_K2": 0.06812447413161907
+      }
+    },
+    {
+      "job": 9,
+      "method": "metric_pod",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.601946400012821,
+        "lower_K2": 0.0,
+        "upper_K2": 0.06812447413161907
+      }
+    },
+    {
+      "job": 9,
+      "method": "metric_greedy",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.601946400012821,
+        "lower_K2": 0.0,
+        "upper_K2": 0.06812447413161907
+      }
+    },
+    {
+      "job": 9,
+      "method": "metric_greedy",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.601946400012821,
+        "lower_K2": 0.0,
+        "upper_K2": 0.06812447413161907
+      }
+    },
+    {
+      "job": 9,
+      "method": "full",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.601946400012821,
+        "lower_K2": 0.0,
+        "upper_K2": 0.06812447413161907
+      }
+    },
+    {
+      "job": 9,
+      "method": "full",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.601946400012821,
+        "lower_K2": 0.0,
+        "upper_K2": 0.06812447413161907
+      }
+    },
+    {
+      "job": 9,
+      "method": "gradient",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.601946400012821,
+        "lower_K2": 0.0,
+        "upper_K2": 0.06812447413161907
+      }
+    },
+    {
+      "job": 9,
+      "method": "gradient",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.601946400012821,
+        "lower_K2": 0.0,
+        "upper_K2": 0.06812447413161907
+      }
+    },
+    {
+      "job": 10,
+      "method": "anchor",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 3.1102527999319136,
+        "lower_K2": 0.0,
+        "upper_K2": 0.43775155300471574
+      }
+    },
+    {
+      "job": 10,
+      "method": "anchor",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 3.1102527999319136,
+        "lower_K2": 0.0,
+        "upper_K2": 0.43775155300471574
+      }
+    },
+    {
+      "job": 10,
+      "method": "metric_greedy",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.998717400012538,
+        "lower_K2": 0.3086030398422394,
+        "upper_K2": 0.43775155300471574
+      }
+    },
+    {
+      "job": 10,
+      "method": "metric_greedy",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 9.99880049994681,
+        "lower_K2": 0.3086030398422394,
+        "upper_K2": 0.34858951003278543
+      }
+    },
+    {
+      "job": 10,
+      "method": "full",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.990311999921687,
+        "lower_K2": 0.1644853743198382,
+        "upper_K2": 0.43775155300471574
+      }
+    },
+    {
+      "job": 10,
+      "method": "full",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 9.810128299868666,
+        "lower_K2": 0.3054711926763502,
+        "upper_K2": 0.43775155300471574
+      }
+    },
+    {
+      "job": 10,
+      "method": "gradient",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.985552999889478,
+        "lower_K2": 0.3086030398422394,
+        "upper_K2": 0.43775155300471574
+      }
+    },
+    {
+      "job": 10,
+      "method": "gradient",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 9.99441109993495,
+        "lower_K2": 0.3086030398422394,
+        "upper_K2": 0.3356620478707469
+      }
+    },
+    {
+      "job": 10,
+      "method": "metric_pod",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 4.996630199835636,
+        "lower_K2": 0.3086030398422394,
+        "upper_K2": 0.40199424325089306
+      }
+    },
+    {
+      "job": 10,
+      "method": "metric_pod",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 9.986902399803512,
+        "lower_K2": 0.3086030398422394,
+        "upper_K2": 0.34076110334143567
+      }
+    },
+    {
+      "job": 11,
+      "method": "anchor",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.678165900055319,
+        "lower_K2": 0.0,
+        "upper_K2": 0.24964756554302117
+      }
+    },
+    {
+      "job": 11,
+      "method": "anchor",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.678165900055319,
+        "lower_K2": 0.0,
+        "upper_K2": 0.24964756554302117
+      }
+    },
+    {
+      "job": 11,
+      "method": "full",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.678165900055319,
+        "lower_K2": 0.0,
+        "upper_K2": 0.24964756554302117
+      }
+    },
+    {
+      "job": 11,
+      "method": "full",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.678165900055319,
+        "lower_K2": 0.0,
+        "upper_K2": 0.24964756554302117
+      }
+    },
+    {
+      "job": 11,
+      "method": "gradient",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.678165900055319,
+        "lower_K2": 0.0,
+        "upper_K2": 0.24964756554302117
+      }
+    },
+    {
+      "job": 11,
+      "method": "gradient",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.678165900055319,
+        "lower_K2": 0.0,
+        "upper_K2": 0.24964756554302117
+      }
+    },
+    {
+      "job": 11,
+      "method": "metric_pod",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.678165900055319,
+        "lower_K2": 0.0,
+        "upper_K2": 0.24964756554302117
+      }
+    },
+    {
+      "job": 11,
+      "method": "metric_pod",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.678165900055319,
+        "lower_K2": 0.0,
+        "upper_K2": 0.24964756554302117
+      }
+    },
+    {
+      "job": 11,
+      "method": "metric_greedy",
+      "horizon_seconds": 5.0,
+      "endpoint": {
+        "seconds": 2.678165900055319,
+        "lower_K2": 0.0,
+        "upper_K2": 0.24964756554302117
+      }
+    },
+    {
+      "job": 11,
+      "method": "metric_greedy",
+      "horizon_seconds": 10.0,
+      "endpoint": {
+        "seconds": 2.678165900055319,
+        "lower_K2": 0.0,
+        "upper_K2": 0.24964756554302117
+      }
+    }
+  ]
+}

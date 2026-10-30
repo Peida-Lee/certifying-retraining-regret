@@ -1,0 +1,266 @@
+[
+  {
+    "dataset": "superconductivity",
+    "n": 1024,
+    "p": 82,
+    "methods": {
+      "energy": {
+        "widths": [
+          3.910700038080653e-06,
+          4.119089624160001e-06,
+          4.290696113751387e-06,
+          3.7314251038823073e-06,
+          4.366311816349005e-06
+        ],
+        "median_width": 4.119089624160001e-06,
+        "median_total_seconds": 6.822893400094472,
+        "median_preprocessing_seconds": 2.653071800014004,
+        "median_search_seconds": 4.21063830005005,
+        "successes": 5,
+        "median_tail": 4.45252271974408e-06
+      },
+      "moment_centered": {
+        "widths": [
+          3.571110959955698e-05,
+          3.986478408852796e-05,
+          4.394380878972254e-05,
+          3.7289918197649236e-05,
+          3.7437907253502225e-05
+        ],
+        "median_width": 3.7437907253502225e-05,
+        "median_total_seconds": 6.286548599833623,
+        "median_preprocessing_seconds": 1.8836437000427395,
+        "median_search_seconds": 4.427588099963032,
+        "successes": 0,
+        "median_tail": 3.767480265866688e-05
+      },
+      "full": {
+        "widths": [
+          0.00018599804943977556,
+          0.0002283222273031379,
+          0.00021954657648748073,
+          8.511426437315419e-05,
+          0.000125331245069606
+        ],
+        "median_width": 0.00018599804943977556,
+        "median_total_seconds": 10.020615499815904,
+        "median_preprocessing_seconds": 1.5684851000551134,
+        "median_search_seconds": 8.439914599992335,
+        "successes": 0,
+        "median_tail": 0.0
+      }
+    },
+    "paired_width_ratios": [
+      0.10950933986462207,
+      0.10332652536165038,
+      0.09764051482844799,
+      0.10006525313637017,
+      0.11662809533619291
+    ],
+    "median_paired_reduction": 0.8966734746383496,
+    "energy_narrower_pairs": 5,
+    "equal_pairs": 0,
+    "tail_successes": 0,
+    "median_original_tail": 7.476270052135433e-06,
+    "median_contraction_tail": 4.45252271974408e-06,
+    "common_cap_successes": 0
+  },
+  {
+    "dataset": "parkinsons",
+    "n": 2048,
+    "p": 20,
+    "methods": {
+      "energy": {
+        "widths": [
+          9.039525222308102e-07,
+          8.612507497908354e-07,
+          8.155431295048428e-07,
+          8.615968265404499e-07,
+          9.051696048559222e-07
+        ],
+        "median_width": 8.615968265404499e-07,
+        "median_total_seconds": 4.05974439997226,
+        "median_preprocessing_seconds": 0.47041430009994656,
+        "median_search_seconds": 3.5529236999573186,
+        "successes": 5,
+        "median_tail": 9.036821836988635e-07
+      },
+      "moment_centered": {
+        "widths": [
+          1.5369210254060142e-06,
+          1.4062672088217126e-06,
+          1.1671787844369595e-06,
+          1.3990790757339349e-06,
+          1.4033406306353247e-06
+        ],
+        "median_width": 1.4033406306353247e-06,
+        "median_total_seconds": 4.155561399995349,
+        "median_preprocessing_seconds": 0.3685406999429688,
+        "median_search_seconds": 3.797337200026959,
+        "successes": 5,
+        "median_tail": 1.448698638741339e-06
+      },
+      "full": {
+        "widths": [
+          3.0099636926689028e-05,
+          2.9155275068128215e-05,
+          2.8615343975852857e-05,
+          3.221326076934786e-05,
+          3.162743557399029e-05
+        ],
+        "median_width": 3.0099636926689028e-05,
+        "median_total_seconds": 10.00308239995502,
+        "median_preprocessing_seconds": 0.21931399998720735,
+        "median_search_seconds": 9.78256149997469,
+        "successes": 0,
+        "median_tail": 0.0
+      }
+    },
+    "paired_width_ratios": [
+      0.5881580818324804,
+      0.6124374829961816,
+      0.6987302548497368,
+      0.6158314004435166,
+      0.645010616165322
+    ],
+    "median_paired_reduction": 0.3841685995564834,
+    "energy_narrower_pairs": 5,
+    "equal_pairs": 0,
+    "tail_successes": 5,
+    "median_original_tail": 3.0656808876792077e-06,
+    "median_contraction_tail": 9.036821836988635e-07,
+    "common_cap_successes": 0
+  },
+  {
+    "dataset": "wine_white",
+    "n": 2048,
+    "p": 12,
+    "methods": {
+      "energy": {
+        "widths": [
+          1.2215821542543078e-07,
+          1.2159825783851323e-07,
+          1.288269971245451e-07,
+          1.1300681402969101e-07,
+          1.3845592962115566e-07
+        ],
+        "median_width": 1.2215821542543078e-07,
+        "median_total_seconds": 4.6012556998757645,
+        "median_preprocessing_seconds": 0.3294412000104785,
+        "median_search_seconds": 4.216063299914822,
+        "successes": 5,
+        "median_tail": 1.3446528146877068e-07
+      },
+      "moment_centered": {
+        "widths": [
+          1.5318760332726526e-07,
+          1.3352609833631622e-07,
+          1.712302501390866e-07,
+          1.4812502285957733e-07,
+          1.6328288799863496e-07
+        ],
+        "median_width": 1.5318760332726526e-07,
+        "median_total_seconds": 4.314084299956448,
+        "median_preprocessing_seconds": 0.2204985999269411,
+        "median_search_seconds": 4.0891095999395475,
+        "successes": 5,
+        "median_tail": 1.6497232824909717e-07
+      },
+      "full": {
+        "widths": [
+          1.2489481127445795e-05,
+          1.1860036071570195e-05,
+          1.1956257010218587e-05,
+          1.3087603285426503e-05,
+          1.2495895719772396e-05
+        ],
+        "median_width": 1.2489481127445795e-05,
+        "median_total_seconds": 10.002115899929777,
+        "median_preprocessing_seconds": 0.13918119994923472,
+        "median_search_seconds": 9.862993899965659,
+        "successes": 0,
+        "median_tail": 0.0
+      }
+    },
+    "paired_width_ratios": [
+      0.797441912871081,
+      0.9106703435027362,
+      0.7523612038170927,
+      0.7629150824626139,
+      0.8479512539140853
+    ],
+    "median_paired_reduction": 0.20255808712891898,
+    "energy_narrower_pairs": 5,
+    "equal_pairs": 0,
+    "tail_successes": 5,
+    "median_original_tail": 1.8667075163663619e-06,
+    "median_contraction_tail": 1.3446528146877068e-07,
+    "common_cap_successes": 0
+  },
+  {
+    "dataset": "yacht",
+    "n": 308,
+    "p": 7,
+    "methods": {
+      "energy": {
+        "widths": [
+          3.2960781909644084e-06,
+          3.4461902512782127e-06,
+          2.6691893331791915e-06,
+          2.657314506276259e-06,
+          2.569022123599836e-06
+        ],
+        "median_width": 2.6691893331791915e-06,
+        "median_total_seconds": 5.288904300075956,
+        "median_preprocessing_seconds": 0.15630979998968542,
+        "median_search_seconds": 5.118824200006202,
+        "successes": 5,
+        "median_tail": 2.787511343043053e-06
+      },
+      "moment_centered": {
+        "widths": [
+          4.3044686513175195e-06,
+          3.4461902512782127e-06,
+          4.521494477104939e-06,
+          3.5565658264808753e-06,
+          3.7229428859640243e-06
+        ],
+        "median_width": 3.7229428859640243e-06,
+        "median_total_seconds": 5.124571299995296,
+        "median_preprocessing_seconds": 0.08556589996442199,
+        "median_search_seconds": 5.039005400030874,
+        "successes": 5,
+        "median_tail": 3.887850427368197e-06
+      },
+      "full": {
+        "widths": [
+          5.899111050079232e-05,
+          5.523484846295466e-05,
+          6.340819170055239e-05,
+          5.576905091034549e-05,
+          6.361125820750527e-05
+        ],
+        "median_width": 5.899111050079232e-05,
+        "median_total_seconds": 10.00356300000567,
+        "median_preprocessing_seconds": 0.03718880005180836,
+        "median_search_seconds": 9.966483899974264,
+        "successes": 0,
+        "median_tail": 0.0
+      }
+    },
+    "paired_width_ratios": [
+      0.7657340447712493,
+      1.0,
+      0.5903334277405206,
+      0.747157408557119,
+      0.6900514464740733
+    ],
+    "median_paired_reduction": 0.252842591442881,
+    "energy_narrower_pairs": 4,
+    "equal_pairs": 1,
+    "tail_successes": 0,
+    "median_original_tail": 3.0286668557499642e-05,
+    "median_contraction_tail": 2.787511343043053e-06,
+    "common_cap_successes": 0
+  }
+]

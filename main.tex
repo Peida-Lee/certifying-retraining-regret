@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{microtype,graphicx,booktabs}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+\usepackage[preprint]{icml2026}
+\usepackage{amsmath,amssymb,mathtools,amsthm}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\R}{\mathbb R}
+\newcommand{\cX}{\mathcal X}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\HH}{\mathcal H}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathSizes{9}{9}{7}{5}
+\makeatletter
+\renewcommand{\ICML@preprint}{\textit{Preprint. October 30, 2026.}}
+\setlength{\@fptop}{0pt}
+\setlength{\@fpsep}{18pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+\setlength{\@dblfptop}{0pt}
+\setlength{\@dblfpsep}{18pt}
+\setlength{\@dblfpbot}{0pt plus 1fil}
+\makeatother
+\icmltitlerunning{Certifying Retraining Regret through Residual Structure}
+\pdfstringdefDisableCommands{\def\\{ }}
+\hypersetup{pdfauthor={Peida Li},pdftitle={Certifying Retraining Regret through Residual Structure},pdfsubject={Certified completion-relative ridge regret},pdfkeywords={incomplete data, certified learning, ridge regression, effective dimension}}
+\begin{document}
+\twocolumn[
+\icmltitle{Certifying Retraining Regret through\\Residual Structure}
+\begin{icmlauthorlist}
+\icmlauthor{Peida Li}{pku}
+\end{icmlauthorlist}
+\icmlaffiliation{pku}{School of Basic Medical Sciences, Peking University}
+\icmlcorrespondingauthor{Peida Li}{2410301207@stu.pku.edu.cn}
+\icmlkeywords{incomplete data, certified learning, ridge regression, effective dimension}
+\vskip 0.3in
+]
+\printAffiliationsAndNotice{}
+\input{sections/main}
+\clearpage
+\typeout{CONTENT_PAGES:\number\numexpr\value{page}-1\relax}
+\section*{Impact Statement}
+This work provides deterministic bounds on training-objective regret under explicitly specified feature intervals. It can help practitioners decide when further feature acquisition is useful. Application-specific interval validity and downstream predictive or clinical utility require their own assessment. Experiments use public benchmark records with artificial coarsening and controlled synthetic tables. LLM tools assisted coding and manuscript preparation, including discussion and presentation of mathematical arguments. The paper provides proofs and executable audit programs for its mathematical and computational claims. The author is responsible for the content.
+\input{sections/references}
+\clearpage
+\appendix
+\input{sections/appendix}
+\end{document}

@@ -1,0 +1,1560 @@
+[
+  {
+    "status": "PASS",
+    "dataset": "parkinsons",
+    "seed": 92411,
+    "instance": "parkinsons_92411",
+    "lower": 0.0009293479143597931,
+    "upper": 0.0009293566358514813,
+    "absolute_gap": 8.72149168813438e-09,
+    "total_seconds": 24.638959900010377,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 24.63895739999134,
+    "nodes": 1,
+    "energy_width": 4.0764105868938715e-05,
+    "energy_seconds": 5.798957499908283,
+    "moment_width": 5.3527861540922524e-05,
+    "moment_seconds": 6.109273700043559,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 5.798957499908283,
+        "lower": 0.0009274191389133575,
+        "upper": 0.0009681832447531054,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 6.480392099940218,
+        "lower": 0.0009293479143597931,
+        "upper": 0.0009681832447531054,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 24.63895739999134,
+        "lower": 0.0009293479143597931,
+        "upper": 0.0009293566358514813,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 6.480392099940218,
+        "lower": 0.0009293479143597931,
+        "upper": 0.0009681832447531054,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 24.63895739999134,
+        "lower": 0.0009293479143597931,
+        "upper": 0.0009293566358514813,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "120": {
+        "seconds": 24.63895739999134,
+        "lower": 0.0009293479143597931,
+        "upper": 0.0009293566358514813,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 24.63895739999134,
+        "lower": 0.0009293479143597931,
+        "upper": 0.0009293566358514813,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 24.63895739999134,
+        "lower": 0.0009293479143597931,
+        "upper": 0.0009293566358514813,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "parkinsons",
+    "seed": 92412,
+    "instance": "parkinsons_92412",
+    "lower": 0.000834374886019449,
+    "upper": 0.0008346294359398985,
+    "absolute_gap": 2.54549920449443e-07,
+    "total_seconds": 56.2112644999288,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 56.21126229991205,
+    "nodes": 1,
+    "energy_width": 3.753639253468966e-05,
+    "energy_seconds": 4.597911199904047,
+    "moment_width": 4.761195937276171e-05,
+    "moment_seconds": 5.05518739996478,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 4.597911199904047,
+        "lower": 0.0008321908603235583,
+        "upper": 0.0008697272528290219,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 5.2049867999739945,
+        "lower": 0.000834374886019449,
+        "upper": 0.0008697272528290219,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 56.21126229991205,
+        "lower": 0.000834374886019449,
+        "upper": 0.0008346294359398985,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 5.2049867999739945,
+        "lower": 0.000834374886019449,
+        "upper": 0.0008697272528290219,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 56.21126229991205,
+        "lower": 0.000834374886019449,
+        "upper": 0.0008346294359398985,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "120": {
+        "seconds": 56.21126229991205,
+        "lower": 0.000834374886019449,
+        "upper": 0.0008346294359398985,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 56.21126229991205,
+        "lower": 0.000834374886019449,
+        "upper": 0.0008346294359398985,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 56.21126229991205,
+        "lower": 0.000834374886019449,
+        "upper": 0.0008346294359398985,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "parkinsons",
+    "seed": 92413,
+    "instance": "parkinsons_92413",
+    "lower": 0.0008961428312346519,
+    "upper": 0.0008961499920496983,
+    "absolute_gap": 7.16081504639407e-09,
+    "total_seconds": 52.28680310002528,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 52.28680040000472,
+    "nodes": 1,
+    "energy_width": 4.5087113785414004e-05,
+    "energy_seconds": 5.26226480002515,
+    "moment_width": 5.794886647715559e-05,
+    "moment_seconds": 5.902606900082901,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 5.26226480002515,
+        "lower": 0.0008932396952060484,
+        "upper": 0.0009383268089622021,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 5.947165600024164,
+        "lower": 0.0008961428312346519,
+        "upper": 0.0009383268089622021,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 52.28680040000472,
+        "lower": 0.0008961428312346519,
+        "upper": 0.0008961499920496983,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 5.947165600024164,
+        "lower": 0.0008961428312346519,
+        "upper": 0.0009383268089622021,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 52.28680040000472,
+        "lower": 0.0008961428312346519,
+        "upper": 0.0008961499920496983,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "120": {
+        "seconds": 52.28680040000472,
+        "lower": 0.0008961428312346519,
+        "upper": 0.0008961499920496983,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 52.28680040000472,
+        "lower": 0.0008961428312346519,
+        "upper": 0.0008961499920496983,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 52.28680040000472,
+        "lower": 0.0008961428312346519,
+        "upper": 0.0008961499920496983,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "parkinsons",
+    "seed": 92414,
+    "instance": "parkinsons_92414",
+    "lower": 0.0008341075432842153,
+    "upper": 0.0008342130362351016,
+    "absolute_gap": 1.0549295088630069e-07,
+    "total_seconds": 48.52525709988549,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 48.52525409986265,
+    "nodes": 1,
+    "energy_width": 6.084410070024556e-05,
+    "energy_seconds": 5.508085399866104,
+    "moment_width": 6.084410070024556e-05,
+    "moment_seconds": 5.865568600012921,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 5.508085399866104,
+        "lower": 0.0008286918340878499,
+        "upper": 0.000889535934758949,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 6.161830899887718,
+        "lower": 0.0008341075432841472,
+        "upper": 0.000889535934758949,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 48.52525409986265,
+        "lower": 0.0008341075432842153,
+        "upper": 0.0008342130362351016,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 6.161830899887718,
+        "lower": 0.0008341075432841472,
+        "upper": 0.000889535934758949,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 48.52525409986265,
+        "lower": 0.0008341075432842153,
+        "upper": 0.0008342130362351016,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "120": {
+        "seconds": 48.52525409986265,
+        "lower": 0.0008341075432842153,
+        "upper": 0.0008342130362351016,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 48.52525409986265,
+        "lower": 0.0008341075432842153,
+        "upper": 0.0008342130362351016,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 48.52525409986265,
+        "lower": 0.0008341075432842153,
+        "upper": 0.0008342130362351016,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "parkinsons",
+    "seed": 92415,
+    "instance": "parkinsons_92415",
+    "lower": 0.0008568197280542822,
+    "upper": 0.000857418857347299,
+    "absolute_gap": 5.991292930168299e-07,
+    "total_seconds": 55.59724470006768,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 55.59723960002884,
+    "nodes": 1,
+    "energy_width": 6.69440011173665e-05,
+    "energy_seconds": 5.856346300104633,
+    "moment_width": 7.233560577381856e-05,
+    "moment_seconds": 5.812255900003947,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 5.856346300104633,
+        "lower": 0.0008553873540780817,
+        "upper": 0.0009223313551662044,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 6.635654300102033,
+        "lower": 0.0008568197280542822,
+        "upper": 0.0009223313551662044,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 55.59723960002884,
+        "lower": 0.0008568197280542822,
+        "upper": 0.000857418857347299,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 6.635654300102033,
+        "lower": 0.0008568197280542822,
+        "upper": 0.0009223313551662044,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 55.59723960002884,
+        "lower": 0.0008568197280542822,
+        "upper": 0.000857418857347299,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "120": {
+        "seconds": 55.59723960002884,
+        "lower": 0.0008568197280542822,
+        "upper": 0.000857418857347299,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 55.59723960002884,
+        "lower": 0.0008568197280542822,
+        "upper": 0.000857418857347299,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 55.59723960002884,
+        "lower": 0.0008568197280542822,
+        "upper": 0.000857418857347299,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 92411,
+    "instance": "superconductivity_92411",
+    "lower": 0.0014053133511080452,
+    "upper": 0.0014084872366191955,
+    "absolute_gap": 3.173885511150278e-06,
+    "total_seconds": 76.20320840005297,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 76.20320360013284,
+    "nodes": 1,
+    "energy_width": 0.00029474350753177754,
+    "energy_seconds": 9.63490820012521,
+    "moment_width": 0.00032826797370678873,
+    "moment_seconds": 8.9171398000326,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 9.63490820012521,
+        "lower": 0.0013733361471907621,
+        "upper": 0.0016680796547225397,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 11.068387300125323,
+        "lower": 0.0014053133511080452,
+        "upper": 0.0016680796547225397,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 76.20320360013284,
+        "lower": 0.0014053133511080452,
+        "upper": 0.0014084872366191955,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 9.63490820012521,
+        "lower": 0.0013733361471907621,
+        "upper": 0.0016680796547225397,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 11.068387300125323,
+        "lower": 0.0014053133511080452,
+        "upper": 0.0016680796547225397,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 76.20320360013284,
+        "lower": 0.0014053133511080452,
+        "upper": 0.0014084872366191955,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 76.20320360013284,
+        "lower": 0.0014053133511080452,
+        "upper": 0.0014084872366191955,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 76.20320360013284,
+        "lower": 0.0014053133511080452,
+        "upper": 0.0014084872366191955,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 92412,
+    "instance": "superconductivity_92412",
+    "lower": 0.0009095677796737385,
+    "upper": 0.0009122831624321789,
+    "absolute_gap": 2.7153827584404247e-06,
+    "total_seconds": 57.056659999885596,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 57.056656099972315,
+    "nodes": 1,
+    "energy_width": 0.00017144464470583265,
+    "energy_seconds": 7.944003699929453,
+    "moment_width": 0.00022622628155607451,
+    "moment_seconds": 7.614722200087272,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 7.944003699929453,
+        "lower": 0.0009031478227561017,
+        "upper": 0.001074592467516704,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 9.09670879994519,
+        "lower": 0.0009095677796737385,
+        "upper": 0.001074592467516704,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 57.056656099972315,
+        "lower": 0.0009095677796737385,
+        "upper": 0.0009122831624321789,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 9.09670879994519,
+        "lower": 0.0009095677796737385,
+        "upper": 0.001074592467516704,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 57.056656099972315,
+        "lower": 0.0009095677796737385,
+        "upper": 0.0009122831624321789,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "120": {
+        "seconds": 57.056656099972315,
+        "lower": 0.0009095677796737385,
+        "upper": 0.0009122831624321789,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 57.056656099972315,
+        "lower": 0.0009095677796737385,
+        "upper": 0.0009122831624321789,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 57.056656099972315,
+        "lower": 0.0009095677796737385,
+        "upper": 0.0009122831624321789,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 92413,
+    "instance": "superconductivity_92413",
+    "lower": 0.0010741814971538643,
+    "upper": 0.0010822613761258765,
+    "absolute_gap": 8.079878972012174e-06,
+    "total_seconds": 65.54847600008361,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 65.54847270005848,
+    "nodes": 1,
+    "energy_width": 0.00021125214081557262,
+    "energy_seconds": 10.00155020004604,
+    "moment_width": 0.0002544497506390083,
+    "moment_seconds": 10.002597099984996,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 10.00155020004604,
+        "lower": 0.0010657731063394152,
+        "upper": 0.0012770252472089829,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 11.305852400138974,
+        "lower": 0.0010741814971538643,
+        "upper": 0.0012770252472089829,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 65.54847270005848,
+        "lower": 0.0010741814971538643,
+        "upper": 0.0010822613761258765,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": null,
+      "60": {
+        "seconds": 11.305852400138974,
+        "lower": 0.0010741814971538643,
+        "upper": 0.0012770252472089829,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 65.54847270005848,
+        "lower": 0.0010741814971538643,
+        "upper": 0.0010822613761258765,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 65.54847270005848,
+        "lower": 0.0010741814971538643,
+        "upper": 0.0010822613761258765,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 65.54847270005848,
+        "lower": 0.0010741814971538643,
+        "upper": 0.0010822613761258765,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 92414,
+    "instance": "superconductivity_92414",
+    "lower": 0.0012530380795554173,
+    "upper": 0.001253238455246773,
+    "absolute_gap": 2.0037569135574265e-07,
+    "total_seconds": 59.27367460005917,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 59.27367070002947,
+    "nodes": 1,
+    "energy_width": 0.00017775480107772306,
+    "energy_seconds": 9.870386900031008,
+    "moment_width": 0.00020145404945382927,
+    "moment_seconds": 9.397324100020342,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 9.870386900031008,
+        "lower": 0.0012477799947982345,
+        "upper": 0.0014255347959300666,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 10.906702000065707,
+        "lower": 0.0012530380795554173,
+        "upper": 0.0014255347959300666,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 59.27367070002947,
+        "lower": 0.0012530380795554173,
+        "upper": 0.001253238455246773,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 9.870386900031008,
+        "lower": 0.0012477799947982345,
+        "upper": 0.0014255347959300666,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 59.27367070002947,
+        "lower": 0.0012530380795554173,
+        "upper": 0.001253238455246773,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "120": {
+        "seconds": 59.27367070002947,
+        "lower": 0.0012530380795554173,
+        "upper": 0.001253238455246773,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 59.27367070002947,
+        "lower": 0.0012530380795554173,
+        "upper": 0.001253238455246773,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 59.27367070002947,
+        "lower": 0.0012530380795554173,
+        "upper": 0.001253238455246773,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "superconductivity",
+    "seed": 92415,
+    "instance": "superconductivity_92415",
+    "lower": 0.0014692874969178282,
+    "upper": 0.0014762188928943013,
+    "absolute_gap": 6.931395976473133e-06,
+    "total_seconds": 72.79449089989066,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 72.79448659985792,
+    "nodes": 1,
+    "energy_width": 0.0002921810280266967,
+    "energy_seconds": 10.002372299903072,
+    "moment_width": 0.0003657875787911936,
+    "moment_seconds": 10.00588299985975,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 10.002372299903072,
+        "lower": 0.001454654981182291,
+        "upper": 0.0017468360092635935,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 11.08023009984754,
+        "lower": 0.0014692874969178282,
+        "upper": 0.0017468360092635935,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 72.79448659985792,
+        "lower": 0.0014692874969178282,
+        "upper": 0.0014762188928943013,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": null,
+      "60": {
+        "seconds": 11.08023009984754,
+        "lower": 0.0014692874969178282,
+        "upper": 0.0017468360092635935,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 72.79448659985792,
+        "lower": 0.0014692874969178282,
+        "upper": 0.0014762188928943013,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 72.79448659985792,
+        "lower": 0.0014692874969178282,
+        "upper": 0.0014762188928943013,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 72.79448659985792,
+        "lower": 0.0014692874969178282,
+        "upper": 0.0014762188928943013,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "wine_white",
+    "seed": 92411,
+    "instance": "wine_white_92411",
+    "lower": 0.00043533313896818173,
+    "upper": 0.00044337241673189344,
+    "absolute_gap": 8.039277763711712e-06,
+    "total_seconds": 6.029151100083254,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 6.025712300091982,
+    "nodes": 0,
+    "energy_width": 8.03927777293849e-06,
+    "energy_seconds": 6.025712300091982,
+    "moment_width": 8.03927777293849e-06,
+    "moment_seconds": 5.836490299901925,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 6.025712300091982,
+        "lower": 0.00043533313896818173,
+        "upper": 0.00044337241673189344,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 6.025712300091982,
+        "lower": 0.00043533313896818173,
+        "upper": 0.00044337241673189344,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 6.025712300091982,
+        "lower": 0.00043533313896818173,
+        "upper": 0.00044337241673189344,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 6.025712300091982,
+        "lower": 0.00043533313896818173,
+        "upper": 0.00044337241673189344,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 6.025712300091982,
+        "lower": 0.00043533313896818173,
+        "upper": 0.00044337241673189344,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 6.025712300091982,
+        "lower": 0.00043533313896818173,
+        "upper": 0.00044337241673189344,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "wine_white",
+    "seed": 92412,
+    "instance": "wine_white_92412",
+    "lower": 0.00044001270551276365,
+    "upper": 0.0004490209762027924,
+    "absolute_gap": 9.008270690028734e-06,
+    "total_seconds": 6.837102900026366,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 6.833969200029969,
+    "nodes": 0,
+    "energy_width": 9.008270699157716e-06,
+    "energy_seconds": 6.833969200029969,
+    "moment_width": 9.008270699157716e-06,
+    "moment_seconds": 6.5469922999618575,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 6.833969200029969,
+        "lower": 0.00044001270551276365,
+        "upper": 0.0004490209762027924,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 6.833969200029969,
+        "lower": 0.00044001270551276365,
+        "upper": 0.0004490209762027924,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 6.833969200029969,
+        "lower": 0.00044001270551276365,
+        "upper": 0.0004490209762027924,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 6.833969200029969,
+        "lower": 0.00044001270551276365,
+        "upper": 0.0004490209762027924,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 6.833969200029969,
+        "lower": 0.00044001270551276365,
+        "upper": 0.0004490209762027924,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 6.833969200029969,
+        "lower": 0.00044001270551276365,
+        "upper": 0.0004490209762027924,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "wine_white",
+    "seed": 92413,
+    "instance": "wine_white_92413",
+    "lower": 0.00043408889417062964,
+    "upper": 0.0004390267569128497,
+    "absolute_gap": 4.937862742220055e-06,
+    "total_seconds": 4.589017400052398,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 4.586192199960351,
+    "nodes": 0,
+    "energy_width": 4.937862751303718e-06,
+    "energy_seconds": 4.586192199960351,
+    "moment_width": 5.241906864581489e-06,
+    "moment_seconds": 4.292715599993244,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 4.586192199960351,
+        "lower": 0.00043408889417062964,
+        "upper": 0.0004390267569128497,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 4.586192199960351,
+        "lower": 0.00043408889417062964,
+        "upper": 0.0004390267569128497,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 4.586192199960351,
+        "lower": 0.00043408889417062964,
+        "upper": 0.0004390267569128497,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 4.586192199960351,
+        "lower": 0.00043408889417062964,
+        "upper": 0.0004390267569128497,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 4.586192199960351,
+        "lower": 0.00043408889417062964,
+        "upper": 0.0004390267569128497,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 4.586192199960351,
+        "lower": 0.00043408889417062964,
+        "upper": 0.0004390267569128497,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "wine_white",
+    "seed": 92414,
+    "instance": "wine_white_92414",
+    "lower": 0.0004315555443571903,
+    "upper": 0.00043582827034976376,
+    "absolute_gap": 4.272725992573447e-06,
+    "total_seconds": 8.270804099855013,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 8.266614899854176,
+    "nodes": 0,
+    "energy_width": 4.272726001599918e-06,
+    "energy_seconds": 8.266614899854176,
+    "moment_width": 4.272726001599918e-06,
+    "moment_seconds": 9.122307199868374,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 8.266614899854176,
+        "lower": 0.0004315555443571903,
+        "upper": 0.00043582827034976376,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 8.266614899854176,
+        "lower": 0.0004315555443571903,
+        "upper": 0.00043582827034976376,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 8.266614899854176,
+        "lower": 0.0004315555443571903,
+        "upper": 0.00043582827034976376,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 8.266614899854176,
+        "lower": 0.0004315555443571903,
+        "upper": 0.00043582827034976376,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 8.266614899854176,
+        "lower": 0.0004315555443571903,
+        "upper": 0.00043582827034976376,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 8.266614899854176,
+        "lower": 0.0004315555443571903,
+        "upper": 0.00043582827034976376,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "wine_white",
+    "seed": 92415,
+    "instance": "wine_white_92415",
+    "lower": 0.00043381690665848387,
+    "upper": 0.0004401380520969785,
+    "absolute_gap": 6.321145438494631e-06,
+    "total_seconds": 4.571222600177862,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 4.568323300103657,
+    "nodes": 0,
+    "energy_width": 6.321145447552815e-06,
+    "energy_seconds": 4.568323300103657,
+    "moment_width": 7.27830026017929e-06,
+    "moment_seconds": 4.240848899935372,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 4.568323300103657,
+        "lower": 0.00043381690665848387,
+        "upper": 0.0004401380520969785,
+        "stage": "energy",
+        "nodes": 0
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 4.568323300103657,
+        "lower": 0.00043381690665848387,
+        "upper": 0.0004401380520969785,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 4.568323300103657,
+        "lower": 0.00043381690665848387,
+        "upper": 0.0004401380520969785,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 4.568323300103657,
+        "lower": 0.00043381690665848387,
+        "upper": 0.0004401380520969785,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "300": {
+        "seconds": 4.568323300103657,
+        "lower": 0.00043381690665848387,
+        "upper": 0.0004401380520969785,
+        "stage": "energy",
+        "nodes": 0
+      },
+      "600": {
+        "seconds": 4.568323300103657,
+        "lower": 0.00043381690665848387,
+        "upper": 0.0004401380520969785,
+        "stage": "energy",
+        "nodes": 0
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "yacht",
+    "seed": 92411,
+    "instance": "yacht_92411",
+    "lower": 0.0007663605825088258,
+    "upper": 0.000766361402212892,
+    "absolute_gap": 8.197040662341268e-10,
+    "total_seconds": 9.918408199911937,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 9.918406399898231,
+    "nodes": 1,
+    "energy_width": 2.5386740680489236e-05,
+    "energy_seconds": 4.942348799901083,
+    "moment_width": 2.5386740680489236e-05,
+    "moment_seconds": 4.784119799965993,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 4.942348799901083,
+        "lower": 0.0007663605825088027,
+        "upper": 0.0007917473231869565,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 5.609606799902394,
+        "lower": 0.0007663605825088167,
+        "upper": 0.0007917473231869565,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 9.918406399898231,
+        "lower": 0.0007663605825088258,
+        "upper": 0.000766361402212892,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 9.918406399898231,
+        "lower": 0.0007663605825088258,
+        "upper": 0.000766361402212892,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "60": {
+        "seconds": 9.918406399898231,
+        "lower": 0.0007663605825088258,
+        "upper": 0.000766361402212892,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "120": {
+        "seconds": 9.918406399898231,
+        "lower": 0.0007663605825088258,
+        "upper": 0.000766361402212892,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 9.918406399898231,
+        "lower": 0.0007663605825088258,
+        "upper": 0.000766361402212892,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 9.918406399898231,
+        "lower": 0.0007663605825088258,
+        "upper": 0.000766361402212892,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "yacht",
+    "seed": 92412,
+    "instance": "yacht_92412",
+    "lower": 0.0007936687604872597,
+    "upper": 0.0007936705086310162,
+    "absolute_gap": 1.7481437564886848e-09,
+    "total_seconds": 13.846949699916877,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 13.84694719989784,
+    "nodes": 1,
+    "energy_width": 7.580337171392032e-05,
+    "energy_seconds": 8.423066799878143,
+    "moment_width": 7.580337171392032e-05,
+    "moment_seconds": 7.1273315999424085,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 8.423066799878143,
+        "lower": 0.0007936687604872597,
+        "upper": 0.0008694721321989606,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 9.179372299928218,
+        "lower": 0.0007936687604872597,
+        "upper": 0.0008694721321989606,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 13.84694719989784,
+        "lower": 0.0007936687604872597,
+        "upper": 0.0007936705086310162,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 9.179372299928218,
+        "lower": 0.0007936687604872597,
+        "upper": 0.0008694721321989606,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 13.84694719989784,
+        "lower": 0.0007936687604872597,
+        "upper": 0.0007936705086310162,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "120": {
+        "seconds": 13.84694719989784,
+        "lower": 0.0007936687604872597,
+        "upper": 0.0007936705086310162,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 13.84694719989784,
+        "lower": 0.0007936687604872597,
+        "upper": 0.0007936705086310162,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 13.84694719989784,
+        "lower": 0.0007936687604872597,
+        "upper": 0.0007936705086310162,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "yacht",
+    "seed": 92413,
+    "instance": "yacht_92413",
+    "lower": 0.0008007145008866096,
+    "upper": 0.0008007153933733803,
+    "absolute_gap": 8.924867706851247e-10,
+    "total_seconds": 9.784298400045373,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 9.784296400030144,
+    "nodes": 1,
+    "energy_width": 3.925594882951049e-05,
+    "energy_seconds": 4.840049899998121,
+    "moment_width": 4.3871646116101825e-05,
+    "moment_seconds": 4.598749800119549,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 4.840049899998121,
+        "lower": 0.0008006430622664386,
+        "upper": 0.000839899011093576,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 5.5055951999966055,
+        "lower": 0.0008007145008865941,
+        "upper": 0.000839899011093576,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 9.784296400030144,
+        "lower": 0.0008007145008866096,
+        "upper": 0.0008007153933733803,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 9.784296400030144,
+        "lower": 0.0008007145008866096,
+        "upper": 0.0008007153933733803,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "60": {
+        "seconds": 9.784296400030144,
+        "lower": 0.0008007145008866096,
+        "upper": 0.0008007153933733803,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "120": {
+        "seconds": 9.784296400030144,
+        "lower": 0.0008007145008866096,
+        "upper": 0.0008007153933733803,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 9.784296400030144,
+        "lower": 0.0008007145008866096,
+        "upper": 0.0008007153933733803,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 9.784296400030144,
+        "lower": 0.0008007145008866096,
+        "upper": 0.0008007153933733803,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "yacht",
+    "seed": 92414,
+    "instance": "yacht_92414",
+    "lower": 0.000787480842334898,
+    "upper": 0.0007874827840542006,
+    "absolute_gap": 1.941719302597615e-09,
+    "total_seconds": 67.87728799995966,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 67.87728559994139,
+    "nodes": 1,
+    "energy_width": 2.476093271692949e-05,
+    "energy_seconds": 7.6198998999316245,
+    "moment_width": 2.522565485653654e-05,
+    "moment_seconds": 7.519759200047702,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 7.6198998999316245,
+        "lower": 0.0007849560609317807,
+        "upper": 0.000809716993646347,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 8.547303100000136,
+        "lower": 0.0007874808423348903,
+        "upper": 0.000809716993646347,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 67.87728559994139,
+        "lower": 0.000787480842334898,
+        "upper": 0.0007874827840542006,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 8.547303100000136,
+        "lower": 0.0007874808423348903,
+        "upper": 0.000809716993646347,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "60": {
+        "seconds": 8.547303100000136,
+        "lower": 0.0007874808423348903,
+        "upper": 0.000809716993646347,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      "120": {
+        "seconds": 67.87728559994139,
+        "lower": 0.000787480842334898,
+        "upper": 0.0007874827840542006,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 67.87728559994139,
+        "lower": 0.000787480842334898,
+        "upper": 0.0007874827840542006,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 67.87728559994139,
+        "lower": 0.000787480842334898,
+        "upper": 0.0007874827840542006,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  },
+  {
+    "status": "PASS",
+    "dataset": "yacht",
+    "seed": 92415,
+    "instance": "yacht_92415",
+    "lower": 0.000763222229474737,
+    "upper": 0.0007632251194144311,
+    "absolute_gap": 2.8899396941261743e-09,
+    "total_seconds": 9.879887800081633,
+    "complete_budget_seconds": 600,
+    "target": 1e-05,
+    "target_met": true,
+    "target_met_in_budget": true,
+    "first_target_seconds": 9.879885900067165,
+    "nodes": 1,
+    "energy_width": 1.384168374104133e-05,
+    "energy_seconds": 4.769284100038931,
+    "moment_width": 1.4388963236864239e-05,
+    "moment_seconds": 4.879938599886373,
+    "family": "frozen_validation",
+    "trace": [
+      {
+        "seconds": 4.769284100038931,
+        "lower": 0.000763222229474737,
+        "upper": 0.0007770639132134346,
+        "stage": "energy",
+        "nodes": 0
+      },
+      {
+        "seconds": 5.409412300097756,
+        "lower": 0.000763222229474737,
+        "upper": 0.0007770639132134346,
+        "stage": "feasible_multistart",
+        "nodes": 0
+      },
+      {
+        "seconds": 9.879885900067165,
+        "lower": 0.000763222229474737,
+        "upper": 0.0007632251194144311,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    ],
+    "checkpoints": {
+      "10": {
+        "seconds": 9.879885900067165,
+        "lower": 0.000763222229474737,
+        "upper": 0.0007632251194144311,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "60": {
+        "seconds": 9.879885900067165,
+        "lower": 0.000763222229474737,
+        "upper": 0.0007632251194144311,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "120": {
+        "seconds": 9.879885900067165,
+        "lower": 0.000763222229474737,
+        "upper": 0.0007632251194144311,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "300": {
+        "seconds": 9.879885900067165,
+        "lower": 0.000763222229474737,
+        "upper": 0.0007632251194144311,
+        "stage": "residual_root",
+        "nodes": 1
+      },
+      "600": {
+        "seconds": 9.879885900067165,
+        "lower": 0.000763222229474737,
+        "upper": 0.0007632251194144311,
+        "stage": "residual_root",
+        "nodes": 1
+      }
+    },
+    "error_count": 0
+  }
+]

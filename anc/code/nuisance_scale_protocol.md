@@ -1,0 +1,5 @@
+# Fixed-dimensional nuisance-scale comparison
+
+Frozen before numerical outputs, 2026-10-28 Asia/Shanghai. Use the original n128,p65 full-rank family, alpha1/32, lambda1/2, uniform weights1/128, beta=Q=e0. Multiply all nuisance coordinates t_j by s in {1,2,4,16,64,256}; keep candidate, dimension, signal intervals, nuisance residuals and retained direction fixed. The signal-support and original energy conditions remain exact. No method or scale is selected after outcomes.
+
+Compare exact symbolic budgets, rather than floating implementation envelopes: scalar-curvature residual elimination using the SAME structural retained radius1/25; general residual-moment using exact G_r=0,C_r=alpha*s,mu1/2,U0=1/512 and its own general root1/16; energy using its discarded-block contraction and radius1/25. Report exact full optimum, retained optimum and omitted regret. Prove uniform row conditions, and independently assemble the endpoint arrowhead normal equations as an attainment check. This is a mechanism comparison, with no claim that a capped final software interval equals the bare additive tail. Preserve all scales, including very loose scalar/moment budgets.

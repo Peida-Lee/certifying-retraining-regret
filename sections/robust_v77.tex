@@ -1,0 +1,21 @@
+\subsection{Leakage outside the declared residual-energy family}
+This perturbation control uses the general moment verifier. Structural support and candidate leakage are verified through Theorem~\ref{thm:energy-leakage-v79} and the automatic original-row pipeline in Appendix~\ref{app:auto-energy-v80}. The grid below isolates the generic sufficient certificate on a broader perturbation grid.
+
+For clarity, a general sufficient bound also explains this fallback. Work in the transformed coordinates of the verifier. For every admissible completion let $M\succeq\mu I$, $g$ be its candidate gradient, and $h=g^TM^{-1}g\le U$. Let $P$ project orthogonally onto the complement of a retained span. Suppose verified uniform bounds satisfy $\|Pg\|\le G$ and $\|PM(I-P)\|\le C$. Write the full optimum displacement $d=M^{-1}g=u+w$ with $u=(I-P)d$. Then $\|u\|\le\sqrt{U/\mu}=:R$, since $d^TMd=h$. For $q(d)=2g^Td-d^TMd$, completing the square in $w$ gives
+\[
+q(u+w)-q(u)\le {\|Pg-PMu\|^2\over\mu}
+ \le {(G+CR)^2\over\mu}=:\eta.
+\]
+Thus the full maximum is at most the retained maximum over the radius-$R$ ball plus $\eta$. For a rounded, nonorthonormal retained basis, the implementation verifies its Gram minimum eigenvalue and enlarges the coordinate radius accordingly. The interval moment receipt computes $G,C,\mu,U$ on the actual perturbed inputs; it covers candidate leakage and signal-row leakage without requiring either to vanish. This is the generic sufficient bound used by this earlier control; the final leakage-energy guarantee has its separately verified original-row conditions.
+
+The frozen perturbation pilot uses $n=128,p=65$, separately adding $\delta$ to feature 1 of all 64 signal rows or to candidate coefficient 1, for $\delta\in\{0,2^{-12},2^{-10},2^{-8}\}$. Ranks 1 and 2 regenerate the automatic gradient proposal at every condition; all use the same generic MomentSearch and five-second setup-plus-search cap. The complete directions, tail receipts, radii, endpoints and costs are in \texttt{structure\_robust\_results.json}; scalar results are in \texttt{structure\_robust\_summary.csv}. These controlled numerical perturbations probe the neighborhood of the constructed family.
+
+\paragraph{Prediction deviations implied by an objective certificate.}
+For a fixed completed design, let $M=X^TX/n+\lambda I$ and let $\theta^*$ be its ridge minimizer. The objective regret equals
+$h=(\beta-\theta^*)^TM(\beta-\theta^*)$.
+If $h\le\tau$, Cauchy--Schwarz in the $M$ inner product gives, for every feature vector $z$,
+\[
+|z^T(\beta-\theta^*)|\le\sqrt{\tau z^TM^{-1}z}
+\le\sqrt{\tau z^TG_0^{-1}z},
+\]
+where the second inequality requires the verified positive-definite anchor bound $M\succeq G_0\succ0$. This controls prediction deviation from the completed-design ridge fit at a given $z$.

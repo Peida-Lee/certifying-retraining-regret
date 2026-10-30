@@ -1,0 +1,21 @@
+{
+  "version": "v92-frozen-validation-2",
+  "frozen_before_new_masks": true,
+  "timezone": "Asia/Shanghai",
+  "development_seeds": [91311,91312,91313,91314,91315],
+  "validation_seeds": [92411,92412,92413,92414,92415],
+  "datasets": ["superconductivity","parkinsons","wine_white","yacht"],
+  "construction": "Unchanged independent-mask input rule, columns, intervals, ridge and four-bit candidate from v91; 17 uniformly sampled distinct rows, response-independent row choice.",
+  "target_width": 0.00001,
+  "complete_budget_seconds": 600,
+  "energy_stage_seconds": 10,
+  "energy_stage_tolerance": 1e-10,
+  "fallback": "When the energy certificate misses the target, construct an exact degree-four reference-residual polynomial; validate rounded nonnegative and PSD duals; refine the highest-upper original completion box.",
+  "witness": {"starts":64,"seed":92101,"optimizer":"L-BFGS-B","ftol":1e-14,"gtol":1e-10,"maxiter":200},
+  "reference": {"iterations":8,"starts":32,"seed":92501,"solver":"CLARABEL","scope":"Each evaluated node uses its own domain; clipped feasible witness and node midpoint initialize the exchange."},
+  "sdp": {"solver":"SCS","max_iters":15000,"eps":1e-6,"scale":1000000,"linear_dual_bits":20,"PSD_factor_bits":24,"residual_correction":true},
+  "branching": "Largest upper node, midpoint of cell maximizing moment variance times sum of absolute polynomial coefficients containing that cell; at most 31 evaluated nodes; keep parent upper until both covering children finish.",
+  "clock": "Charge data/input, candidate, anchor, coarse witness, basis, energy, numerical reference, multistart, polynomial and dual validation. Python imports and writing receipts are outside benchmark convention; this implementation conservatively includes receipt writes inside refinement time. Credit only evidence actually completed at each deadline.",
+  "checkpoints_seconds": [10,60,120,300,600],
+  "failure_policy": "Retain every condition and error; continue queue. Future changes require a new protocol and separate validation records."
+}

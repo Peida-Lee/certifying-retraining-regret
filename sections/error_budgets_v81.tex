@@ -1,0 +1,14 @@
+\begin{table*}[t]
+\caption{Three error budgets for the same original full-comparator regret. Each follows from eliminating discarded coordinates; the applicable conditions determine the certificate used. Search error is added separately.}
+\label{tab:tails}
+\centering\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{.12\textwidth}p{.31\textwidth}p{.22\textwidth}p{.27\textwidth}}
+\toprule
+Tail & Verified sufficient condition & Additive error & Role and evidence \\
+\midrule
+Residual energy & Signal residual and coupling; exact support or verified leakage $b$ & $(\epsilon+aR)^2$; leakage $\eta_b$ & Full-rank structural separation; nonzero residual and support-leakage series \\
+Residual moment & Actual metric; aggregate gradient and cross-block bounds & $(G_r+C_rR_s)^2/\mu$ & General real-table certificate; fixed-rank direction controls and acquisition decisions \\
+Spectral & Uniform discarded, whitened covariance bounded by $\rho$ & $\rho B_0^2/(1+\rho)$ & Sharp benchmark and covariance-based regime; exact sharpness and high-rank separation \\
+\bottomrule
+\end{tabular}
+\end{table*}

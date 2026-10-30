@@ -1,0 +1,91 @@
+\subsection{Algebraic Row Compression and Observed-Column Elimination}\label{app:compact-profile}
+The general-coarsening solver combines two exact reductions with the validated row-edge bound. Algebraic row coordinates reduce the coupling matrices, and analytic elimination of fully observed columns reduces the outer comparator search when uncertainty is concentrated in a few columns.
+
+\paragraph{Algebraic row coordinates.}
+For row $i$, let $x_i=x_i^0+D_i z_i$, where $D_i$ has one scaled coordinate vector for each of its $k_i$ uncertain cells and $z_i\in[0,1]^{k_i}$. Fix a reference $\vartheta$, put $e_i^0=x_i^{0\top}\vartheta-y_i$ and $q_i=\vartheta^\top D_i z_i$, and define
+\[
+ u_i(z_i)=\begin{bmatrix}q_i\\z_i(e_i^0+q_i)\end{bmatrix},\qquad
+ V_i=w_i\begin{bmatrix}T^\top x_i^0&T^\top D_i\end{bmatrix}.
+\]
+The transformed row-gradient increment is exactly $V_i u_i$. Thus, for a constant $a_0$ containing the endpoint gradients, observed rows and ridge,
+\[
+ T^\top g_\vartheta(X)=a_0+\sum_i V_i u_i(z_i).
+\]
+This uses at most $k_i+1$ scalar coordinates per row, independently of the number of model features. Exact zero columns can be omitted, and diagonal dyadic rescaling preserves the identity.
+
+Write the joint majorant as
+\[
+ C+\sum_i\bar f_i(z_i)+c\Big\|\sum_iV_i u_i(z_i)\Big\|^2,
+ \qquad c=\mu^{-1},
+\]
+where $C$ absorbs $c\|a_0\|^2$ and $\bar f_i$ absorbs $2c\,a_0^\top V_i u_i$. Choose $H_i\succ0$, $d_i$ and $\alpha$ satisfying
+\begin{equation}
+ \begin{bmatrix}\alpha&0\\0&c^{-1}I\end{bmatrix}
+ -\sum_i\begin{bmatrix}d_i^\top\\V_i\end{bmatrix}
+ H_i^{-1}\begin{bmatrix}d_i&V_i^\top\end{bmatrix}\succeq0.
+ \label{eq:compact-schur}
+\end{equation}
+Two Schur complements give
+\[
+ c\Big\|\sum_i V_i u_i\Big\|^2
+ \le\alpha+\sum_i\{u_i^\top H_i u_i+2d_i^\top u_i\}.
+\]
+Consequently, the sum of the corresponding row-edge quartic maxima plus $C+\alpha$ bounds the original regret. The numerical master uses one coupling cone and one small block cone per row. The independent verifier checks each local inverse exactly, encloses its Schur contribution by a dyadic positive-semidefinite upper matrix, verifies the central matrix by rational LDL elimination, and checks all row quartics by Bernstein subdivision. These checks retain all cross-row terms.
+
+\paragraph{Curvature from uncertain rows.}
+Let $c_i,h_i$ be row midpoints and halfwidths, and let
+\[
+ D=\operatorname{diag}\!\left(\sum_{i\notin\mathcal A}w_i k_i h_{ij}^2\right)_j.
+\]
+For $0<t<1$, matrix Young's inequality gives the uniform lower matrix
+\begin{equation}
+ M_X\succeq G_t:=G_0+(1-t)\sum_{i\notin\mathcal A}w_i c_i c_i^\top
+ -(t^{-1}-1)D.\label{eq:young-curvature}
+\end{equation}
+Indeed, $(c+\delta)(c+\delta)^\top\succeq(1-t)cc^\top-(t^{-1}-1)\delta\delta^\top$ and $\delta\delta^\top\preceq k_i\operatorname{diag}(h_i^2)$. The implementation uses $t=1/2$ when its rounded metric is verified positive. This strengthens the common curvature used by the reference certificate.
+
+\begin{proposition}[Profiling fully observed columns]\label{prop:observed-profile}
+Let $J$ contain every uncertain feature column, let $K$ be its complement, and put $A=\lambda I+X_K^\top W X_K\succ0$. For $t\in\mathbb R^{|J|}$, define
+\[
+ F_J(t)=\max_{X\in\mathcal X}\{J_X(\beta)-\min_b J_X(\theta_J=t,\theta_K=b)\}.
+\]
+For any reference $\vartheta$ with $\vartheta_J=t$, its fixed-completion objective equals
+\begin{equation}
+ J_X(\beta)-J_X(\vartheta)+g_{\vartheta,K}(X)^\top A^{-1}g_{\vartheta,K}(X).
+ \label{eq:profile-identity}
+\end{equation}
+Each fixed-completion function is concave quadratic in $t$, with negative quadratic coefficient
+\[
+ S_X=M_{JJ}-M_{JK}A^{-1}M_{KJ}\preceq M_{JJ}.
+\]
+If $U_0\ge H^*$, then
+\[
+ H^*=\max_{|t_j-\beta_j|\le\sqrt{U_0/\lambda}}F_J(t).
+\]
+\end{proposition}
+\begin{proof}
+Completing the square in $b$ proves~\eqref{eq:profile-identity}; a second completion of the square gives $S_X$. The full optimum satisfies $\lambda\|\theta_X^*-\beta\|^2\le h_\beta(X)\le U_0$, proving the containing box. Maximization over that box and the original completion domain recovers the full retraining optimum.
+\end{proof}
+For each corner query, a verified factor of $A$ bounds the last term in~\eqref{eq:profile-identity}. The transformed gradient of an uncertain row varies along the fixed direction obtained from its observed entries, giving a single algebraic row coordinate. A maximizing pair $(X,b)$ at fixed $t$ admits a row-edge completion by Theorem~\ref{thm:row}. Thus the compressed row certificate applies to each query. Theorem~\ref{thm:interp}, with
+\[
+ H_j=\lambda+\sum_iw_i\max\{L_{ij}^2,U_{ij}^2\},
+\]
+certifies every outer box. This computational reduction retains unrestricted retraining in $K$. Its search dimension is $|J|$; the residual-energy theorem separately controls certification dimension through residual structure.
+
+\paragraph{Choosing the conic representation.}
+The implementation compares the sizes of the two formulations using only $p$ and the uncertain-cell counts $k_i$. Put
+\[
+ \begin{aligned}
+ q&=1+\sum_i k_i+\sum_i k_i(k_i+1)/2,\\
+ C_{\rm moment}&=q(q+1)/2,
+ \end{aligned}
+\]
+and
+\[
+ C_{\rm row}=\frac{(p+1)(p+2)}2+
+ \sum_i\frac{(p+k_i+2)(p+k_i+3)}2.
+\]
+These count symmetric entries in the principal moment cone and the compressed block cones. The solver chooses the moment formulation when $C_{\rm moment}<C_{\rm row}$ and compressed rows otherwise. This geometry-based rule uses the same original objective and certificate tolerance in both branches.
+
+\paragraph{Common general-coarsening protocol.}
+Every condition uses rank-one/two/three structural selection and a one-second initial search. Both refinement branches start with 64 feasible starts. The moment branch uses eight reference-exchange rounds with 32 starts, one root-reference update, 60-second root and 40-second child proposals, and at most 33 evaluated nodes. A leading relaxed covariance direction and its mean propose complementary halfspaces; their nonnegative linear slacks and products with normalized variables enter the validated dual. The compressed branch uses sixteen reference exchanges with 32 starts and a 90-second root proposal. Remaining compressed cases with at most three uncertain columns use the profiled comparator search with at most 1023 evaluated boxes; other cases use fixed-reference residual slabs with at most 513 nodes and 60 seconds per proposal. The complete cap is 9000 seconds. Representation selection, input construction, reference fitting, numerical proposals, exact evaluations and completed partial-child work enter the clock. A parent stays active until both covering children are verified. A separate rational replay checks the representation rule, original witness, every query and the full cover.

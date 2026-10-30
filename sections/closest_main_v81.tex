@@ -1,0 +1,12 @@
+\begin{table*}[t]\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Closest guarantees and the present target. Fixed-rank geometry supplies the row oracle; the continuous-table comparator and uniform, verifiable compression bounds distinguish the complete method.}\label{tab:closest-main-v81}
+\begin{tabular}{p{.20\textwidth}p{.34\textwidth}p{.39\textwidth}}\toprule
+Work&Domain and comparator&Guaranteed quantity / relation here\\\midrule
+Reduced basis~\citep{quarteroni2011,balabanov2019}&Parametrized full-order equations; Galerkin/POD/greedy spaces&Residual/coercivity approximation and output-error certificates\\
+Fixed-rank box-QP~\citep{hladik2021}&A fixed low-rank quadratic on a box&Global optimum by zonotope faces; foundation for our row geometry\\
+Robust regret~\citep{vanli2014}&Norm-bounded matrix/response perturbations&SDP for a regularized minimax-regret formulation using a first-order comparator approximation\\
+Completion-relative learning, 2024~\citep{zhen2024sigmod}&Incomplete feature tables; published endpoint theorem assumes unbounded intervals&Learning under feature completions; the stated interval assumption matters for finite-box certification\\
+Minimal repairs, 2026~\citep{repair2026}&Worst-repair suboptimality gap; Section~4.1 uses adversarial edge repairs&Repair selection and optimization; finite continuous boxes can also have interior worst regret (Proposition~\ref{prop:interior})\\
+ZORRO, NeurIPS 2024~\citep{zhu2024zorro}&Uncertain training features/labels; all exact ridge optima at specified $\lambda$&Sound joint model/data zonotope; our same-target regret conversion and complete costs appear in Table~\ref{tab:zorro-v90}\\
+Present method&Continuous cell completions; exact full-feature ridge retraining at original $\lambda$&Feasible original-table witness and global upper; computable uniform subspace error; sharp energy constant under original-row conditions\\
+\bottomrule\end{tabular}\end{table*}

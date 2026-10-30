@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "checks": [
+    "512calibration IDs independent of all declared earlier and target pools",
+    "means/ranges recomputed solely from calibration values",
+    "12conditions and complete five-method comparison",
+    "identical within-condition shared charges",
+    "deadline eligibility and original-completion coverage",
+    "fixed half-reveal saving policy"
+  ],
+  "elapsed_seconds": 123.13016109995078,
+  "calibration_compute_seconds": 0.005735900020226836,
+  "calibration_feature_cells": 41472,
+  "counts": [
+    {
+      "method": "anchor",
+      "conditions": 12,
+      "STOP": 9,
+      "VIOLATING": 0,
+      "UNRESOLVED": 3,
+      "coarse_STOP": 9,
+      "saved_cells": 896
+    },
+    {
+      "method": "gradient",
+      "conditions": 12,
+      "STOP": 10,
+      "VIOLATING": 1,
+      "UNRESOLVED": 1,
+      "coarse_STOP": 9,
+      "saved_cells": 960
+    },
+    {
+      "method": "metric_pod",
+      "conditions": 12,
+      "STOP": 10,
+      "VIOLATING": 1,
+      "UNRESOLVED": 1,
+      "coarse_STOP": 9,
+      "saved_cells": 960
+    },
+    {
+      "method": "metric_greedy",
+      "conditions": 12,
+      "STOP": 10,
+      "VIOLATING": 1,
+      "UNRESOLVED": 1,
+      "coarse_STOP": 9,
+      "saved_cells": 960
+    },
+    {
+      "method": "full",
+      "conditions": 12,
+      "STOP": 9,
+      "VIOLATING": 1,
+      "UNRESOLVED": 2,
+      "coarse_STOP": 9,
+      "saved_cells": 896
+    }
+  ]
+}

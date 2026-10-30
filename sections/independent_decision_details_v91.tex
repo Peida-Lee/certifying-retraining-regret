@@ -1,0 +1,115 @@
+\section{Independent Row Masks and Core-Energy Decisions}\label{app:core-decisions-v91}
+The frozen design file records masks, methods, time caps, response-independent row sampling and the decision rule before the independent-row and new-pool decision runs. The random-row study retains the four primary column lists and widths. It uniformly samples seventeen distinct rows, using the first as signal and the rest as nuisance rows, without responses or residual scores. The candidate is the four-fractional-bit midpoint ridge model. All twenty instances retain $|J_{\mathcal S}|=1$ and the constructive rank-three span. The first-stage sufficient tails and ranks are stored with each receipt. The joint refinement uses the same original boxes and full comparator. It attains width $10^{-5}$ on all twenty original masks, within 255.07 seconds, and all twenty new masks, within 76.21 seconds. Centered moments on the new masks receive the same 600-second cap and terminate at their tail/arithmetic floors. All new cases finish by 120 seconds with refinement; moments meet the target in five.
+
+\begin{table*}[t]\centering\small
+\caption{All original and new response-independent masks. Widths use $10^{-6}$ units. Every row uses a rank-three structural first stage A. R adds joint residual refinement; M is centered moments. Original-set M columns are ten-second first-stage records; new-set M uses the common 600-second cap. Original instances restart from their stored binary input; new-mask costs include input construction.}\label{tab:independent-details-v91}
+\begin{tabular}{llrrrr}\toprule Data&Seed&A width&R width&M width&R seconds\\\midrule
+Supercond. & 91311 & 275.5 & 7.706 & 312.7 & 62.32\\
+Supercond. & 91312 & 157.1 & 2.227 & 202.5 & 87.43\\
+Supercond. & 91313 & 291.2 & 7.927 & 412.4 & 255.06\\
+Supercond. & 91314 & 159.7 & 7.173 & 185.6 & 91.09\\
+Supercond. & 91315 & 214.8 & 1.256 & 252.1 & 90.26\\
+Parkinsons & 91311 & 27.96 & 0.009376 & 34.56 & 99.38\\
+Parkinsons & 91312 & 44.03 & 0.001401 & 56.99 & 57.29\\
+Parkinsons & 91313 & 66.33 & 0.00286 & 86.19 & 35.84\\
+Parkinsons & 91314 & 52.71 & 0.00234 & 65.16 & 21.22\\
+Parkinsons & 91315 & 50.62 & 0.0004626 & 68.75 & 51.57\\
+Wine Quality & 91311 & 3.074 & 3.074 & 3.167 & 10.01\\
+Wine Quality & 91312 & 3.051 & 3.051 & 3.051 & 8.72\\
+Wine Quality & 91313 & 8.444 & 8.444 & 8.444 & 10.03\\
+Wine Quality & 91314 & 9.452 & 9.452 & 9.83 & 9.66\\
+Wine Quality & 91315 & 4.678 & 4.678 & 5.081 & 6.82\\
+Yacht & 91311 & 87.79 & 7.614e-05 & 87.79 & 18.27\\
+Yacht & 91312 & 29.7 & 0.009634 & 29.7 & 20.06\\
+Yacht & 91313 & 42.41 & 0.001967 & 42.41 & 69.49\\
+Yacht & 91314 & 34.11 & 0.001701 & 35.49 & 97.67\\
+Yacht & 91315 & 17.43 & 0.002385 & 17.43 & 17.46\\
+\midrule
+Supercond. & 92411 & 294.7 & 3.174 & 328.3 & 76.20\\
+Supercond. & 92412 & 171.4 & 2.715 & 226.2 & 57.06\\
+Supercond. & 92413 & 211.3 & 8.08 & 254.4 & 65.55\\
+Supercond. & 92414 & 177.8 & 0.2004 & 201.5 & 59.27\\
+Supercond. & 92415 & 292.2 & 6.931 & 365.8 & 72.79\\
+Parkinsons & 92411 & 40.76 & 0.008721 & 53.53 & 24.64\\
+Parkinsons & 92412 & 37.54 & 0.2545 & 47.61 & 56.21\\
+Parkinsons & 92413 & 45.09 & 0.007161 & 57.95 & 52.29\\
+Parkinsons & 92414 & 60.84 & 0.1055 & 60.84 & 48.53\\
+Parkinsons & 92415 & 66.94 & 0.5991 & 72.34 & 55.60\\
+Wine Quality & 92411 & 8.039 & 8.039 & 8.039 & 6.03\\
+Wine Quality & 92412 & 9.008 & 9.008 & 9.008 & 6.84\\
+Wine Quality & 92413 & 4.938 & 4.938 & 5.242 & 4.59\\
+Wine Quality & 92414 & 4.273 & 4.273 & 4.273 & 8.27\\
+Wine Quality & 92415 & 6.321 & 6.321 & 7.278 & 4.57\\
+Yacht & 92411 & 25.39 & 0.0008197 & 25.39 & 9.92\\
+Yacht & 92412 & 75.8 & 0.001748 & 75.8 & 13.85\\
+Yacht & 92413 & 39.26 & 0.0008925 & 43.87 & 9.78\\
+Yacht & 92414 & 24.76 & 0.001942 & 25.23 & 67.88\\
+Yacht & 92415 & 13.84 & 0.00289 & 14.39 & 9.88\\
+\midrule
+\bottomrule\end{tabular}\end{table*}
+\subsection{Disjoint pools, a stored predictor and the relative objective budget}
+Using the original normalization, we exclude the 1024-row pool 74001, the 1024-row scaling pool 84001 and the primary development pool 84101. A seeded permutation of remaining row indices defines three mutually disjoint 1024-row evaluation pools. The stored coefficient vector is the development first-mask predictor and is held fixed across all new pools and masks. Pool construction and its disjointness checks are recorded locally; its exact sampler and seed are in the portable source. The pool preparation cost is charged conservatively in each condition's input cost.
+
+Rule~\eqref{eq:core-decision-v91} is a model-retention contract for additional uncertainty cost, relative to the current encoded model's nominal representation cost. It is fixed at $\alpha=1/50$ before the new runs. With midpoint interval $[l_c,u_c]$, STOP uses $U\le(1+\alpha)l_c$ and violation uses $L>(1+\alpha)u_c$. Endpoint products and labels are independently checked as exact rationals. The nominal comparator fit includes a verified normal-equation residual correction. Only decisions completed by ten seconds receive credit; any last-call overrun is retained in the timing record. The fixed policy reveals all thirty-three uncertain cells for every non-STOP case and none for STOP. Costs are charged independently to each audit instance and summed over the fixed grid.
+
+\begin{table*}[t]\centering\small
+\caption{Core-energy decisions across three disjoint pools. Stops are by the ten-second complete cap. Saved cells follow the fixed thirty-three-cell policy. Median time is conditional on STOP.}
+\label{tab:core-decisions-v91}
+\begin{tabular}{lrrrrrr}\toprule Method&Pool 1&Pool 2&Pool 3&Total STOP&Saved cells&Median STOP seconds\\\midrule
+Coarse & 0 & 0 & 0 & 0 & 0 & --\\
+Energy & 5 & 5 & 3 & 13 & 429 & 3.098\\
+Adaptive & 5 & 5 & 3 & 13 & 429 & 3.067\\
+Moment & 0 & 5 & 0 & 5 & 165 & 2.199\\
+SCIP numeric & 0 & 0 & 0 & 0 & 0 & --\\
+ZORRO refined & 0 & 0 & 0 & 0 & 0 & --\\
+\bottomrule\end{tabular}\end{table*}
+\begin{table*}[t]\centering\small
+\caption{All new condition labels at the primary 2\% budget. E/A/M are contraction energy/adaptive energy/centered moment. S/U denote STOP/unresolved; all coarse, SCIP and refined-ZORRO labels are U. Midpoint regret and budget widths use $10^{-6}$ units.}
+\begin{tabular}{llrrrrrr}\toprule Pool&Seed&Midpoint&E width&M width&E&A&M\\\midrule
+1 & 91411 & 2397.494 & 4.341 & 54.203 & S & S & U\\
+1 & 91412 & 2398.536 & 3.652 & 42.800 & S & S & U\\
+1 & 91413 & 2396.162 & 4.290 & 56.023 & S & S & U\\
+1 & 91414 & 2394.529 & 3.799 & 39.834 & S & S & U\\
+1 & 91415 & 2394.600 & 3.945 & 45.031 & S & S & U\\
+2 & 91411 & 2349.725 & 3.624 & 25.013 & S & S & S\\
+2 & 91412 & 2348.823 & 2.958 & 18.873 & S & S & S\\
+2 & 91413 & 2349.773 & 3.927 & 26.123 & S & S & S\\
+2 & 91414 & 2349.700 & 3.507 & 24.502 & S & S & S\\
+2 & 91415 & 2350.506 & 3.287 & 23.409 & S & S & S\\
+3 & 91411 & 2751.258 & 8.948 & 121.385 & S & S & U\\
+3 & 91412 & 2761.790 & 11.413 & 139.351 & U & U & U\\
+3 & 91413 & 2753.522 & 8.993 & 117.779 & S & S & U\\
+3 & 91414 & 2765.084 & 10.214 & 118.237 & U & U & U\\
+3 & 91415 & 2760.569 & 10.885 & 133.867 & S & S & U\\
+\bottomrule\end{tabular}\end{table*}
+\begin{table*}[tp]\centering\small
+\caption{All predeclared relative-budget sensitivities, reported as STOP counts out of fifteen.}
+\begin{tabular}{lrrr}\toprule Method&1\%&2\%&5\%\\\midrule
+Coarse & 0 & 0 & 0\\
+Energy & 5 & 13 & 15\\
+Adaptive & 5 & 13 & 15\\
+Moment & 0 & 5 & 10\\
+SCIP numeric & 0 & 0 & 2\\
+ZORRO refined & 0 & 0 & 0\\
+\bottomrule\end{tabular}\end{table*}
+
+\begin{table*}[t]\centering\small
+\caption{Precision refinement of the same fifteen decision instances. The original 2\% rule and predictor are unchanged. Widths use $10^{-6}$ units. R seconds measure all recomputed algorithm stages from the stored binary instance.}\label{tab:decisions-refined-v92}
+\begin{tabular}{llrrrr}\toprule Pool&Seed&R width&R seconds&2\% label&Saved cells\\\midrule
+1 & 91411 & 4.342 & 10.07 & STOP & 33\\
+1 & 91412 & 3.652 & 10.04 & STOP & 33\\
+1 & 91413 & 4.29 & 10.05 & STOP & 33\\
+1 & 91414 & 3.799 & 10.05 & STOP & 33\\
+1 & 91415 & 3.945 & 10.04 & STOP & 33\\
+2 & 91411 & 3.624 & 9.84 & STOP & 33\\
+2 & 91412 & 2.958 & 9.61 & STOP & 33\\
+2 & 91413 & 3.927 & 9.89 & STOP & 33\\
+2 & 91414 & 3.507 & 9.65 & STOP & 33\\
+2 & 91415 & 3.287 & 9.86 & STOP & 33\\
+3 & 91411 & 8.948 & 10.04 & STOP & 33\\
+3 & 91412 & 0.3638 & 91.67 & STOP & 33\\
+3 & 91413 & 9.027 & 10.07 & STOP & 33\\
+3 & 91414 & 0.449 & 87.90 & STOP & 33\\
+3 & 91415 & 0.3911 & 80.03 & STOP & 33\\
+\bottomrule\end{tabular}\end{table*}
+Joint refinement certifies all fifteen STOP decisions within 91.68 seconds, saving 495 cells under the same acquisition policy. The ten-second energy and moment results above retain their original timing boundary. The additional two decisions occur after that boundary.

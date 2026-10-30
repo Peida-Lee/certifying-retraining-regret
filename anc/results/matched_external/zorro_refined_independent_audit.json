@@ -1,0 +1,766 @@
+{
+  "status": "PASS",
+  "reports": [
+    {
+      "dataset": "superconductivity",
+      "status": "PASS",
+      "covered_leaves": 19,
+      "verified_model_bounds": 0,
+      "exact_fixed_point_and_adapter_checks": {},
+      "all_parent_bounds_valid": true,
+      "complete_partition": true
+    },
+    {
+      "dataset": "parkinsons",
+      "status": "PASS",
+      "covered_leaves": 9,
+      "verified_model_bounds": 15,
+      "exact_fixed_point_and_adapter_checks": {
+        "0": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "71039068411682704620089346266554373/85070591730234615865843651857942052864",
+          "exact_center_lower": "291845836778086395844501534296721166771365/356811923176489970264571492362373784095686656"
+        },
+        "1": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "70982093191640041173076877783715123/85070591730234615865843651857942052864",
+          "exact_center_lower": "1170872511450507799372077889751133946562181/1427247692705959881058285969449495136382746624"
+        },
+        "2": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "564530931020547555089038160064697611/680564733841876926926749214863536422912",
+          "exact_center_lower": "72739118873473250344738120430671562183775/89202980794122492566142873090593446023921664"
+        },
+        "3": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "141929268680752160506815031499933765/170141183460469231731687303715884105728",
+          "exact_center_lower": "1172576507487403347091266541789818257633925/1427247692705959881058285969449495136382746624"
+        },
+        "4": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "566081072005837608602642410982402937/680564733841876926926749214863536422912",
+          "exact_center_lower": "4676558112958890912043910246840618145301541/5708990770823839524233143877797980545530986496"
+        },
+        "5": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "70958469434923123935404213599500941/85070591730234615865843651857942052864",
+          "exact_center_lower": "293353975654094252848454460839950692429005/356811923176489970264571492362373784095686656"
+        },
+        "6": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "566857472993793267035323724305010559/680564733841876926926749214863536422912",
+          "exact_center_lower": "4686913935332786311725347379893744129045053/5708990770823839524233143877797980545530986496"
+        },
+        "7": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "283497238638075644565761391474160819/340282366920938463463374607431768211456",
+          "exact_center_lower": "9163952403077337282670432934681716040457/11150372599265311570767859136324180752990208"
+        },
+        "8": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "567458215643002708029460354826263299/680564733841876926926749214863536422912",
+          "exact_center_lower": "4695426532375387432097862091943759746433141/5708990770823839524233143877797980545530986496"
+        },
+        "9": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "1133650067606566895500890915857222147/1361129467683753853853498429727072845824",
+          "exact_center_lower": "4693922631920777638942308598759751303213517/5708990770823839524233143877797980545530986496"
+        },
+        "10": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "1134327572163714424396110124564996119/1361129467683753853853498429727072845824",
+          "exact_center_lower": "1174243711892351293075371530131438518626853/1427247692705959881058285969449495136382746624"
+        },
+        "11": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "566551063001421345025216178047975959/680564733841876926926749214863536422912",
+          "exact_center_lower": "1173888087483558762079820763360870458244981/1427247692705959881058285969449495136382746624"
+        },
+        "12": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "283473196220042967038914993596475581/340282366920938463463374607431768211456",
+          "exact_center_lower": "293652714602576303886807629336659762429453/356811923176489970264571492362373784095686656"
+        },
+        "13": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "141588630020503259292962705616308855/170141183460469231731687303715884105728",
+          "exact_center_lower": "4690440998859955312546313782158112502161125/5708990770823839524233143877797980545530986496"
+        },
+        "14": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3840,
+          "exact_regret_upper": "70838428367407031799658604528030699/85070591730234615865843651857942052864",
+          "exact_center_lower": "4693491335544848879882012425431113340549525/5708990770823839524233143877797980545530986496"
+        }
+      },
+      "all_parent_bounds_valid": true,
+      "complete_partition": true
+    },
+    {
+      "dataset": "wine_white",
+      "status": "PASS",
+      "covered_leaves": 13,
+      "verified_model_bounds": 24,
+      "exact_fixed_point_and_adapter_checks": {
+        "0": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "145968421215158925702360285775186551/340282366920938463463374607431768211456",
+          "exact_center_lower": "4846476960803262180985007083053757903582371/11417981541647679048466287755595961091061972992"
+        },
+        "1": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "72872460896734265402638771447475687/170141183460469231731687303715884105728",
+          "exact_center_lower": "19388758475681754481231292835891999330604707/45671926166590716193865151022383844364247891968"
+        },
+        "2": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "291494316989464224165420688632337283/680564733841876926926749214863536422912",
+          "exact_center_lower": "302902967901803952045824487465271560687203/713623846352979940529142984724747568191373312"
+        },
+        "3": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "9103370782651781133317615587873073/21267647932558653966460912964485513216",
+          "exact_center_lower": "19385342754413646204846835311250329481216891/45671926166590716193865151022383844364247891968"
+        },
+        "4": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "291397108410754116531140406770374463/680564733841876926926749214863536422912",
+          "exact_center_lower": "75732818892334220117936045019977912237041/178405961588244985132285746181186892047843328"
+        },
+        "5": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "72861466927644849760420501656402631/170141183460469231731687303715884105728",
+          "exact_center_lower": "4848224481770426578930303110034559217594299/11417981541647679048466287755595961091061972992"
+        },
+        "6": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "291330356289699697030315209675624795/680564733841876926926749214863536422912",
+          "exact_center_lower": "19384253870148984880379321339249324245521251/45671926166590716193865151022383844364247891968"
+        },
+        "7": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "291330798005117588355541466324900603/680564733841876926926749214863536422912",
+          "exact_center_lower": "19394558162600422941479418841928375773071355/45671926166590716193865151022383844364247891968"
+        },
+        "8": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "72823788148759995188215978163288469/170141183460469231731687303715884105728",
+          "exact_center_lower": "4847826937664946048616233474533881920405179/11417981541647679048466287755595961091061972992"
+        },
+        "9": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "18209616788578367436150996187226259/42535295865117307932921825928971026432",
+          "exact_center_lower": "19391841142050147590460302012673577304487571/45671926166590716193865151022383844364247891968"
+        },
+        "10": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "9101064800367002424538672459544277/21267647932558653966460912964485513216",
+          "exact_center_lower": "19382939286610302490796495758553051165851587/45671926166590716193865151022383844364247891968"
+        },
+        "11": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "72833189279029124260297664796289179/170141183460469231731687303715884105728",
+          "exact_center_lower": "19395848337942935699254192418866355991554443/45671926166590716193865151022383844364247891968"
+        },
+        "12": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "18199577828864584212850419650033051/42535295865117307932921825928971026432",
+          "exact_center_lower": "19388151798407136047215375868137179100242363/45671926166590716193865151022383844364247891968"
+        },
+        "13": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "9103498080362798139621738612559965/21267647932558653966460912964485513216",
+          "exact_center_lower": "1212463075552973420491196975580403865928099/2854495385411919762116571938898990272765493248"
+        },
+        "14": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "145591298128566920975667337530971345/340282366920938463463374607431768211456",
+          "exact_center_lower": "19392605928004780175937083723247046951562099/45671926166590716193865151022383844364247891968"
+        },
+        "15": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "9103442461959488468658365201349003/21267647932558653966460912964485513216",
+          "exact_center_lower": "1212407070452738888146413628963008638720779/2854495385411919762116571938898990272765493248"
+        },
+        "16": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "291171047098162695382713817191162513/680564733841876926926749214863536422912",
+          "exact_center_lower": "19390933936985603020978756362050332847477451/45671926166590716193865151022383844364247891968"
+        },
+        "17": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "36401867474082093460298715570510749/85070591730234615865843651857942052864",
+          "exact_center_lower": "19385954271109821197879814952527592212856523/45671926166590716193865151022383844364247891968"
+        },
+        "18": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "72794682176221254410335739807343111/170141183460469231731687303715884105728",
+          "exact_center_lower": "19382619803488290309125118354433049337995435/45671926166590716193865151022383844364247891968"
+        },
+        "19": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "291168586536935634069552715038818017/680564733841876926926749214863536422912",
+          "exact_center_lower": "4848998828626249392103008749506559100121307/11417981541647679048466287755595961091061972992"
+        },
+        "20": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "72824154402425249843914272564790007/170141183460469231731687303715884105728",
+          "exact_center_lower": "19403197858544560004703283631778788050366043/45671926166590716193865151022383844364247891968"
+        },
+        "21": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "291290503402204076739833720208826775/680564733841876926926749214863536422912",
+          "exact_center_lower": "4850543706991478517085883823517857022081139/11417981541647679048466287755595961091061972992"
+        },
+        "22": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "36394755893713949422468970613765267/85070591730234615865843651857942052864",
+          "exact_center_lower": "9470304007591886897693223023791061671997/22300745198530623141535718272648361505980416"
+        },
+        "23": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 3176,
+          "exact_regret_upper": "145632287373417268161425795521820831/340282366920938463463374607431768211456",
+          "exact_center_lower": "19389537598724038759656045507029369333397859/45671926166590716193865151022383844364247891968"
+        }
+      },
+      "all_parent_bounds_valid": true,
+      "complete_partition": true
+    },
+    {
+      "dataset": "yacht",
+      "status": "PASS",
+      "covered_leaves": 22,
+      "verified_model_bounds": 41,
+      "exact_fixed_point_and_adapter_checks": {
+        "0": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "174393392885825277035427289599897/228461061775532415655341838485684224",
+          "exact_center_lower": "265308194553747961491350257515889704611903/356811923176489970264571492362373784095686656"
+        },
+        "1": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "1194395368487557801113354099587459/1599227432428726909587392869399789568",
+          "exact_center_lower": "2972313981619396344396155463296747857830998989/4019129502659983025060133289969778304053814493184"
+        },
+        "2": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "304785919526236467728012427136143/399806858107181727396848217349947392",
+          "exact_center_lower": "5152061622215851872311452678789356901116739/6868629521147431927593001227975695343841968128"
+        },
+        "3": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "1204278533329762849036246121806145/1599227432428726909587392869399789568",
+          "exact_center_lower": "1281873362965275836771530897895148486417531/1717157380286857981898250306993923835960492032"
+        },
+        "4": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "609343448168398687747655389260157/799613716214363454793696434699894784",
+          "exact_center_lower": "46257756406746203808664560145164834494049/61327049295959213639223225249782994141446144"
+        },
+        "5": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "2421573146254573076767499856631589/3198454864857453819174785738799579136",
+          "exact_center_lower": "322870917624387869121200052716443811420745/429289345071714495474562576748480958990123008"
+        },
+        "6": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "304622184746809361810009378240265/399806858107181727396848217349947392",
+          "exact_center_lower": "649608562626378762645849868359767771338795/858578690143428990949125153496961917980246016"
+        },
+        "7": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "2428841868378345335211199086383065/3198454864857453819174785738799579136",
+          "exact_center_lower": "162147968220805955903775731519421913526963/214644672535857247737281288374240479495061504"
+        },
+        "8": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "152299531525481021829670065802781/199903429053590863698424108674973696",
+          "exact_center_lower": "81332348508252610956271415556703400411273/107322336267928623868640644187120239747530752"
+        },
+        "9": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "608166477387850468874474278644371/799613716214363454793696434699894784",
+          "exact_center_lower": "650129474465804326866142221392028086564227/858578690143428990949125153496961917980246016"
+        },
+        "10": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "174050229627354019837593445513573/228461061775532415655341838485684224",
+          "exact_center_lower": "1302393045904473679842688312472860826461429/1717157380286857981898250306993923835960492032"
+        },
+        "11": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "173901798235214479964281873430439/228461061775532415655341838485684224",
+          "exact_center_lower": "1301853203150792843584715616670356762989891/1717157380286857981898250306993923835960492032"
+        },
+        "12": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "609164838354832590747921488063295/799613716214363454793696434699894784",
+          "exact_center_lower": "7403051759632359051834526818542999927875/9756576024357147624421876744283658158866432"
+        },
+        "13": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "304452080248311153530233024951443/399806858107181727396848217349947392",
+          "exact_center_lower": "81416534364518089434561003690463221478981/107322336267928623868640644187120239747530752"
+        },
+        "14": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "43511386040550891212232423663139/57115265443883103913835459621421056",
+          "exact_center_lower": "93086480441608089764843305001188389620877/122654098591918427278446450499565988282892288"
+        },
+        "15": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "43509136982946379695947404995297/57115265443883103913835459621421056",
+          "exact_center_lower": "162921308750360641085826666106620396128785/214644672535857247737281288374240479495061504"
+        },
+        "16": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "21749356898366524206395631021915/28557632721941551956917729810710528",
+          "exact_center_lower": "81440261068742635064942662731620263848723/107322336267928623868640644187120239747530752"
+        },
+        "17": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "174027817275334101193836197394885/228461061775532415655341838485684224",
+          "exact_center_lower": "1303526234157526455088990718229971908847235/1717157380286857981898250306993923835960492032"
+        },
+        "18": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "608957145481362813158325147564619/799613716214363454793696434699894784",
+          "exact_center_lower": "325801882866377262866518452332276310623619/429289345071714495474562576748480958990123008"
+        },
+        "19": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "1218112186809454732801546342849765/1599227432428726909587392869399789568",
+          "exact_center_lower": "93118398800215231150991007511289752582141/122654098591918427278446450499565988282892288"
+        },
+        "20": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "304474643255084003338187181076925/399806858107181727396848217349947392",
+          "exact_center_lower": "186198266950273053588448796114997189432251/245308197183836854556892900999131976565784576"
+        },
+        "21": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "1217851621457040612498162261812009/1599227432428726909587392869399789568",
+          "exact_center_lower": "1303520843419019957416189315597408892684819/1717157380286857981898250306993923835960492032"
+        },
+        "22": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "2436214962302835601404528654383869/3198454864857453819174785738799579136",
+          "exact_center_lower": "20371790426382958178213676487049750063627/26830584066982155967160161046780059936882688"
+        },
+        "23": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "609027850854608474630058296728647/799613716214363454793696434699894784",
+          "exact_center_lower": "325978164038216041527541351344937009729637/429289345071714495474562576748480958990123008"
+        },
+        "24": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "2435695940620131290307611729124343/3198454864857453819174785738799579136",
+          "exact_center_lower": "40739658799412177886252963080319071835229/53661168133964311934320322093560119873765376"
+        },
+        "25": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "348000586675007489266299372311857/456922123551064831310683676971368448",
+          "exact_center_lower": "652014816102930362638299672286615069578861/858578690143428990949125153496961917980246016"
+        },
+        "26": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "608896727618377267000766665302617/799613716214363454793696434699894784",
+          "exact_center_lower": "11640967362869599235673433695143609619341/15331762323989803409805806312445748535361536"
+        },
+        "27": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "2435538879551808857677139427925415/3198454864857453819174785738799579136",
+          "exact_center_lower": "1303917373486245381657440125116005069913185/1717157380286857981898250306993923835960492032"
+        },
+        "28": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "2435909682829638490507154473025545/3198454864857453819174785738799579136",
+          "exact_center_lower": "1304136799435255828075078184419787034424725/1717157380286857981898250306993923835960492032"
+        },
+        "29": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "1217903339191039725669918006858635/1599227432428726909587392869399789568",
+          "exact_center_lower": "81449930543841777238343056858363974516721/107322336267928623868640644187120239747530752"
+        },
+        "30": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "76101541052833451621144025938875/99951714526795431849212054337486848",
+          "exact_center_lower": "16920550369925684396035077763740707295785/22300745198530623141535718272648361505980416"
+        },
+        "31": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "695935798831310013836892259954665/913844247102129662621367353942736896",
+          "exact_center_lower": "652119411534288804643648049098506229723695/858578690143428990949125153496961917980246016"
+        },
+        "32": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "1217728506781535433302833276626949/1599227432428726909587392869399789568",
+          "exact_center_lower": "1304027201483409190232740807520786182692449/1717157380286857981898250306993923835960492032"
+        },
+        "33": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "304457980554964851864861348745499/399806858107181727396848217349947392",
+          "exact_center_lower": "162917236291432778324570321608814780384589/214644672535857247737281288374240479495061504"
+        },
+        "34": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "304404946195610552759539716038457/399806858107181727396848217349947392",
+          "exact_center_lower": "651535107926491136444948211879636991786007/858578690143428990949125153496961917980246016"
+        },
+        "35": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "1217821295509385312792049217673335/1599227432428726909587392869399789568",
+          "exact_center_lower": "46547466151676851593070994546931374025955/61327049295959213639223225249782994141446144"
+        },
+        "36": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "76100596329771118447682297990133/99951714526795431849212054337486848",
+          "exact_center_lower": "1303061792384564992009374515115595096111645/1717157380286857981898250306993923835960492032"
+        },
+        "37": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "347896517262880588817530129747581/456922123551064831310683676971368448",
+          "exact_center_lower": "651625508118684627466408485216798253631783/858578690143428990949125153496961917980246016"
+        },
+        "38": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "608946919272351775162379218680505/799613716214363454793696434699894784",
+          "exact_center_lower": "81470311575418237591503362839018505977319/107322336267928623868640644187120239747530752"
+        },
+        "39": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "2435272114182979062983085403583283/3198454864857453819174785738799579136",
+          "exact_center_lower": "651700294021550619022351609986742709031369/858578690143428990949125153496961917980246016"
+        },
+        "40": {
+          "status": "PASS",
+          "fixed_point_equations": true,
+          "joint_symbol_regret_upper": true,
+          "forcing_monomials": 2180,
+          "regret_monomials": 2761,
+          "exact_regret_upper": "27678283729723309231017535462449/36346078009743793399713474304540672",
+          "exact_center_lower": "81477775809120275101506891226139413754005/107322336267928623868640644187120239747530752"
+        }
+      },
+      "all_parent_bounds_valid": true,
+      "complete_partition": true
+    }
+  ],
+  "seconds": 337.4108272000449,
+  "imports_refinement_or_adapter_implementation": false
+}

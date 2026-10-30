@@ -1,0 +1,42 @@
+{
+  "file": "D:\\ISSP\\research_20261025\\exploration_v75\\structure_representative_certificate.json",
+  "status": "PASS",
+  "audit_type": "independent_Fraction_original_data_and_complete_tree",
+  "imports_solver_implementation": false,
+  "n": 128,
+  "p": 65,
+  "m": 64,
+  "alpha": "1/32",
+  "rank": 1,
+  "full_rank_minor_uniform_lower": "4707826301540010572876842067405749812076766583348025884672",
+  "all_family_input_conditions_verified": true,
+  "exact_midpoint_ridge_fit_verified": true,
+  "actual_scalar_T_and_rounded_basis_verified": true,
+  "original_data_radius_and_energy_tail_verified": true,
+  "analytic_and_covariance_pca_formulas_verified": true,
+  "tail_error": "1/1280000",
+  "exact_original_H": "10/8001",
+  "exact_retained_V": "2/1601",
+  "reported_lower": "5763887036781567/4611686018427387904",
+  "reported_upper": "5766916425166617/4611686018427387904",
+  "point_count": 15,
+  "node_count": 13,
+  "terminal_count": 7,
+  "mode": "adaptive",
+  "bound_minimizers": {
+    "parent_cap": 1,
+    "corner_interpolation": 12
+  },
+  "exact_terminal_upper": "5766916425166617/4611686018427387904",
+  "independent_original_upper": "5766916425166617/4611686018427387904",
+  "exact_original_witness_regret": "13609593477652831934543166401469651741/10889035741470030830827987437816582766592",
+  "feasible_lower_justification": "5763887036781567/4611686018427387904",
+  "exact_point_original_values_verified": true,
+  "every_node_upper_verified": true,
+  "complete_binary_coverage_verified": true,
+  "all_terminal_uppers_verified": true,
+  "original_full_witness_verified": true,
+  "logical_cpu_affinity": [
+    6
+  ]
+}

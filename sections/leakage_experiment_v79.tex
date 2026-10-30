@@ -1,0 +1,25 @@
+\subsection{Signal-support leakage with a uniform energy certificate}\label{app:leakage-experiment-v79}
+We retain the original $n=128,p=65$ mechanism with $\alpha=1/32$, $\lambda=1/2$, weights $1/128$ and fixed candidate $\beta=e_0$, and change every signal row to $x_i=u_ie_0+\delta e_1$, $u_i\in[3/4,5/4]$. Nuisance rows, responses and independent uncertainty intervals stay as declared. The five leakage levels were fixed before outcomes. At positive $\delta$ the candidate is no longer the perturbed midpoint fit: its exact midpoint gradient is $-(\delta/2)e_1$. Both methods retain the declared $e_0$ direction, so this measures certificate stability with fixed directions.
+
+The original-row constants satisfy $\epsilon=d=0$, $a^2=\alpha^2/2$, $\sigma^2=E^2=25/32$, $b^2=\delta^2/2$, $G=1/32$, $\kappa=25/32$. We use the conservative rational curvature, radius and energy tail
+\begin{align*}
+ \kappa_\delta&=\frac{25+16\delta^2}{32(1+\delta^2)},\\
+ \overline R_\delta&=\frac{(1+20\alpha\delta+25\delta^2)(1+\delta^2)}{25+16\delta^2},\\
+ \overline\eta_\delta&=\frac12\left[\alpha\overline R_\delta+
+       \frac{5\delta}{4}(1+\overline R_\delta)\right]^2.
+\end{align*}
+These verify a uniform projection-error bound for every completion. Energy and general-moment searches use the same actual scalar ridge-anchor transformation, full original comparator, declared direction and measured common input/anchor cost. Each receives its own two-second search cap and $10^{-6}$ final-width target.
+
+\begin{table*}[t]\centering\small
+\caption{Signal-support leakage: tails and final widths in $10^{-6}$ units; total seconds include common input/anchor setup and each method's setup/search. All five energy widths meet $10^{-6}$; general moment reaches a tail/arithmetic floor in all five.}\label{tab:leakage-experiment-v79}
+\begin{tabular}{rrrrrr}\toprule $\delta$&Energy tail&Energy width&Moment width&Energy s&Moment s\\\midrule
+0&0.7812&0.6569&57.07&0.550&0.871\\
+$2^{-18}$&0.7875&0.6628&57.12&0.545&0.870\\
+$2^{-16}$&0.8063&0.6806&57.28&0.548&0.892\\
+$2^{-14}$&0.8836&0.7538&57.91&0.541&0.893\\
+$2^{-12}$&1.2286&0.6993&60.43&0.573&0.884\\
+\bottomrule\end{tabular}\end{table*}
+
+At $\delta=2^{-12}$ the energy tail alone is $1.22865\times10^{-6}$, exceeding the $10^{-6}$ target. The final bracket nevertheless has width $6.99261\times10^{-7}$: full-model witness retraining strengthens the lower endpoint beyond a retained-only lower, while further retained subdivision tightens the upper. This condition is retained as a missed tail-only budget and a met final-width target. The experiment illustrates the stated neighborhood with controlled leakage; it does not establish the same small tail for arbitrary leakage magnitude.
+
+A solver-independent Fraction program checks every actual input cell, the midpoint gradient and a uniformly positive full-rank minor, the actual dyadic transform, rational $\kappa_\delta,\overline R_\delta,\overline\eta_\delta$, and the outward root. It computes the global cap from exact original-gradient scalar-quadratic ranges coordinate by coordinate. Across all five certificates it verifies 77 retained query points, 67 tree nodes, complete binary coverage with 36 terminal leaves, and feasible original-table witness losses. The retained optimum $V_{e_0}=1/(800+512\alpha^2)$ is checked separately by joint gradient/curvature attainment. No analytic formula for the full perturbed optimum is assumed or substituted for the uniform-tail and tree proof.

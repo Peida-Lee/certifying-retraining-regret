@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "original_normal_equation_cases": 18,
+  "reports": [
+    {
+      "scale": 1,
+      "pattern": 0,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 1,
+      "pattern": 1,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 1,
+      "pattern": 2,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 2,
+      "pattern": 0,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 2,
+      "pattern": 1,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 2,
+      "pattern": 2,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 4,
+      "pattern": 0,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 4,
+      "pattern": 1,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 4,
+      "pattern": 2,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 16,
+      "pattern": 0,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 16,
+      "pattern": 1,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 16,
+      "pattern": 2,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 64,
+      "pattern": 0,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 64,
+      "pattern": 1,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 64,
+      "pattern": 2,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 256,
+      "pattern": 0,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 256,
+      "pattern": 1,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    },
+    {
+      "scale": 256,
+      "pattern": 2,
+      "normal_equations": "PASS",
+      "full_metric_lower": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "status": "PASS",
+  "conditions": 15,
+  "core_energy_receipts": 30,
+  "original_witnesses": 30,
+  "adaptive_complete_trees": 3,
+  "pure_energy_mathematical_tree_checks": 3,
+  "disjoint_pools": true,
+  "exact_relative_tolerance": "1/50",
+  "reports": [
+    {
+      "pool": 0,
+      "seed": 91411,
+      "adaptive_complete_tree": {
+        "nodes": 1467,
+        "points": 2525,
+        "leaves": 734,
+        "binary_coverage": true,
+        "exact_original_row_values": true
+      },
+      "pure_energy_tree": "identical mathematical tree and tail to audited adaptive tree",
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    },
+    {
+      "pool": 0,
+      "seed": 91412,
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    },
+    {
+      "pool": 0,
+      "seed": 91413,
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    },
+    {
+      "pool": 0,
+      "seed": 91414,
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    },
+    {
+      "pool": 0,
+      "seed": 91415,
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    },
+    {
+      "pool": 1,
+      "seed": 91411,
+      "adaptive_complete_tree": {
+        "nodes": 1249,
+        "points": 2177,
+        "leaves": 625,
+        "binary_coverage": true,
+        "exact_original_row_values": true
+      },
+      "pure_energy_tree": "identical mathematical tree and tail to audited adaptive tree",
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    },
+    {
+      "pool": 1,
+      "seed": 91412,
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    },
+    {
+      "pool": 1,
+      "seed": 91413,
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    },
+    {
+      "pool": 1,
+      "seed": 91414,
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    },
+    {
+      "pool": 1,
+      "seed": 91415,
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    },
+    {
+      "pool": 2,
+      "seed": 91411,
+      "adaptive_complete_tree": {
+        "nodes": 1451,
+        "points": 2475,
+        "leaves": 726,
+        "binary_coverage": true,
+        "exact_original_row_values": true
+      },
+      "pure_energy_tree": "identical mathematical tree and tail to audited adaptive tree",
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    },
+    {
+      "pool": 2,
+      "seed": 91412,
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    },
+    {
+      "pool": 2,
+      "seed": 91413,
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    },
+    {
+      "pool": 2,
+      "seed": 91414,
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    },
+    {
+      "pool": 2,
+      "seed": 91415,
+      "status": "PASS",
+      "adaptive_constants": true,
+      "pure_energy_constants_shared_and_verified": true,
+      "both_original_witnesses": true,
+      "midpoint_interval": true,
+      "frozen_candidate": true,
+      "exact_decision_rule": true
+    }
+  ],
+  "seconds": 228.17433760000858,
+  "imports_solver_implementation": false
+}

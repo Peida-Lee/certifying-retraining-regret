@@ -1,0 +1,35 @@
+\section{Additional Geometry and Search Details}\label{app:method-details}
+
+\subsection{The interior counterexample}
+Proposition~\ref{prop:interior} follows by minimizing each diagonal quadratic: the first-coordinate optimum is $(1+t^2+3\lambda)^{-1}$. At $t=\pm A$ this equals the candidate, whereas the difference at $t=0$ gives the stated positive regret. All tables have full column rank, including the unregularized example.
+
+\subsection{Row-face extremizers (Theorem~\ref{thm:row})}
+\begin{proof}
+Fix a globally maximizing pair $(X,\theta)$. In one row, fix $b=x^\top\theta-y_i$ at its maximizing value. Maximizing the remaining convex function $(x^\top\beta-y_i)^2$ over the box intersected with this one hyperplane has an extreme-point solution. Such a point has at most one non-endpoint coordinate: with two free coordinates there is a nonzero feasible perturbation preserving the hyperplane. Replacing the row preserves or increases the joint objective. Applying this to every row preserves global optimality.
+\end{proof}
+
+\subsection{Sharp spectral tail (Theorem~\ref{thm:tail})}
+\begin{proof}
+For each completion, eliminating discarded coordinates replaces the residual penalty by $(I+E_XE_X^\top)^{-1}$, between $\gamma I$ and $I$. Eliminating retained coordinates too gives an inverse difference with scalar eigenvalue bound $\rho/(1+\rho)$. Apply it to the reference residual $d_X$ and maximize over completions. For the witness statement, let $f=F_\gamma(s)$ and let $\widehat X$ attain its row maxima. At that same $s$, the undiscounted fixed-table objective is $f-(1-\gamma)\|d_{\widehat X}-A_{\widehat X}s\|^2$. Optimize the undiscounted retained comparator for this fixed table: the inverse-difference bound above gives its optimum at least the discounted fixed-table optimum minus $\rho B_0^2/(1+\rho)$, and the latter optimum is at least $f$. Full retraining can only increase this feasible regret. Thus $h_\beta(\widehat X)\geq f-\rho B_0^2/(1+\rho)$, proving~\eqref{eq:witness} after adding $U-f\leq\delta$.
+\end{proof}
+
+\subsection{Sharpness on an original table.}
+Take one record and one feature, $w=\lambda=1$, $\beta=0$, $y=B$, $x\in[-\sqrt{\rho},\sqrt{\rho}]$, and retain rank zero. The lower projected value is zero, while the exact full regret and the upper value equal $\rho B^2/(1+\rho)$.
+
+\subsection{A finite root and computable curvature.}
+For fixed $X$, the retained optimum is
+\begin{equation}
+ s_c=c(I+cA_X^\top A_X)^{-1}A_X^\top d_X.
+\end{equation}
+The singular-value multiplier $c\sigma/(1+c\sigma^2)$ is at most $\sqrt c/2$. Therefore a global optimizer lies in $\|s\|\leq\sqrt c B_0/2$. Valid curvature diagonals are
+\begin{equation}
+ H_j=1+c\sum_iw_i\left(|q_j^\top Tc_i|+
+                 \sum_l s_{il}|q_j^\top Te_l|\right)^2.\label{eq:curv}
+\end{equation}
+
+
+
+\subsection{Curvature interpolation (Theorem~\ref{thm:interp})}
+\begin{proof}
+Independently randomize the coordinates of a box vertex $q$ to have mean $s$. For each fixed completion, the quadratic identity expresses its value at $s$ as its expected value at $q$ plus diagonal curvature times $(s_j-l_j)(u_j-s_j)$. The expected value is bounded by the largest vertex value of $F_c$, and each product is at most $(u_j-l_j)^2/4$. Maximize over completions and parameters. Cross terms are preserved by independent endpoint interpolation.
+\end{proof}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "reports": [
+    {
+      "dataset": "superconductivity",
+      "status": "PASS",
+      "bound_origin": "shared independently audited cap; incomplete fixed-point cover"
+    },
+    {
+      "dataset": "parkinsons",
+      "status": "PASS",
+      "fixed_point_equations": true,
+      "joint_symbol_regret_upper": true,
+      "forcing_monomials": 2180,
+      "regret_monomials": 3840,
+      "exact_regret_upper": "71039068411682704620089346266554373/85070591730234615865843651857942052864"
+    },
+    {
+      "dataset": "wine_white",
+      "status": "PASS",
+      "fixed_point_equations": true,
+      "joint_symbol_regret_upper": true,
+      "forcing_monomials": 2180,
+      "regret_monomials": 3176,
+      "exact_regret_upper": "145968421215158925702360285775186551/340282366920938463463374607431768211456"
+    },
+    {
+      "dataset": "yacht",
+      "status": "PASS",
+      "fixed_point_equations": true,
+      "joint_symbol_regret_upper": true,
+      "forcing_monomials": 2180,
+      "regret_monomials": 2761,
+      "exact_regret_upper": "174393392885825277035427289599897/228461061775532415655341838485684224"
+    }
+  ],
+  "seconds": 20.663138100062497,
+  "imports_adapter_implementation": false
+}

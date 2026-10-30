@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "analytic_cases": [
+    {
+      "case": 0,
+      "status": "PASS",
+      "optimum": "1",
+      "upper": "1"
+    },
+    {
+      "case": 1,
+      "status": "PASS",
+      "optimum": "1/4",
+      "upper": "1/4"
+    },
+    {
+      "case": 2,
+      "status": "PASS",
+      "optimum": "3/16",
+      "upper": "3/16"
+    },
+    {
+      "case": 3,
+      "status": "PASS",
+      "optimum": "-1/2",
+      "upper": "-1/2"
+    },
+    {
+      "case": 4,
+      "status": "PASS",
+      "optimum": "3/2",
+      "upper": "3/2"
+    },
+    {
+      "case": 5,
+      "status": "PASS",
+      "optimum": "1/16",
+      "upper": "1/16"
+    }
+  ],
+  "screened_points_checked": 238,
+  "sparse_oracles_against_exact": [
+    {
+      "row": 0,
+      "domain": null,
+      "status": "PASS",
+      "numeric": 170756.1016082764,
+      "exact_upper": 170756.10160827637
+    },
+    {
+      "row": 0,
+      "domain": [
+        0.521875,
+        0.634375
+      ],
+      "status": "PASS",
+      "numeric": 154044.22416687012,
+      "exact_upper": 154044.22416687012
+    },
+    {
+      "row": 1,
+      "domain": null,
+      "status": "PASS",
+      "numeric": 106179.31683858237,
+      "exact_upper": 106179.31683858235
+    },
+    {
+      "row": 1,
+      "domain": [
+        0.271875,
+        0.384375
+      ],
+      "status": "PASS",
+      "numeric": 106179.31683858237,
+      "exact_upper": 106179.31683858235
+    }
+  ],
+  "exact_original_majorant_identities": 20
+}

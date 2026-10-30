@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "original_normal_equations": true,
+  "orthogonal_displacements": true,
+  "active_components": [
+    "320/8001",
+    "80/9041"
+  ],
+  "squared_norms": [
+    "102416/64016001",
+    "6401/81739681"
+  ],
+  "a_squared": "1/2048",
+  "G_squared": "17/65536",
+  "kappa": "25/64",
+  "radius_squared": "17/10000",
+  "energy_upper": "17/20480000",
+  "conservative_all_line_lower": "25600/1371850897",
+  "exact_two_point_lower": "25604/1371850897",
+  "epsilon": "1/100000",
+  "intrinsic_dimension": 2,
+  "solver_imported": false,
+  "source_public_data_opened": false
+}

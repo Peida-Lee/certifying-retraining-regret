@@ -1,0 +1,23 @@
+\subsection{An automatic original-row energy pipeline}\label{app:auto-energy-v80}
+We connect direction selection and the leakage-energy theorem in a frozen six-condition experiment with $n=32,p=17$, $\alpha=1/32$ and $\lambda=1/2$. Perturbations cross balanced nuisance-response shifts $\delta$, a fixed signal-row discarded coefficient $\ell$, and a candidate coefficient $\gamma$, with fixed candidate $\beta=e_0+\gamma e_1$. The grid is listed in Table~\ref{tab:auto-energy-v80}.
+
+For every input the actual uncertainty-gradient proposal supplies a rounded rank-one numerical direction $R$. Its physical vector is computed exactly as $r=TR$. We use $Q=r/\sqrt{h}$ implicitly, with $h=r^\top r$, $\Pi=rr^\top/h$ and $D=I-\Pi$, preserving the actual search span. A row enters the signal partition when its exact maximum absolute candidate residual is at least half the largest row score. Thus partition labels and direction both come from the current input. The threshold is fixed across conditions.
+
+The verifier computes retained projection ranges, actual residual energies, aggregate retained signal-gradient ranges and a positive retained-curvature lower bound directly from the original intervals. It obtains signal leakage through the endpoint maximum of $x^\top Dx$ and candidate leakage through $\beta^\top D\beta$. Each row in this pilot has one uncertain coordinate, so exact scalar-quadratic ranges verify these quantities. Rational upward square roots supply $a,\epsilon,\sigma,E,b,d,G$ for the strongest leakage-energy theorem. Its all-completions radius is converted to actual numerical coordinates with the exact check $hR_{\mathrm{coord}}^2\geq R_{\mathrm{physical}}^2$.
+
+All six inputs yield verified energy constants and the same automatically selected partition of 16 signal and 16 nuisance rows. The rounded gradient proposals recover $\operatorname{span}(e_0)$ in all six cases. Condition 6 has actual discarded candidate norm $d=2^{-18}$ and nuisance residual-energy bound $\epsilon^2=2(2^{-18})^2$. This grid evaluates automatic recovery and verified perturbation stability at the axis-aligned mechanism; the generic projector formulas also accept non-axis directions.
+
+\begin{table*}[t]\centering\small
+\caption{Automatic energy pipeline. Tails and final widths use $10^{-6}$ units. Both methods receive the same automatically proposed direction and the full original comparator; each has a two-second search cap and a $10^{-6}$ final-width target.}\label{tab:auto-energy-v80}
+\begin{tabular}{lrrrrrr}\toprule Condition&$\delta$&$\ell$&$\gamma$&Energy tail&Energy width&Moment width\\\midrule
+1&0&0&0&0.7813&0.6569&22.74\\
+2&$2^{-18}$&0&0&0.7860&0.6617&22.79\\
+3&0&$2^{-18}$&0&0.7875&0.6625&22.77\\
+4&$2^{-18}$&$2^{-18}$&0&0.7923&0.6673&22.81\\
+5&$2^{-16}$&$2^{-16}$&0&0.8258&0.6988&23.01\\
+6&$2^{-18}$&$2^{-18}$&$2^{-18}$&0.8019&0.6793&22.85\\
+\bottomrule\end{tabular}\end{table*}
+
+All six energy tails satisfy the budget and all six final widths meet the target. The paired general-moment certificate reaches a tail/arithmetic floor in all six, with widths $22.74$--$23.01\times10^{-6}$. Direction construction takes $0.30$--$0.34$ ms; exact partition and constant verification take $7.1$--$7.4$ ms. Complete energy times are $0.057$--$0.071$ seconds. Both branches are charged the same complete pipeline stage, including the energy-constant verification; the moment totals of $0.141$--$0.160$ seconds therefore include that common diagnostic overhead. The experiment evaluates applicability, certified widths and complete-pipeline costs. Positive perturbations retain their fixed candidates and actual residuals throughout.
+
+An independent Fraction auditor reconstructs every original-row residual and projection bound, partition, actual dyadic span, anchor metric and outward search root. It verifies all six energy trees: 90 original-row query points, 78 nodes, 42 terminal leaves, complete binary coverage and six feasible full-model table witnesses. The auditor imports no implementation and assumes no analytic full optimum. Proposal execution is established by the runner; the independent proof audit begins from its saved actual direction. All six empirical directions span $e_0$.

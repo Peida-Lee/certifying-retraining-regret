@@ -1,0 +1,17 @@
+% Optional compact comparison table; uses only standard tabular, booktabs.
+\begin{table*}[t]
+\centering
+\caption{Guarantees for different dimension-reduction tasks. ``All completions'' refers to a fixed finite interval-valued table domain. References are to the inspected arXiv versions.}
+\label{tab:related_guarantees}
+\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{0.19\textwidth}p{0.29\textwidth}p{0.18\textwidth}p{0.25\textwidth}}
+\toprule
+Work & Guaranteed quantity and mode & All completions & Full-dimensional comparison \\
+\midrule
+Quarteroni et~al. (2011), Sec.~6; Balabanov--Nouy (2019), Secs.~2.2--2.3 & Residual/coercivity solution and output-error certificates; Galerkin/POD spaces & Parameterwise certificates; uniformity requires parameter-domain bounds & Full-order parametrized equation solution \\
+Chen et~al. (2025), Thm.~5 & Distribution-averaged $L^2$ function error; Jacobian bounds & No such guarantee stated & Original function $G$; reduced function approximation \\
+Patil--LeJeune (2024), Thms.~2--3 & Prediction-risk equivalence and GCV consistency; almost-sure asymptotics & No such guarantee stated & Unsketched $p$-feature ridge at implicit $\mu$; finite-ensemble variance \\
+Present residual-energy theorem & Additive enclosure of maximum completion-relative training regret; finite problem & Yes, under uniform row conditions & Exact retraining in all $p$ features at the original $\lambda$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,469 @@
+{
+  "protocol": "planar_protocol.md",
+  "cpu": 8,
+  "threads": 1,
+  "exact_checks": [
+    {
+      "k": 1,
+      "case": 0,
+      "exact_equal": true,
+      "maximum": "97/64",
+      "witness": [
+        "-1"
+      ],
+      "planar_seconds": 0.00013420009054243565,
+      "box_seconds": 2.3999949917197227e-05,
+      "interior": false
+    },
+    {
+      "k": 1,
+      "case": 1,
+      "exact_equal": true,
+      "maximum": "-11/64",
+      "witness": [
+        "-1"
+      ],
+      "planar_seconds": 5.259993486106396e-05,
+      "box_seconds": 2.6000081561505795e-05,
+      "interior": false
+    },
+    {
+      "k": 1,
+      "case": 2,
+      "exact_equal": true,
+      "maximum": "-3/256",
+      "witness": [
+        "-1"
+      ],
+      "planar_seconds": 0.0001243998995050788,
+      "box_seconds": 3.0100112780928612e-05,
+      "interior": false
+    },
+    {
+      "k": 2,
+      "case": 0,
+      "exact_equal": true,
+      "maximum": "107/32",
+      "witness": [
+        "-1",
+        "1"
+      ],
+      "planar_seconds": 0.00015089998487383127,
+      "box_seconds": 0.00010179996024817228,
+      "interior": false
+    },
+    {
+      "k": 2,
+      "case": 1,
+      "exact_equal": true,
+      "maximum": "-1/32",
+      "witness": [
+        "-1",
+        "1"
+      ],
+      "planar_seconds": 8.60999571159482e-05,
+      "box_seconds": 9.089999366551638e-05,
+      "interior": false
+    },
+    {
+      "k": 2,
+      "case": 2,
+      "exact_equal": true,
+      "maximum": "0",
+      "witness": [
+        "0",
+        "-1"
+      ],
+      "planar_seconds": 0.00014239992015063763,
+      "box_seconds": 0.00010160007514059544,
+      "interior": true
+    },
+    {
+      "k": 4,
+      "case": 0,
+      "exact_equal": true,
+      "maximum": "83/32",
+      "witness": [
+        "-1",
+        "-1",
+        "1",
+        "-1"
+      ],
+      "planar_seconds": 0.00023729994427412748,
+      "box_seconds": 0.0009849000489339232,
+      "interior": false
+    },
+    {
+      "k": 4,
+      "case": 1,
+      "exact_equal": true,
+      "maximum": "3/8",
+      "witness": [
+        "-1",
+        "1",
+        "1",
+        "2/3"
+      ],
+      "planar_seconds": 0.0001976999919861555,
+      "box_seconds": 0.000928599969483912,
+      "interior": true
+    },
+    {
+      "k": 4,
+      "case": 2,
+      "exact_equal": true,
+      "maximum": "0",
+      "witness": [
+        "1",
+        "1",
+        "-1/3",
+        "-1"
+      ],
+      "planar_seconds": 0.00022849999368190765,
+      "box_seconds": 0.0009403000585734844,
+      "interior": true
+    },
+    {
+      "k": 8,
+      "case": 0,
+      "exact_equal": true,
+      "maximum": "5157/256",
+      "witness": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "-1",
+        "-1",
+        "-1",
+        "1"
+      ],
+      "planar_seconds": 0.00043889996595680714,
+      "box_seconds": 0.042845699936151505,
+      "interior": false
+    },
+    {
+      "k": 8,
+      "case": 1,
+      "exact_equal": true,
+      "maximum": "75/128",
+      "witness": [
+        "-1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "-5/12",
+        "-1"
+      ],
+      "planar_seconds": 0.0004056999459862709,
+      "box_seconds": 0.04652870004065335,
+      "interior": true
+    },
+    {
+      "k": 8,
+      "case": 2,
+      "exact_equal": true,
+      "maximum": "0",
+      "witness": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "-1/3",
+        "-1",
+        "-1"
+      ],
+      "planar_seconds": 0.0004594000056385994,
+      "box_seconds": 0.04353389993775636,
+      "interior": true
+    }
+  ],
+  "timings": [
+    {
+      "k": 4,
+      "coefficient_center": [
+        "1/8",
+        "-1/4"
+      ],
+      "generators": [
+        [
+          "0",
+          "7/8"
+        ],
+        [
+          "-5/8",
+          "-1"
+        ],
+        [
+          "7/8",
+          "-1/4"
+        ],
+        [
+          "-1/4",
+          "-7/8"
+        ]
+      ],
+      "planar_seconds": [
+        0.0002609000075608492,
+        0.00022980000358074903,
+        0.00020969996694475412
+      ],
+      "planar_median": 0.00022980000358074903,
+      "box_seconds": [
+        0.0009379000402987003,
+        0.0010694999946281314,
+        0.0019339999416843057
+      ],
+      "box_median": 0.0010694999946281314
+    },
+    {
+      "k": 8,
+      "coefficient_center": [
+        "1/8",
+        "-1/4"
+      ],
+      "generators": [
+        [
+          "-1/2",
+          "-1/8"
+        ],
+        [
+          "0",
+          "1/4"
+        ],
+        [
+          "3/8",
+          "1/8"
+        ],
+        [
+          "3/4",
+          "-5/8"
+        ],
+        [
+          "7/8",
+          "7/8"
+        ],
+        [
+          "1/8",
+          "1/2"
+        ],
+        [
+          "-1/4",
+          "1"
+        ],
+        [
+          "1/4",
+          "-3/4"
+        ]
+      ],
+      "planar_seconds": [
+        0.001577800023369491,
+        0.0006329999305307865,
+        0.00042669998947530985
+      ],
+      "planar_median": 0.0006329999305307865,
+      "box_seconds": [
+        0.04794740001671016,
+        0.047609000001102686,
+        0.05011280009057373
+      ],
+      "box_median": 0.04794740001671016
+    },
+    {
+      "k": 16,
+      "coefficient_center": [
+        "1/8",
+        "-1/4"
+      ],
+      "generators": [
+        [
+          "-1/2",
+          "1/4"
+        ],
+        [
+          "-5/8",
+          "5/8"
+        ],
+        [
+          "3/4",
+          "-1/8"
+        ],
+        [
+          "1/2",
+          "5/8"
+        ],
+        [
+          "-1",
+          "1/4"
+        ],
+        [
+          "-7/8",
+          "-1/8"
+        ],
+        [
+          "-3/8",
+          "3/8"
+        ],
+        [
+          "1/8",
+          "1/4"
+        ],
+        [
+          "1/8",
+          "5/8"
+        ],
+        [
+          "1/4",
+          "1"
+        ],
+        [
+          "-1/8",
+          "-7/8"
+        ],
+        [
+          "-3/8",
+          "1/8"
+        ],
+        [
+          "-3/4",
+          "-5/8"
+        ],
+        [
+          "0",
+          "1/2"
+        ],
+        [
+          "-5/8",
+          "-3/4"
+        ],
+        [
+          "0",
+          "1/4"
+        ]
+      ],
+      "planar_seconds": [
+        0.0009775999933481216,
+        0.0009205000242218375,
+        0.0009239999344572425
+      ],
+      "planar_median": 0.0009239999344572425
+    }
+  ],
+  "certifications": [
+    {
+      "dataset": "sklearn diabetes",
+      "features": 11,
+      "rows": 442,
+      "uncertain_rows": 4,
+      "k": 2,
+      "oracle": "box",
+      "anchor_setup_seconds": 0.06252110004425049,
+      "search_setup_seconds": 0.006354899960570037,
+      "actual_solve_seconds": 0.007417900022119284,
+      "status": "PASS",
+      "anchor": "observed",
+      "rank": 11,
+      "n": 442,
+      "lower": 3.4336444798555016e-10,
+      "upper": 6.752812019511915e-08,
+      "absolute_gap": 6.71847557471336e-08,
+      "relative_gap": 195.66602233077126,
+      "search_lower": -2.3096940398469528e-18,
+      "search_upper": 6.752812019511915e-08,
+      "search_error": 6.752812019742885e-08,
+      "tail_error": 0.0,
+      "anchor_error": 0.0,
+      "B0_squared": 9.487954565643128e-05,
+      "rho": 0.0,
+      "seconds": 0.006606700015254319,
+      "nodes": 0,
+      "points": 1,
+      "stop_reason": "tolerance",
+      "budget_seconds": 2.0,
+      "absolute_tolerance": 0.0001,
+      "method": "residual_moment",
+      "basis_kind": "gradient",
+      "tail_gradient_norm": 0.0,
+      "tail_coupling_norm": 0.0,
+      "certificate_file": "planar_diabetes_k2_box_certificate.json"
+    },
+    {
+      "dataset": "sklearn diabetes",
+      "features": 11,
+      "rows": 442,
+      "uncertain_rows": 4,
+      "k": 2,
+      "oracle": "planar",
+      "anchor_setup_seconds": 0.06736550002824515,
+      "search_setup_seconds": 0.006437900010496378,
+      "actual_solve_seconds": 0.007028099964372814,
+      "status": "PASS",
+      "anchor": "observed",
+      "rank": 11,
+      "n": 442,
+      "lower": 2.517474478880288e-09,
+      "upper": 6.752812019511648e-08,
+      "absolute_gap": 6.501064571623619e-08,
+      "relative_gap": 25.82375561763445,
+      "search_lower": -2.236596246317387e-18,
+      "search_upper": 6.752812019511648e-08,
+      "search_error": 6.752812019735307e-08,
+      "tail_error": 0.0,
+      "anchor_error": 0.0,
+      "B0_squared": 9.487954565643128e-05,
+      "rho": 0.0,
+      "seconds": 0.006564699928276241,
+      "nodes": 0,
+      "points": 1,
+      "stop_reason": "tolerance",
+      "budget_seconds": 2.0,
+      "absolute_tolerance": 0.0001,
+      "method": "residual_moment",
+      "basis_kind": "gradient",
+      "tail_gradient_norm": 0.0,
+      "tail_coupling_norm": 0.0,
+      "certificate_file": "planar_diabetes_k2_planar_certificate.json"
+    },
+    {
+      "dataset": "sklearn diabetes",
+      "features": 11,
+      "rows": 442,
+      "uncertain_rows": 4,
+      "k": 10,
+      "oracle": "planar",
+      "anchor_setup_seconds": 0.1515966000733897,
+      "search_setup_seconds": 0.006791400024667382,
+      "actual_solve_seconds": 0.011041200021281838,
+      "status": "PASS",
+      "anchor": "observed",
+      "rank": 11,
+      "n": 442,
+      "lower": 6.635212030092762e-07,
+      "upper": 5.22440163824587e-06,
+      "absolute_gap": 4.560880435236593e-06,
+      "relative_gap": 6.873752360213319,
+      "search_lower": -2.3636281920359255e-18,
+      "search_upper": 5.22440163824587e-06,
+      "search_error": 5.224401638248233e-06,
+      "tail_error": 0.0,
+      "anchor_error": 0.0,
+      "B0_squared": 0.00023364671566372788,
+      "rho": 0.0,
+      "seconds": 0.010687500005587935,
+      "nodes": 0,
+      "points": 1,
+      "stop_reason": "tolerance",
+      "budget_seconds": 2.0,
+      "absolute_tolerance": 0.0001,
+      "method": "residual_moment",
+      "basis_kind": "gradient",
+      "tail_gradient_norm": 0.0,
+      "tail_coupling_norm": 0.0,
+      "certificate_file": "planar_diabetes_k10_planar_certificate.json"
+    }
+  ],
+  "errors": []
+}

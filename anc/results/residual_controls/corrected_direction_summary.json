@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "new_search_runs_executed_by_builder": 0,
+  "source": "corrected_direction_results.json",
+  "method_runs": 12,
+  "paired_conditions": 6,
+  "rank": 3,
+  "search_cap_seconds": 1,
+  "original_PCA_definition": "Uncentered C.T C/n in original feature coordinates, including intercept; T^-1 mapping, column normalization, dyadic 2^-24 rounding.",
+  "corrected_rows": [
+    {
+      "dataset": "diabetes",
+      "spread": "concentrated",
+      "rank": 3,
+      "search_cap_seconds": 1,
+      "residual_width": 9.424468667086515e-05,
+      "original_gram_pca_width": 0.00017902432491267344,
+      "historical_midpoint_metric_width": 0.00013128381182928766,
+      "residual_reduction_percent": 47.35649095907111,
+      "residual_total_seconds": 1.092223700019531,
+      "pca_total_seconds": 1.1007165999617428,
+      "physical_pca_span_residual": 3.5342972240321977e-07
+    },
+    {
+      "dataset": "diabetes",
+      "spread": "dispersed",
+      "rank": 3,
+      "search_cap_seconds": 1,
+      "residual_width": 7.88483180858285e-05,
+      "original_gram_pca_width": 9.325402243973213e-05,
+      "historical_midpoint_metric_width": 7.895539015048748e-05,
+      "residual_reduction_percent": 15.447810160911501,
+      "residual_total_seconds": 1.1043368999380618,
+      "pca_total_seconds": 1.1087275998434052,
+      "physical_pca_span_residual": 1.9587915841603227e-07
+    },
+    {
+      "dataset": "concrete",
+      "spread": "concentrated",
+      "rank": 3,
+      "search_cap_seconds": 1,
+      "residual_width": 5.395856564681848e-06,
+      "original_gram_pca_width": 1.5034158751592416e-05,
+      "historical_midpoint_metric_width": 1.1111775089729769e-05,
+      "residual_reduction_percent": 64.10935487753633,
+      "residual_total_seconds": 1.1486602999502793,
+      "pca_total_seconds": 1.1528901999117807,
+      "physical_pca_span_residual": 2.207139226573669e-07
+    },
+    {
+      "dataset": "concrete",
+      "spread": "dispersed",
+      "rank": 3,
+      "search_cap_seconds": 1,
+      "residual_width": 8.302061482528844e-06,
+      "original_gram_pca_width": 9.50015229760045e-06,
+      "historical_midpoint_metric_width": 8.950221338392427e-06,
+      "residual_reduction_percent": 12.611280088364696,
+      "residual_total_seconds": 1.10840729996562,
+      "pca_total_seconds": 1.1066673001041636,
+      "physical_pca_span_residual": 2.1950071322517494e-07
+    },
+    {
+      "dataset": "superconductivity",
+      "spread": "concentrated",
+      "rank": 3,
+      "search_cap_seconds": 1,
+      "residual_width": 2.6503510655189846e-06,
+      "original_gram_pca_width": 1.401618159109016e-05,
+      "historical_midpoint_metric_width": 7.574642874196759e-06,
+      "residual_reduction_percent": 81.09077676901842,
+      "residual_total_seconds": 2.393503100145608,
+      "pca_total_seconds": 2.4106636000797153,
+      "physical_pca_span_residual": 1.2984812430849114e-06
+    },
+    {
+      "dataset": "superconductivity",
+      "spread": "dispersed",
+      "rank": 3,
+      "search_cap_seconds": 1,
+      "residual_width": 7.636563525748503e-06,
+      "original_gram_pca_width": 9.733492159418506e-06,
+      "historical_midpoint_metric_width": 8.433109328385053e-06,
+      "residual_reduction_percent": 21.543435791859487,
+      "residual_total_seconds": 2.458618199918419,
+      "pca_total_seconds": 2.4839319998864084,
+      "physical_pca_span_residual": 1.2924057098041877e-06
+    }
+  ],
+  "pairs_residual_narrower": 6,
+  "frozen_protocol_digest_matches": true,
+  "exact_timing_sum_checks": 12,
+  "interval_width_checks": 12,
+  "paired_metadata_checks": true,
+  "all_historical_metric_widths_preserved": true,
+  "scope": "Aggregate arithmetic and metadata audit; not an independent full search-tree/witness audit.",
+  "reproduction_order": [
+    "analyze_existing.py (historical metric table only)",
+    "corrected_direction_build.py (current corrected direction_table.tex)"
+  ],
+  "no_timing_repeats": true
+}

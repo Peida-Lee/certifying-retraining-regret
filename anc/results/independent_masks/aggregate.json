@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "datasets": [
+    {
+      "dataset": "superconductivity",
+      "signal_unknown_columns": 1,
+      "actual_retained_rank": 3,
+      "adaptive_median_width": 0.0002148190645575531,
+      "moment_median_width": 0.00025210899384167694,
+      "strict_pairs": 5,
+      "equal_pairs": 0,
+      "sufficient_tail_successes": 0,
+      "adaptive_width_successes": 0,
+      "moment_width_successes": 0
+    },
+    {
+      "dataset": "parkinsons",
+      "signal_unknown_columns": 1,
+      "actual_retained_rank": 3,
+      "adaptive_median_width": 5.0617027872448686e-05,
+      "moment_median_width": 6.516146270079749e-05,
+      "strict_pairs": 5,
+      "equal_pairs": 0,
+      "sufficient_tail_successes": 0,
+      "adaptive_width_successes": 0,
+      "moment_width_successes": 0
+    },
+    {
+      "dataset": "wine_white",
+      "signal_unknown_columns": 1,
+      "actual_retained_rank": 3,
+      "adaptive_median_width": 4.6780026545803705e-06,
+      "moment_median_width": 5.080726833093033e-06,
+      "strict_pairs": 3,
+      "equal_pairs": 2,
+      "sufficient_tail_successes": 0,
+      "adaptive_width_successes": 5,
+      "moment_width_successes": 5
+    },
+    {
+      "dataset": "yacht",
+      "signal_unknown_columns": 1,
+      "actual_retained_rank": 3,
+      "adaptive_median_width": 3.410533411642657e-05,
+      "moment_median_width": 3.549515242927588e-05,
+      "strict_pairs": 1,
+      "equal_pairs": 4,
+      "sufficient_tail_successes": 0,
+      "adaptive_width_successes": 0,
+      "moment_width_successes": 0
+    }
+  ]
+}

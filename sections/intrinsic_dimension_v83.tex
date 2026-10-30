@@ -1,0 +1,34 @@
+\subsection{A nontrivial intrinsic certification dimension}\label{app:intrinsic-two-v83}
+Use the unperturbed $r=2,m=16$ construction above, with $p=34,n=64$, $\lambda=1/4$, $\alpha=1/32$ and $\beta=e_0+e_1$. Its signal halfwidths are $h_0=1/4,h_1=1/8$. The original independent feature intervals and full-rank property are preserved. Theorem~\ref{thm:energy} applies to $S_{\rm active}=\operatorname{span}(e_0,e_1)$ with
+\[
+ \epsilon=0,\quad a^2=1/2048,\quad
+ G^2=17/65536,\quad\kappa=25/64.
+\]
+The Frobenius upper for $a$ suffices. Thus $R^2=17/10000$ and
+\[
+ E(S_{\rm active})\le a^2R^2=17/20480000.
+\]
+
+For a uniform lower bound, choose legal completion $X^{(j)}$, $j=0,1$, by placing all signal rows in block $j$ at their lower endpoints and all signal rows in the other block at their midpoints; put every nuisance coordinate at eight. The original normal matrix is block diagonal between the two feature blocks. Its gradient is supported only in block $j$, so its full optimizer displacement $u^{(j)}=M_{X^{(j)}}^{-1}g_{X^{(j)}}$ has that same block support. In particular, $u^{(0)}\perp u^{(1)}$. Direct Schur equations give active components
+\[
+ s_0=320/8001,\qquad s_1=80/9041.
+\]
+Put $A=\|u^{(0)}\|^2\ge s_0^2$ and $B=\|u^{(1)}\|^2\ge s_1^2$. For every line $S$,
+\[
+ \max_j\operatorname{dist}(u^{(j)},S)^2\ge AB/(A+B).
+\]
+Indeed, for a unit line direction $q$, the two normalized displacement vectors are orthogonal, so the sum of their squared projections onto $q$ is at most one. Simultaneously attaining errors smaller than $t$ would require that sum to exceed $2-t/A-t/B$, forcing $t>AB/(A+B)$. Components of $q$ outside the two-vector span cannot improve the inequality. The zero-dimensional space also obeys it.
+
+Every $M_X\succeq\lambda I$, and $AB/(A+B)$ increases in both positive arguments. Therefore
+\begin{align*}
+ E(S)&\ge\lambda\frac{AB}{A+B}
+ \ge\lambda\frac{s_0^2s_1^2}{s_0^2+s_1^2}\\
+ &=\frac{25600}{1371850897}>1.866\times10^{-5}.
+\end{align*}
+Combining upper and lower bounds yields $d_\varepsilon=2$ throughout
+\[
+ \frac{17}{20480000}\le\varepsilon<\frac{25600}{1371850897},
+\]
+including $\varepsilon=10^{-5}$. This concerns the uniform pointwise error in~\eqref{eq:intrinsic}. The two-completion argument supplies a lower bound against every line, strengthening the candidate-line control.
+
+The independent Fraction program \texttt{intrinsic\_dimension.py} generates both completions from their original rows, solves the full 34-dimensional normal equations exactly, verifies orthogonality and checks all constants. The exact squared norms are $102416/64016001$ and $6401/81739681$, giving the slightly stronger two-point lower bound $25604/1371850897$. The displayed simpler bound suffices. No source public table or solver is imported.

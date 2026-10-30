@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.aux
+*.log
+*.out
+*.synctex.gz
+reproduced_figures/
+anc/code/data/
+anc/code/*_run/
+anc/code/frozen_*/
+anc/code/extended_reproduction/

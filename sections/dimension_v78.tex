@@ -1,0 +1,101 @@
+% Compact main-text candidate, followed by a self-contained appendix proof.
+% The root author may move the first paragraph to the main text.
+\paragraph{Intrinsic approximation dimension.}
+Let $u_X=M_X^{-1}g_X$ and define
+\begin{align*}
+ E(S)&=\sup_{X\in\mathcal X}\min_{v\in S}\|u_X-v\|_{M_X}^{2},\\
+ d_\varepsilon&=\min\{r:\min_{S\in\operatorname{Gr}(r,p)}E(S)\leq\varepsilon\}.
+\end{align*}
+The inner minimum is attained, and $h_\beta(X)-\max_{v\in S}(2g_X^\top v-v^\top M_Xv)=\operatorname{dist}_{M_X}(u_X,S)^2$. Thus the global reduction gap is at most $E(S)$. A verified uniform tail $\eta$ gives $d_\eta\leq\dim S$; it supplies an upper candidate for this intrinsic quantity. This is a varying-energy-norm version of classical Kolmogorov-width approximation, as studied in reduced-basis theory \citep{binev2011}. Our results give verifiable original-data sufficient conditions for small width. Spectral compression around $\theta_0$ is affine: its direct dimension bound is affine rank $r$, or linear rank at most $r+1$ after including $\beta-\theta_0$.
+
+\subsection{Intrinsic dimension and the scope of each tail}\label{app:dimension-v78}\label{app:dimension}
+Throughout, $\mathcal X$ is nonempty and compact, the weights are fixed and nonnegative, and $\lambda>0$. Put $u_X=M_X^{-1}g_X$. For $S\subseteq\mathbb R^p$ linear, set $f_X(v)=2g_X^\top v-v^\top M_Xv$ and $h_S(X)=\max_{v\in S}f_X(v)$.
+
+\begin{proposition}[Pointwise identity and existence]
+For every fixed $S$,
+\[
+ h_\beta(X)-h_S(X)=\min_{v\in S}\|u_X-v\|_{M_X}^2.
+\]
+Consequently $0\leq H^*-\max_Xh_S(X)\leq E(S)$. For every $r\in\{0,\ldots,p\}$, the minimum $e_r=\min_{S\in\operatorname{Gr}(r,p)}E(S)$ is attained. Also $e_0=H^*$, $e_p=0$, and $e_{r+1}\leq e_r$.
+\end{proposition}
+\begin{proof}
+Completing the square gives
+\[
+ f_X(v)=g_X^\top M_X^{-1}g_X-(u_X-v)^\top M_X(u_X-v).
+\]
+For a full-column basis $B$ of $S$, the unique restricted displacement is $B(B^\top M_XB)^{-1}B^\top g_X$. The global implication follows by taking maxima of the pointwise inequality $h_\beta(X)\leq h_S(X)+E(S)$.
+
+Identify the Grassmannian with the compact set of rank-$r$ orthogonal projectors $P$. The matrix $A(P,X)=PM_XP+I-P$ has minimum eigenvalue at least $\min(\lambda,1)>0$, and
+\[
+ h_S(X)=g_X^\top P A(P,X)^{-1}P g_X.
+\]
+This expression is jointly continuous in $P,X$. The pointwise error is therefore jointly continuous; its maximum on compact $\mathcal X$ is continuous in $P$. It attains a minimum on the Grassmannian. Subspace augmentation gives monotonicity. The endpoint identities follow from $S=\{0\}$ and $S=\mathbb R^p$.
+\end{proof}
+
+\paragraph{Why a global-gap definition would be vacuous.}
+Let $X_*$ attain $H^*$. The space $S_* =\operatorname{span}(u_{X_*})$ has dimension at most one and already satisfies $\max_Xh_{S_*}(X)=H^*$. Its uniform pointwise error can remain large. For example, take one row $x=(1,t)$, $t\in[-1,1]$, $W=1$, $\lambda=1$, $y=1$, and $\beta=0$. Then $u_t=-(1,t)/(2+t^2)$ and $h_\beta(t)=(1+t^2)/(2+t^2)$. The span of $(1,1)$ attains the global value $2/3$ at $t=1$ but has pointwise error $2/3$ at $t=-1$. Thus a small global reduction gap alone yields no bound on $E(S)$.
+
+\paragraph{Connection to classical widths.}
+The set $\mathcal K=\{u_X:X\in\mathcal X\}$ is compact. Let $\delta_r(\mathcal K)=\inf_{\dim S=r}\sup_{u\in\mathcal K}\operatorname{dist}_2(u,S)$ be its linear Kolmogorov width, and let $\Lambda=\sup_X\lambda_{\max}(M_X)<\infty$. Norm equivalence gives
+\[
+ \lambda\delta_r(\mathcal K)^2\leq e_r\leq\Lambda\delta_r(\mathcal K)^2.
+\]
+The width is a standard approximation-theoretic object up to these varying-energy-norm constants; see, for example, \citet{binev2011}. The present sufficient conditions bound it from original table intervals and preserve the full ridge comparator.
+
+\paragraph{Actual-metric residual moments.}
+Let the actual verified $T$ be invertible, $K_X=T^\top M_XT\succeq\mu I$, $b_X=T^\top g_X$, and $U_0\geq\sup_Xh_\beta(X)$. For full-column $R$, put $H=R^\top R\succeq\mu_HI$, $\Pi=RH^{-1}R^\top$, $D=I-\Pi$, and $S=\operatorname{range}(TR)$. Suppose uniformly
+\[
+ \|Db_X\|\leq G_r,\qquad \|DK_XR\|_{\mathrm{op}}\leq C_r.
+\]
+For every $X$, $w_X=T^{-1}u_X$ satisfies $\|w_X\|^2\leq U_0/\mu$. Its projected coordinate $z_X=H^{-1}R^\top w_X$ therefore satisfies
+\[
+ \|z_X\|\leq R_s=\sqrt{U_0/(\mu\mu_H)}.
+\]
+For fixed $X,z_X$, set $q_X=D(b_X-K_XRz_X)$ and let $K_{D,X}$ denote $K_X$ restricted to $\operatorname{range}(D)$. Elimination yields
+\begin{align*}
+ h_\beta(X)-f_X(TRz_X)&=q_X^\top K_{D,X}^{-1}q_X\\
+ &\leq (G_r+C_rR_s)^2/\mu.
+\end{align*}
+Since $h_S(X)\geq f_X(TRz_X)$, this proves $E(S)\leq\eta_r$ and $d_{\eta_r}\leq r$. The radius must cover these projected coordinates for every $X$; a containing cube and outward-rounded radius suffice. At full rank the discarded space and tail vanish exactly. This argument uses the actual metric and has no whitening-surrogate anchor error.
+
+\paragraph{Original-row residual energy.}
+Under the signal-support and residual-energy conditions of Theorem~\ref{thm:energy}, put $q_X(s)=e_X-A_Xs$ and $B_X=Z_X(\lambda I+Z_X^\top Z_X)^{-1}Z_X^\top$. The elimination identity at fixed $X,s$ adds
+\[
+ q_X(s)^\top B_Xq_X(s)\leq\|q_X(s)\|^2.
+\]
+Writing $L_Z=I-Z_X(\lambda I+Z_X^\top Z_X)^{-1}Z_X^\top$, the full optimizer's retained coordinate obeys
+\[
+ [\lambda I+C_{\mathcal S,X}+A_X^\top L_ZA_X]s_X
+ =f_{\mathcal S,X}+A_X^\top L_Ze_X.
+\]
+The uniform bounds and $0\prec L_Z\preceq I$ imply $\|s_X\|\leq R=(G+a\epsilon_0)/\kappa$ for every $X$, where $\epsilon_0$ denotes nuisance residual energy. Comparing with $Qs_X$ proves
+\[
+ E(\operatorname{range}(Q))\leq(\epsilon_0+aR)^2.
+\]
+The all-completions radius supplies the required root. Extensions to anchors or candidate leakage require their stated additional pointwise conditions.
+
+\paragraph{Spectral compression requires affine dimension.}
+For ideal exact whitening $T^\top G_0T=I$ and $\theta_0=G_0^{-1}r_0$, retained comparators have $\theta=\theta_0+TQs$. Their displacements form
+\[
+ \mathcal A=(\beta-\theta_0)+\operatorname{range}(TQ),
+\]
+which need not be linear. Define $E_{\mathrm{aff}}(\mathcal A)=\sup_X\min_{v\in\mathcal A}\|u_X-v\|_{M_X}^2$. Let $d_X=W_{\mathcal N}^{1/2}(X_{\mathcal N}\theta_0-y_{\mathcal N})$, and let $A_X,E_X$ denote the retained and discarded whitened row matrices. If $\|E_X\|_{\mathrm{op}}^2\leq\rho$ and $\|d_X\|^2\leq B_0^2$ uniformly, the restricted-versus-full minimized loss difference at each $X$ is
+\[
+ d_X^\top\{C_X^{-1}-(C_X+B_X)^{-1}\}d_X,
+\]
+where $C_X=I+A_XA_X^\top\succeq I$ and, in this paragraph, $B_X=E_XE_X^\top$. Loewner monotonicity and scalar spectral calculus give
+\begin{align*}
+ 0&\preceq C_X^{-1}-(C_X+B_X)^{-1}\\
+ &\preceq C_X^{-1}-(C_X+\rho I)^{-1}\\
+ &\preceq\frac{\rho}{1+\rho}I.
+\end{align*}
+Hence $E_{\mathrm{aff}}(\mathcal A)\leq\rho B_0^2/(1+\rho)$. This gives affine dimension at most $r$. For the linear definition use
+\[
+ S_+=\operatorname{span}\bigl(\{\beta-\theta_0\}\cup\operatorname{range}(TQ)\bigr),
+\]
+whose dimension is at most $\min(p,r+1)$ and whose error is no greater. Rank $r$ suffices when the offset already belongs to the retained range.
+
+This implication is proved pointwise for ideal exact whitening. A global discounted-surrogate upper-minus-lower bound alone does not establish this uniform error. For rounded whitening, an intrinsic-dimension assertion additionally requires a uniform per-$X$ comparator inequality and an all-$X$ root, including any anchor correction. We make no such inference solely from a global rounding correction. The actual-metric residual-moment argument already applies to the verified rounded $T$.
+
+
+For an explicit ideal-spectral root that is uniform in $X$, the whitened full comparator minimizes $\|w\|^2+\|d_X+U_Xw\|^2$. Its value is no greater than the value at $w=0$, hence $\|w_X\|\leq B_0$. Its orthogonal retained projection therefore lies in $[-B_0,B_0]^r$ for every completion. This conservative root is sufficient for the pointwise comparison; a smaller implementation root requires its own all-completions proof.

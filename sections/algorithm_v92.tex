@@ -1,0 +1,20 @@
+\begin{algorithm}[t]
+\caption{Original-table regret certification}\label{alg:certificate}
+\begin{algorithmic}[1]
+\REQUIRE Row boxes, $y,w,\lambda,\beta$, rank cap, tolerance $\varepsilon$, total budget $B$, structural-stage budget $B_s\le B$
+\STATE Start the complete clock; charge input and preprocessing to $B$.
+\STATE Form $G_0,r_0$ from complete rows and ridge once.
+\STATE Propose dyadic $T$; verify its metric and an original upper $U_0$.
+\STATE Propose uncertainty-gradient spans or signal-row spans plus an anchor-correction direction; verify the actual Gram/projector.
+\STATE Select a span using verified spectral, moment or structural energy budgets.
+\STATE Establish a finite root; initialize a feasible original lower $L$.
+\WHILE{complete time is below $B_s$ and $U-L>\varepsilon$}
+\STATE Pop the leaf with largest upper; bisect its weighted widest side.
+\STATE Query row maxima; bound both children; update a feasible table.
+\STATE Retrain that table in all $p$ features and update $L$.
+\STATE Update $U$ from surviving leaf uppers, tail and $U_0$.
+\ENDWHILE
+\STATE If $U-L>\varepsilon$, apply the validated joint residual refinement; use observed-column elimination or row-edge subdivision for the general-coarsening protocol (Appendix~\ref{app:compact-profile}).
+\STATE \textbf{return} $[L,U]$, completed-table witness, error ledger and stop reason
+\end{algorithmic}
+\end{algorithm}

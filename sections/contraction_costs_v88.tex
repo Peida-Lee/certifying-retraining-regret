@@ -1,0 +1,11 @@
+\begin{table*}[t]\centering\small
+\caption{Complete computation cost. Per-method medians over five masks, in seconds. Setup includes input, anchor, caps, proposal and verification; search includes original-table witness fits.}
+\label{tab:contraction-costs-v88}
+\begin{tabular}{lrrrrrrr}\toprule
+&\multicolumn{3}{c}{Adaptive energy}&\multicolumn{3}{c}{Centered moment}&Full\\
+Data&Setup&Search&Total&Setup&Search&Total&Total\\\midrule
+Supercond. & 2.653 & 4.211 & 6.823 & 1.884 & 4.428 & 6.287 & 10.021\\
+Parkinsons & 0.470 & 3.553 & 4.060 & 0.369 & 3.797 & 4.156 & 10.003\\
+Wine Quality & 0.329 & 4.216 & 4.601 & 0.220 & 4.089 & 4.314 & 10.002\\
+Yacht & 0.156 & 5.119 & 5.289 & 0.086 & 5.039 & 5.125 & 10.004\\
+\bottomrule\end{tabular}\end{table*}

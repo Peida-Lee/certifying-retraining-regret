@@ -1,0 +1,81 @@
+\subsection{Reconstructable continuous input-box baseline}\label{app:input-baseline-v78}\label{app:input}
+The input-space baseline uses cellwise branch and bound and an observed-row fallback. All weights here are $1/n$. The baseline branches directly over uncertain input cells and uses the same full-feature ridge comparator.
+
+\paragraph{Feasible lower bounds.}
+For a legal table $X$, solve the numerical ridge equations for $\widehat\theta$ and evaluate $J_X(\beta)-J_X(\widehat\theta)$ with outward interval arithmetic. Its lower endpoint is a valid lower bound on $h_\beta(X)$ even when the numerical solve is inexact, because $\widehat\theta$ is a feasible comparator. Initialize $L=0$ and retain the best table and comparator. Each node tests its midpoint. Before branching, the baseline also runs two bounded L-BFGS-B starts: the midpoint and a uniform legal completion from seed $73101$, at most $35$ iterations per start, with \texttt{ftol}$=10^{-14}$ and \texttt{gtol}$=10^{-12}$. For uncertain cell $(i,j)$ the optimization gradient is
+\[
+ \frac{2}{n}\{(x_i^\top\beta-y_i)\beta_j-(x_i^\top\widehat\theta-y_i)\widehat\theta_j\}.
+\]
+This heuristic proposes tables; clipping to the input box and an interval loss difference supply the actual lower certificates.
+
+\paragraph{A local Gram and gradient enclosure.}
+For a node $[L_B,U_B]$, let $C=(L_B+U_B)/2$, $D=(U_B-L_B)/2$, and
+\[
+ T_B=2^{-24}\operatorname{round}\!\left[2^{24}\operatorname{chol}
+ (C^\top C/n+\lambda I)^{-\top}\right].
+\]
+The matrix inside rounding is the inverse transpose of the lower Cholesky factor. Every enclosure below concerns this actual dyadic $T_B$. Write $t_j$ for column $j$, $c_{ij}=c_i^\top t_j$, $r_i=c_i^\top\beta-y_i$, $\delta_{ij}=\sum_\ell D_{i\ell}|T_{B,\ell j}|$, and $\delta_{i\beta}=\sum_\ell D_{i\ell}|\beta_\ell|$. Thus $x_i^\top t_j$ lies in $[c_{ij}-\delta_{ij},c_{ij}+\delta_{ij}]$ and the residual lies in $[r_i-\delta_{i\beta},r_i+\delta_{i\beta}]$, all computed outward.
+
+If row $i$ has at most one uncertain coordinate, use their common scalar $z\in[-1,1]$ to range the products exactly as univariate quadratics, including an interior stationary point. With uncertain coordinate $\ell$ and radius $s=D_{i\ell}$, the gradient-product polynomial is
+\[
+ s^2T_{B,\ell j}\beta_\ell z^2
+ +s(T_{B,\ell j}r_i+c_{ij}\beta_\ell)z+c_{ij}r_i,
+\]
+and the Gram-product polynomial for $(j,k)$ is
+\[
+ s^2T_{B,\ell j}T_{B,\ell k}z^2
+ +s(T_{B,\ell j}c_{ik}+T_{B,\ell k}c_{ij})z+c_{ij}c_{ik}.
+\]
+For a fixed row $s=0$ and the selected index is immaterial. For a row with multiple uncertain coordinates, multiply the respective interval ranges instead. Sum these row enclosures and add the exact-form ridge terms to enclose
+\[
+ b_X=T_B^\top g_X,\qquad K_X=T_B^\top M_XT_B.
+\]
+Specifically, add $\lambda t_j^\top\beta$ to gradient coordinate $j$ and $\lambda t_j^\top t_k$ to Gram entry $(j,k)$. If the enclosures are $[\underline b_j,\overline b_j]$ and $[\underline K_{jk},\overline K_{jk}]$, compute the downward Gershgorin bound
+\[
+ \mu_B=\min_j\left\{\underline K_{jj}
+ -\sum_{k\ne j}\max(|\underline K_{jk}|,|\overline K_{jk}|)\right\}.
+\]
+When $\mu_B>0$, positive definiteness also certifies that $T_B$ is invertible, and
+\[
+ h_\beta(X)\leq U_{\mathrm{loc},B}
+ =\operatorname{up}\!\left[\frac{\sum_j\max(\underline b_j^2,\overline b_j^2)}{\mu_B}\right]
+ \quad(X\in B).
+\]
+The implementation obtains the numerator with outward interval squares and sums. If $\mu_B\leq0$, it uses the inherited global fallback $U_0$ instead of this quotient. The node upper is
+\[
+ U_B=\min\{U_{\mathrm{parent}},U_0,U_{\mathrm{loc},B}\},
+\]
+with root parent cap $U_0$.
+
+\paragraph{The global fallback and its $\lambda$ correction.}
+The constructor receives $U_0$; the matched driver supplies the independently valid \texttt{solver.initial\_upper} from the full-box reference solver. This is the minimum of its fixed-row transformed-gradient bound and its direct fixed-row-loss bound. For the first, form $M_A=X_A^\top X_A/n+\lambda I$ from fully fixed rows, round its inverse Cholesky transpose on a $2^{-16}$ grid, verify $T_A^\top M_AT_A\succeq\mu_AI$ by outward Gershgorin, and uniformly enclose $T_A^\top g_X$. Then $U_{\mathrm{grad}}=\operatorname{up}(\sup\|T_A^\top g_X\|^2/\mu_A)$ is valid. The one-cell implementation ranges scalar quadratics; the multi-cell implementation uses interval product ranges.
+
+For the direct fallback, let $J_A(\theta)=\|X_A\theta-y_A\|^2/n+\lambda\|\theta\|^2$. A numerical fixed-row ridge fit $\widetilde\theta$ is corrected by its interval gradient $a_A=M_A\widetilde\theta-X_A^\top y_A/n$:
+\[
+ \min_\theta J_A(\theta)\geq
+ J_A(\widetilde\theta)-\|a_A\|^2/\lambda.
+\]
+Since $J_X\geq J_A$, this gives
+\begin{align*}
+ v_A&=\sup_XJ_X(\beta)-J_A(\widetilde\theta)+\|a_A\|^2/\lambda,\\
+ U_{\mathrm{direct}}&=\max\{0,\operatorname{up}(v_A)\},\\
+ U_0&=\min(U_{\mathrm{grad}},U_{\mathrm{direct}}).
+\end{align*}
+The candidate-loss supremum is enclosed by scalar quadratic ranges for one-cell rows and by absolute residual envelopes for general row boxes. The factor $1/\lambda$ corrects an approximate fixed-row solve; a feasible fitted loss alone would be an upper bound on the fixed-row minimum and could not serve this role. If the fixed-row transformed curvature cannot be verified, that reference constructor fails explicitly; the input baseline does not silently replace it with an uncertified number. A separately supplied fallback must likewise be valid. The generic inequality $h_\beta(X)\leq\|g_X\|^2/\lambda$ offers another possible safe cap, but it is not an additional node calculation in this implementation.
+
+\paragraph{Queue, split and stopping.}
+Use a max-upper heap, stable by node ID, and remove nodes with $U_B\leq L$. On each surviving node, split the first row-major maximizer of
+\[
+ \frac{(U_B^{\mathrm{input}}-L_B^{\mathrm{input}})_{ij}}
+ {\max((U^{\mathrm{input}}-L^{\mathrm{input}})_{ij},10^{-300})}
+\]
+at its midpoint, then bound both children with their parent cap. This is the largest remaining fraction of an original cell width, with ties resolved by NumPy's first \texttt{argmax}. Stop when the heap is empty, when
+\begin{align*}
+ U-L&\leq\max(10^{-9},\tau_{\mathrm{rel}}L),\\
+ U&=\max\{L,\max_{B\text{ live}}U_B\},
+\end{align*}
+or when elapsed time reaches its cap. Here $\tau_{\mathrm{rel}}$ is the relative tolerance, whose default is $0.01$. The clock starts before the two-start heuristic and root bound. Time is checked between node expansions, so a heuristic, root, or pair of child bounds can overrun it. Retained records contain node boxes, parent/child IDs, uppers, local $\mu_B,T_B,b$ receipts, the global fallback, and a feasible table/comparator witness. A time-limit status preserves the live-leaf upper.
+
+
+\paragraph{Driver-specific fallback and clock boundary.}
+The preceding fixed-row fallback is the one supplied by \texttt{run\_matched.py}, whose baseline-only clock begins after that inherited fallback was prepared by the proposed solver. Its recorded own baseline elapsed time therefore excludes fresh fallback construction. The physical-unit decision experiment uses a different driver: \texttt{v75/decision\_experiment.py} constructs each method's own \texttt{ObservedAnchor} and passes its \texttt{a.gradient\_upper} to \texttt{TimedInput}. The total clock starts before CSV/input construction, candidate fitting and that anchor, so those costs are charged to the input method. This fallback uses the actual-anchor uniform gradient cap. The timed driver uses the same local node enclosures and normalized split rule, stops once all declared thresholds are decided or the total cap is reached, and records only events completed by each deadline. Its root/heuristic can overrun the cap; completed late events receive no earlier credit. Thus the v73 inherited-fallback timing boundary is not the v75 decision experiment's accounting boundary.

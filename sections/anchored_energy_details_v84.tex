@@ -1,0 +1,37 @@
+\section{Observed-Anchor Residual-Energy Certification}\label{app:anchor-energy-v84}
+This section supplies the extension that connects the energy mechanism to the measured public tables.
+Write $V=W_{\mathcal A^c}^{1/2}X_{\mathcal A^c}T$, $e=W_{\mathcal A^c}^{1/2}(X_{\mathcal A^c}\beta-y_{\mathcal A^c})$. The original gain in transformed displacement $z$ has Hessian $K+V^\top V$ and linear term $h+V^\top e$. A retained translation $z=z_0+Qu+Pv$ changes the linear term to $h_c+V^\top e_c$. Since $z_0$ belongs to the retained span, the original restricted-comparator class is unchanged.
+
+Let $A=V_{\mathcal N}Q$, $Z=V_{\mathcal N}P$ and $S=V_{\mathcal S}Q$. Signal support removes $V_{\mathcal S}P$. The discarded block is $D=K_{PP}+Z^\top Z\succeq\mu I$. Therefore
+\begin{align*}
+ ZD^{-1}Z^\top&\preceq I,\\
+ D^{-1}Z^\top ZD^{-1}&\preceq D^{-1}-\mu D^{-2}\preceq I/(4\mu).
+\end{align*}
+The last inequality follows by diagonalizing $D$: $t^{-1}-\mu t^{-2}\le1/(4\mu)$ for every $t\ge\mu$. Thus $\|ZD^{-1}\|\le1/(2\sqrt\mu)$. Also $\|K_{QP}\|\le c=(\nu-\mu)/2$, because subtracting the midpoint scalar matrix leaves the off-diagonal block unchanged.
+
+The Schur complement of $K+V_{\mathcal N}^\top V_{\mathcal N}$ is at least $\mu I$: its quadratic form at $u$ is the minimum over $v$ of a form bounded below by $\mu(\|u\|^2+\|v\|^2)$. Adding $S^\top S$ preserves the bound. Its retained right-hand side is
+\begin{align*}
+ g_S&+A^\top(I-ZD^{-1}Z^\top)e_N-K_{QP}D^{-1}Z^\top e_N\\
+ &\quad-(K_{QP}+A^\top Z)D^{-1}(h_c)_P,
+\end{align*}
+where $g_S=Q^\top h_c+S^\top(e_c)_{\mathcal S}$ and $e_N=(e_c)_{\mathcal N}$. The displayed contractions and $\|D^{-1}\|\le1/\mu$ bound its norm by the numerator of $R_A$. Every full optimizer therefore has $\|u\|\le R_A$. The retained-only optimizer has right-hand norm at most $G+a\epsilon$ and satisfies the same radius.
+
+At fixed retained $u$, optimizing the discarded coordinate adds
+\begin{align*}
+ &\|D^{-1/2}[(h_c)_P-K_{PQ}u+Z^\top(e_N-Au)]\|^2\\
+ &\qquad\le[\epsilon+aR_A+(d+cR_A)/\sqrt\mu]^2.
+\end{align*}
+Apply this at each completion's full optimum to bound the pointwise best-subspace error, then take the supremum over tables. This proves Corollary~\ref{cor:anchor-energy-v84}, including its intrinsic-dimension statement and its shifted containing domain.
+
+\input{sections/contraction_v88}
+\subsection{Constructive discovery and actual arithmetic}
+For each signal row $x_i=c_i+\sum_j[-1,1]s_{ij}e_j$, its transformed vector lies in the span of $T^\top c_i$ and the $k_i$ vectors $s_{ij}T^\top e_j$. Adjoin $z_A=T^{-1}(\beta-\theta_A)$ with $\theta_A=B^{-1}r_A$. Then $h-Kz_A=0$, and the dimension is at most $1+\sum_i(1+k_i)$. This gives a deterministic construction from a chosen signal set, with no spectral-gap assumption. The residual and retained-coupling constants decide whether its rank suffices.
+
+The implementation uses the actual dyadic $T$ rounded at $2^{-20}$. For one signal row and one unknown, its first two proposal columns are exact power-of-two scalings of the transformed center and generator. It appends the observed-anchor correction orthogonal to that span, rounded at $2^{-24}$. With the actual proposal $R$, compute $H=R^\top R$, its exact rational inverse, and the projector $RH^{-1}R^\top$. The signal's two discarded squared norms are checked to equal zero exactly. The retained reference solves
+\[
+ s_0=(R^\top KR)^{-1}R^\top h.
+\]
+Its reference coefficients are $\beta_c=\beta-TRs_0$, and $R^\top h_c=0$ is checked exactly. The remaining discarded-gradient norm $d$ is bounded from these actual rational quantities. The verified Gram minimum is the larger of its Gershgorin lower bound and $1/\operatorname{tr}(H^{-1})$.
+
+Nuisance residual energy uses exact affine row ranges at $\beta_c$. Retained energy uses the smaller of a rowwise trace bound and a verified three-dimensional operator bound. The latter whitens the actual retained Gram by a dyadic test matrix and encloses every moment entry from original row boxes before a Gershgorin upper bound. The signal-gradient squared norm is a univariate quartic; dyadic Bernstein subdivisions give a rational upper bound, combined with its coordinate-box bound. All square roots round upward. The search domain contains $s_0$ plus the certified coordinate-radius cube. Node radii enclose both endpoint distances from the actual evaluated float center, accounting for translated-box rounding.
+

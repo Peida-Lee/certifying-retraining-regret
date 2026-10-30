@@ -1,0 +1,24 @@
+\section{Real-World Experiment Settings}\label{app:public-energy-v84}
+Superconductivity records measured critical temperatures; Yacht records measured residuary resistance; Wine Quality records sensory quality scores and physicochemical tests. Parkinsons Telemonitoring contains home voice recordings, demographic variables and dataset-provided total UPDRS scores, which the source defines by linear interpolation of clinical assessments. The identifier and the alternative motor-UPDRS response are excluded from its predictors; all 19 documented predictor columns are retained. Binary sex remains observed. These tasks keep their supplied regression responses, followed by affine normalization and $2^{-10}$ quantization.
+
+The candidate is the midpoint ridge fit rounded to four fractional binary bits. One signal row has one unknown and sixteen nuisance rows have two unknowns each, giving 33 uncertain cells. The signal and nuisance column lists are fixed in the supplied settings. The signal row has the largest pilot residual. After three fixed passes, nuisance rows are a seeded sample from the 32 smallest residual-interval scores under the observed-row reference. The pilot uses coarsened candidate-column values. Every compared method uses the same final row rule, candidate and continuous feature boxes.
+
+\begin{table*}[t]\centering\small
+\caption{Real-world parameters. Widths are fractions of the feature range. All candidates use four fractional bits and the retained rank is three.}
+\begin{tabular}{lrrrrr}\toprule
+Data & $n$ & $p$ & $\lambda$ & Signal width & Nuisance width\\\midrule
+Superconductivity&1024&82&$2^{-10}$&$1/2$&$1/2$\\
+Parkinsons&2048&20&$2^{-10}$&$1/2$&$1/4$\\
+Wine Quality (white)&2048&12&$2^{-10}$&$1/2$&$1/4$\\
+Yacht&308&7&$2^{-5}$&$1/2$&$1/4$\\\bottomrule
+\end{tabular}\end{table*}
+
+Each task uses mask seeds 88211--88215. Superconductivity retains its target pool 84101 and scaling pool 84001, with the specified earlier record-pool exclusions. Parkinsons and Wine use scaling pool 88101 and disjoint target pool 88201, each with 2048 records; means and ranges come from the scaling pool. Yacht uses all 308 source records. Parkinsons record pools describe recordings from the fixed cohort; the certification experiment makes a deterministic statement about these tables. The seed lists, column indices, record-pool construction and numeric settings are supplied with the code.
+
+Each method has a ten-second complete budget, with a $10^{-10}$ search tolerance to resolve its attainable width. We report success against a common final-width target of $10^{-5}$ and a separate energy-tail budget of $2.5\times10^{-6}$. Adaptive energy uses the smaller verified contraction/common-domain moment tail; centered moment verifies its own reference gradient and radius in the same actual rank-three span. Full search retains all model coordinates. All three methods receive the same feasible midpoint witness and the smaller gradient/observed-loss cap. The complete clock charges input/candidate construction, anchor, common caps/witness, the method's required proposal and verification, setup, search and full-feature witness fits. Imports and certificate serialization are outside the clock; source-data reads in input construction are charged. Moment pays reference construction, and full search has no reduced-space proposal or tail verification. All sixty method-condition runs and the original pure-energy component results are supplied. The CSV reports any small indivisible-node overrun.
+
+An independent Fraction program imports no proposal, verifier or search implementation. It reconstructs the observed anchors, actual metrics, retained projectors and references; checks the original-row constants, mixed residual moments, projected center-Gram operator bound, discarded perturbation trace and containing radius; and verifies every feasible original-table witness. The first mask of each dataset additionally receives a complete search-tree audit of all row-query enclosures, curvature, binary coverage and terminal uppers. The independent adaptive audit additionally verifies its selected moment branch by exact projected gradient and coupling reconstruction. Forty-eight exact normal-equation examples separately verify the refined theorem under nonzero metric cross blocks, nonzero residuals and retained translations.
+
+\input{sections/contraction_costs_v88}
+
+\input{sections/matched_components_v89}

@@ -1,0 +1,17 @@
+\paragraph{Generic real-data tail regime.}
+We evaluate the verified $G_r,C_r,R_s,\mu$ and $\eta_r=(G_r+C_rR_s)^2/\mu$ at ranks 1,2,3,4,6 for both proposals. The source CSV reports all sixty points and the three contributions $G_r^2/\mu$, $2G_rC_rR_s/\mu$, $(C_rR_s)^2/\mu$. The gradient term is largest at 50 points and the mixed term at 10. Exact retained-Gram checks certify all sixty points; two use the inverse-norm bound stated in Appendix~\ref{app:new}.
+
+This diagnostic evaluates the generic residual-moment certificate, with positive discarded-gradient and coupling terms. Its verified envelopes depend on the basis metric and rowwise coupling bounds, so their rank curves can be nonmonotone. The constructive observed-anchor energy study is reported in Appendix~\ref{app:public-energy-v84}.
+
+\begin{table}[t]\centering\small
+\caption{Residual-gradient rank curve for the six original conditions. Entries are verified $\eta_r$ in $10^{-6}$ units; the accompanying CSV reports every constant and both proposals.}\label{tab:rank-v77}
+\resizebox{\columnwidth}{!}{\begin{tabular}{llrrrrr}\toprule Data&Pattern&$r=1$&2&3&4&6\\\midrule
+Diabetes&Conc.&260.28&123.58&85.69&55.64&25.18\\
+Diabetes&Disp.&123.09&109.31&108.92&95.33&59.16\\
+Concrete&Conc.&14.86&8.34&5.09&3.83&1.77\\
+Concrete&Disp.&11.33&10.18&8.79&7.15&4.11\\
+Supercond.&Conc.&11.50&1.94&1.71&1.57&1.25\\
+Supercond.&Disp.&10.87&9.23&10.10&9.09&5.58\\
+\bottomrule\end{tabular}}\end{table}
+
+A fixed 24-condition diagnostic sweep crosses Concrete and Superconductivity, both patterns, 64/128 uncertain rows and ridge multipliers $0.5,1,2$. Every row retains two uncertain cells and each candidate is refit at its own midpoint and penalty. Both rank-three proposals completed in all 24 conditions. The gradient proposal has a smaller verified tail in 24 of 24 conditions; gradient/POD tail ratios range from 0.413 to 0.970. Doubling uncertain rows multiplies the tail by 3.95--13.48 across paired methods and penalties. This sweep evaluates bound diagnostics, with no additional search or row-density comparison.

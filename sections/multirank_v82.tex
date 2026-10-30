@@ -1,0 +1,58 @@
+\subsection{Automatic structure beyond the candidate line}\label{app:multirank-v82}
+The pre-outcome factorial grid uses $r\in\{2,3\}$, $\delta\in\{0,2^{-10},2^{-6}\}$ and $\ell\in\{0,2^{-12},2^{-4}\}$. Let $m=16$, $n=2mr$, $p=r+mr$, weights $1/n$, $\lambda=1/(2r)$ and $\beta=\sum_{j=0}^{r-1}e_j$. For every $j=0,\ldots,r-1$ and $i=1,\ldots,m$, use
+\begin{align*}
+ x_{j,i}&=u_{j,i}e_j+\ell e_{r+jm+i-1},
+ &u_{j,i}&\in[1-h_j,1+h_j],\\
+ y_{j,i}&=2,&h_j&=2^{-j-2},\\
+ x'_{j,i}&=\alpha e_j+t_{j,i}e_{r+jm+i-1},
+ &t_{j,i}&\in[4,8],\\
+ y'_{j,i}&=\alpha+\sigma_i\delta,&\alpha&=1/32,
+\end{align*}
+where eight signs $\sigma_i$ are positive and eight negative. Every uncertain scalar varies independently. The candidate is fixed, including under perturbations. Thus $p=34,51$ and the proposed retained ranks are two and three. All columns have nondegenerate intervals. The signal/nuisance two-by-two row-block determinant is $u_{j,i}t_{j,i}-\alpha\ell>0$, which yields a full-rank submatrix for every completion.
+
+The existing uncertainty-gradient proposal is used without a direction override. A residual-score rule defines the row partition. The actual physical Gram/projector gives norm and gradient bounds. An interval enclosure of retained signal moments, minus $cH$, is verified diagonally dominant with nonnegative diagonal; this supplies $\kappa=\lambda+c$. All norm roots and radii are rounded outward. Energy search uses that radius and tail; same-span general moment and an explicit rank-one $\operatorname{span}(\beta)$ control use their own valid moment bounds. The candidate-line control tests the need to discover directions beyond the candidate; it has a different rank. Every method has a two-second search cap and a predeclared $10^{-5}$ final-width target. Complete costs include input, anchor, proposal, constants, method setup and search.
+
+\paragraph{Exact unperturbed comparison.}
+At $\delta=\ell=0$, put
+\begin{align*}
+ g_j&=h_j^2/(2r),\\
+ b_j&=[1+(1-h_j)^2+\alpha^2]/(2r),\\
+ k_j&=[1+(1-h_j)^2+\alpha^2/5]/(2r).
+\end{align*}
+The block Schur equations give
+\begin{gather*}
+ H^*=\sum_jg_j^2/k_j,\qquad V_{\rm active}=\sum_jg_j^2/b_j,\\
+ V_\beta=(\sum_jg_j)^2/\sum_jb_j.
+\end{gather*}
+Signal lower endpoints simultaneously maximize each numerator and minimize each denominator; nuisance upper endpoints minimize the full Schur denominator. Distinct $h_j$ make the active optimal displacement $(g_j/b_j)_j$ nonparallel to $\beta$. At $r=2,3$, omission from the candidate line is $2.013\times10^{-4}$ and $2.257\times10^{-4}$, respectively. The learned spans have energy tails $8.301\times10^{-7}$ and $8.331\times10^{-7}$; their final widths are $6.96\times10^{-6}$ and $9.64\times10^{-6}$. These analytic formulas concern the nominal exact family. The software interprets its stored ridge coefficient as an exact binary value; the independent row-and-tree audit uses that actual value.
+
+\begin{table*}[t]\centering\small\setlength{\tabcolsep}{5pt}
+\caption{All eighteen multidimensional conditions. Widths use $10^{-6}$ units; the target is 10. Energy and moments use the learned rank-$r$ span, and the candidate control uses rank one. Block elimination verifies the sparse row-pair structure and certifies the full comparator through scalar searches.}\label{tab:multirank-v82}
+\begin{tabular}{rrrrrrrr}\toprule $r$&$\delta$&$\ell$&Energy width&Moment width&Candidate-line width&Block width&Block (s)\\\midrule
+2&0&0&6.96&37.6&378&6.239&0.065\\
+2&0&$2^{-12}$&7.57&38.3&378&6.239&0.074\\
+2&0&$2^{-4}$&509&415&509&6.239&0.068\\
+2&$2^{-10}$&0&8.28&56.3&380&6.239&0.057\\
+2&$2^{-10}$&$2^{-12}$&9.31&56.5&380&6.239&0.075\\
+2&$2^{-10}$&$2^{-4}$&519&433&519&6.239&0.072\\
+2&$2^{-6}$&0&45.4&769&769&6.239&0.060\\
+2&$2^{-6}$&$2^{-12}$&52.7&769&769&6.239&0.076\\
+2&$2^{-6}$&$2^{-4}$&945&945&945&6.239&0.078\\
+3&0&0&9.64&49.9&253&7.206&0.084\\
+3&0&$2^{-12}$&9.86&50.7&253&7.206&0.110\\
+3&0&$2^{-4}$&377&377&377&7.206&0.112\\
+3&$2^{-10}$&0&8.1&71.2&255&7.206&0.087\\
+3&$2^{-10}$&$2^{-12}$&9.37&71.4&255&7.206&0.117\\
+3&$2^{-10}$&$2^{-4}$&571&357&387&7.206&0.114\\
+3&$2^{-6}$&0&812&644&644&7.206&0.088\\
+3&$2^{-6}$&$2^{-12}$&812&644&644&7.206&0.119\\
+3&$2^{-6}$&$2^{-4}$&988&806&803&7.206&0.126\\
+\bottomrule\end{tabular}\end{table*}
+
+The structural first stage reaches the target in eight conditions. Exact block elimination completes all eighteen to the same precision in 0.06--0.13 seconds per condition. It verifies the two-row star structure directly: each leaf coefficient occurs only in its paired signal and nuisance rows, and each block has one center coefficient. The implementation proposes the pairing from the family row order and checks every support, response, coefficient and row assignment. Independent blocks add their regret maxima.
+
+For a fixed center coefficient $s$, eliminating a leaf gives a quotient $(a+bt)^2/(K+t^2)$ with $K>0$. Its maximum over the nuisance interval occurs at an endpoint or at $t=Kb/a$. On either endpoint the remaining signal-coordinate objective is quadratic; on the stationary branch it is quadratic on the interval where $t$ is feasible. Endpoint and scalar-stationary checks therefore give an exact pair oracle. Curvature interpolation certifies the remaining one-dimensional search. The block routine is a precision fallback for this verified sparse structure; the energy columns quantify what the learned spans alone certify.
+
+All eighteen block receipts are checked independently with exact rational arithmetic, including every original pair maximum, profiled leaf coefficient, containing root, complete subdivision tree and feasible witness. This supplies an exact-reference interval throughout the residual/leakage grid.
+
+The independent standard-library Fraction auditor imports no solver, proposal or energy-verifier implementation. It reconstructs every original-row constant, actual projector, retained-curvature enclosure, rounded radius and ridge gradient cap for all eighteen cases. For the two unperturbed cases it additionally verifies every saved original-row query, every node bound, binary coverage and full-model table witness. The analytic optima are separate explanatory checks. All checks pass in \texttt{multirank\_audit\_results.json}.

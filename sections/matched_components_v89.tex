@@ -1,0 +1,21 @@
+\subsection{Tail components and original-regret levels}
+Table~\ref{tab:tail-components-v89} separates the contraction, retained-radius and residual-envelope contributions; Table~\ref{tab:regret-levels-v89} reports the corresponding original-regret levels.
+\begin{table*}[t]\centering\small
+\caption{Tail components on identical primary instances; medians over five masks, in $10^{-6}$ units. Contraction changes $\gamma$ at the original $R_A$. Radius then uses the mixed-moment radius and the independently verified full-gradient restriction. The last column adds the mixed residual-energy envelope in~\eqref{eq:contraction-main-v89}. All quantities use saved verified constants; these are bound evaluations with no new solver searches.}
+\label{tab:tail-components-v89}
+\begin{tabular}{lrrrr}\toprule
+Data&Original&Contraction&+Radius&+Mixed envelope\\\midrule
+Supercond. & 7.476 & 5.547 & 5.547 & 4.453\\
+Parkinsons & 3.066 & 0.953 & 0.953 & 0.904\\
+Wine Quality & 1.867 & 0.143 & 0.142 & 0.134\\
+Yacht & 30.287 & 4.132 & 3.879 & 2.788\\
+\bottomrule\end{tabular}\end{table*}
+\begin{table}[t]\centering\small
+\caption{Original-regret magnitude. Marginal medians of energy lower and upper endpoints over five masks, in $10^{-3}$ normalized squared-response units. Numerical width and model-retention tolerance are distinct quantities.}
+\label{tab:regret-levels-v89}
+\begin{tabular}{lrr}\toprule Data&Median $L$&Median $U$\\\midrule
+Supercond. & 1.689359 & 1.693478\\
+Parkinsons & 0.828699 & 0.829603\\
+Wine Quality & 0.426868 & 0.426990\\
+Yacht & 0.761605 & 0.764284\\
+\bottomrule\end{tabular}\end{table}

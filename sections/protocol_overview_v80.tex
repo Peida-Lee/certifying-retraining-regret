@@ -1,0 +1,20 @@
+\subsection{Study settings and computing budgets}\label{app:protocol-v80}
+\begin{table*}[t]\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Experiment settings, targets and accounting boundaries. Each study retains its own candidate, normalization and precision target.}\label{tab:protocol-v80}
+\begin{tabular}{p{.19\textwidth}p{.22\textwidth}p{.25\textwidth}p{.23\textwidth}}\toprule
+Study&Inputs and comparison&Targets and clock&Reported evidence\\\midrule
+Structural family, 12&Synthetic full-rank tables; rank-one energy/moment&$10^{-6}$ width; 10\,s search; setup separate&12 energy successes; complete costs\\
+Nuisance scale, 6&Fixed $p=65$; scalar/moment/energy&Exact rational calculation&Scale-independent contraction\\
+Multidimensional structure, 18&Active ranks 2/3; residual and leakage changes&$10^{-5}$ width; 2\,s structural search; exact block refinement&18 block successes; first-stage and candidate-line controls\\
+Real-world tasks, 20&Four datasets; finite-precision candidates; rank 3&$10^{-5}$ width, $2.5\times10^{-6}$ tail; 10\,s complete&20 final-width, 10 strict-tail successes\\
+Precision/row controls, 24&Four tasks, three precisions, two row rules&Same 33 cells; 10\,s first stage, 600\,s refinement cap&24 refined successes; 15 centered-moment successes at the same cap\\
+Independent masks, 40&Two sets of five response-independent masks per task&$10^{-5}$ width; 600\,s complete cap&40 refined successes; separate new-mask timings\\
+Fixed-predictor decisions, 15&Three disjoint pools; fixed two-percent criterion&10\,s energy; shared 120\,s refinement/moment checkpoint&15 refined STOPs versus 5 moments; 330 additional cells\\
+General solver, 12 runs&First mask of four tasks; all features&10/30\,s complete; scales $1,10^6$&Numerical duals and objective identity audit\\
+General coarsening, 60&Three datasets; two widths and column patterns&$3\times10^{-6}$ width; 1\,s structural stage, 9000\,s complete cap&60 final-width successes; all exact replay audits\\
+Dense row certificates, 4&Diabetes and one density sweep; all features&$10^{-8}$ width; 1800\,s complete cap&4 final-width successes; all exact replay audits\\
+Metric controls, 18&Gradient/metric POD/greedy; fixed rank 3&10\,s complete, input included&All pairs and completed-event checkpoints\\
+Acquisition, 12&Three target pools, 512 disjoint reference rows&$0.25\,\mathrm{K}^2$; 10\,s online&One additional STOP, 64 target cells\\
+\bottomrule\end{tabular}\end{table*}
+
+General-coarsening studies use source-pool means/ranges as supplied preprocessing metadata. The energy study uses the explicit scaling pools in Appendix~\ref{app:public-energy-v84}. The acquisition study uses 512 disjoint reference records and reports 41,472 reference feature cells separately. Responses remain observed and undergo each task's specified normalization. Imports precede algorithm clocks; only evidence completed by a deadline receives credit. Queue errors are recorded and subsequent conditions continue.

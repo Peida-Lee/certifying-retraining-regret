@@ -1,0 +1,257 @@
+{
+  "status": "PASS",
+  "conditions": 20,
+  "full_trees": 4,
+  "reports": [
+    {
+      "dataset": "superconductivity",
+      "seed": 91311,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "1172783185020516138797685434922007634046358974563683034810171993843676681195263153918773778574231349231045215005328997247813182648618729968338747443404720157218372225/3773681369438638967034104628973389590008778595376769447921308989564482218321957279290696763277822675952436065955248168386113210171045206518735548356866764875495475511296",
+      "complete_tree": {
+        "nodes": 1379,
+        "points": 2378,
+        "leaves": 690,
+        "binary_coverage": true,
+        "exact_original_row_values": true
+      }
+    },
+    {
+      "dataset": "superconductivity",
+      "seed": 91312,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "10745418822549361570152633500524494838767640930236929553823336611113090652446012248817937649375794812632226116623684299457906010607222571787314612045074330289791001/58963904180416784235309901253323033337901985084192492895788545389629646920336644106586515877822866537040328417083951146830995791215905863668638288024392484357096341504"
+    },
+    {
+      "dataset": "superconductivity",
+      "seed": 91313,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "1328926773318387854189963755415662770725085275113859125487638772016417806332208138991842873911063551810332078894109945945952100535858670665282472769125800242528521/3685200412349838660452542632788403870141101831905146245716936403800434032532071446542097084498129273316117787017846216741529149089481781398596827175267254510177746944"
+    },
+    {
+      "dataset": "superconductivity",
+      "seed": 91314,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "2938660729683092298253198270916833068039790237465228578294859742362222623651592732462879366538269136482794869600234787149498878844823838824741707520550035834062525625/15094840399972136295006081309597434867437115766293299373562866932346099507857097243436334802136354566941574252768503964574418170200170118161108433452158582161256988278784"
+    },
+    {
+      "dataset": "superconductivity",
+      "seed": 91315,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "232459689132830351388438704732109383776844703925291213045155589228785735927359726977250754810474908721813492577114899235929601120675381282792569368671242907801/899713157083435970958091991473446328677562353999085562838742251339767910262271158294466420389729618592469888017056653372833008527215900010283478105222260681867264"
+    },
+    {
+      "dataset": "parkinsons",
+      "seed": 91311,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "12241119419415209382113998610705985089804521/365373595720042100400625728000097542458275004416",
+      "complete_tree": {
+        "nodes": 1241,
+        "points": 2148,
+        "leaves": 621,
+        "binary_coverage": true,
+        "exact_original_row_values": true
+      }
+    },
+    {
+      "dataset": "parkinsons",
+      "seed": 91312,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "5185496996968098591295718433775945554628321/91343411535257506143147283548115179594106011648"
+    },
+    {
+      "dataset": "parkinsons",
+      "seed": 91313,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "6386109509884520305035805721853847314515625/91343383034400795921242950878874674806363521024"
+    },
+    {
+      "dataset": "parkinsons",
+      "seed": 91314,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "5455237121212062300666620770481828627025/89202466007265424619509978177829410388836352"
+    },
+    {
+      "dataset": "parkinsons",
+      "seed": 91315,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "6009011399418504701563586389363442312794609/91343401937080704773215512790301616936434270208"
+    },
+    {
+      "dataset": "wine_white",
+      "seed": 91311,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "41772064936201239118680375362735875455625/10149288305712429072537638719707680072674574336",
+      "complete_tree": {
+        "nodes": 1277,
+        "points": 2204,
+        "leaves": 639,
+        "binary_coverage": true,
+        "exact_original_row_values": true
+      }
+    },
+    {
+      "dataset": "wine_white",
+      "seed": 91312,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "22884718931379613302268656901960304361/5575169158833348800824656773122587784904704"
+    },
+    {
+      "dataset": "wine_white",
+      "seed": 91313,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "103147351289890294473721161696935583981801/10149285023979795516944785782862258798078197760"
+    },
+    {
+      "dataset": "wine_white",
+      "seed": 91314,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "4032877107239991832629880371498383127126481/365374268629699383111348684869889522459362721792"
+    },
+    {
+      "dataset": "wine_white",
+      "seed": 91315,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "2068930151286377202087884996924900202587881/365374292598709081598772006483302253926526484480"
+    },
+    {
+      "dataset": "yacht",
+      "seed": 91311,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "29945030980438003252499239847769298989/265484751046164570181106736889856905969664",
+      "complete_tree": {
+        "nodes": 1517,
+        "points": 2604,
+        "leaves": 759,
+        "binary_coverage": true,
+        "exact_original_row_values": true
+      }
+    },
+    {
+      "dataset": "yacht",
+      "seed": 91312,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "43343334042453244689587526334226154400849/1427246244964292825023863279735651829465219072"
+    },
+    {
+      "dataset": "yacht",
+      "seed": 91313,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "1436143706875311502567199262131682662021521/22835931658356299854823995185023542590399578112"
+    },
+    {
+      "dataset": "yacht",
+      "seed": 91314,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "463263116290298388022417321394884625597863/13049104251009688343572415640506198613720825856"
+    },
+    {
+      "dataset": "yacht",
+      "seed": 91315,
+      "origin": "independent_uniform",
+      "row_rule": null,
+      "candidate_bits": null,
+      "status": "PASS",
+      "constants": "PASS",
+      "feasible_original_witness": "PASS",
+      "tail": "8908782849597871279639823255120965098737761/365374901183837281728682196114268473784707055616"
+    }
+  ],
+  "seconds": 157.63752370001748,
+  "imports_solver_implementation": false
+}

@@ -1,0 +1,46 @@
+\subsection{Curvature-aware controls at fixed ambient dimension}\label{app:scale-v80}
+Fix $n=128$, $p=65$, $\alpha=1/32$, $\lambda=1/2$ and $\beta=Q=e_0$ in~\eqref{eq:family}. Scale only nuisance features, giving $t_j\in[s\sqrt m,2s\sqrt m]$. The structural constants are $a=\alpha/\sqrt2$ and $R=1/25$; the exact cross-block bound is $\sup_X\|Z_X^\top A_X\|=\alpha s$.
+
+The ridge-only scalar estimate is $\eta_\lambda=2\alpha^2s^2/625$. This family also admits a stronger curvature estimate directly from its original intervals:
+\[
+ D_X=\lambda I+Z_X^\top Z_X\succeq (1+s^2)I/2.
+\]
+At the same structural radius, the resulting bound is
+\[
+ \eta_D=\frac{2\alpha^2s^2}{625(1+s^2)},\quad
+ \eta_E=\frac{\alpha^2}{1250},\quad
+ \frac{\eta_D}{\eta_E}=\frac{4s^2}{1+s^2}<4.
+\]
+Thus stronger scalar curvature also removes scale divergence in this diagonal family. The energy certificate gives the smaller constant without estimating a nuisance curvature lower bound.
+
+\paragraph{Moment control with an actual preconditioner.}
+For the stated power-of-two scales, $T_s=\operatorname{diag}(1,s^{-1}I)$ is exactly dyadic and retains the same physical line $e_0$. In its actual transformed full Gram, retained curvature is at least $A=25/32$, discarded curvature at least $d_s=(1+s^{-2})/2$, and cross-block norm at most $\alpha$. Therefore
+\[
+ \widehat M_X\succeq\mu_s I,\quad
+ \mu_s=\frac{A+d_s-\overline{\sqrt{(A-d_s)^2+4\alpha^2}}}{2}>0,
+\]
+where the square root is rounded upward on a $2^{-64}$ grid. Exact rational checks verify $A-\mu_s\ge0$, $d_s-\mu_s\ge0$ and $(A-\mu_s)(d_s-\mu_s)\ge\alpha^2$. These inequalities prove the bound uniformly over all original tables. The transformed discarded gradient is zero and $C_r=\alpha$, so $U_0=1/(1024\mu_s)$, $R_s=1/(32\mu_s)$ and Theorem~\ref{thm:moment} yields
+\[
+ \eta_{M,T}=\frac{\alpha^2}{1024\mu_s^3}.
+\]
+This is a curvature-aware, actually preconditioned moment control. It also stays bounded as $s$ grows. For reference, the identity-metric moment constants give $\alpha^2s^2/128$; that simpler control is recorded in the source.
+
+The exact full and restricted optima are
+\[
+ \begin{gathered}
+ H_s^*=\frac1{800+512\alpha^2/(1+4s^2)},\\
+ V_{e_0}=\frac1{800+512\alpha^2}.
+ \end{gathered}
+\]
+Original normal equations attain both at the signal lower endpoints and nuisance upper endpoints. The comparison keeps dimension, direction and candidate fixed. Energy's scale-independent guarantee applies without the diagonal family's available nuisance curvature estimate; the diagonal case quantifies the remaining constant advantage after supplying it.
+
+\begin{table}[t]\centering\small\setlength{\tabcolsep}{3pt}
+\caption{Additive controls at fixed $p=65$, in $10^{-6}$ units. D uses the enhanced discarded curvature; MT uses the actual dyadic preconditioner and verified full-Gram lower bound.}\label{tab:scale-v80}
+\begin{tabular}{rrrrr}\toprule Scale&Actual&Energy&D&MT\\\midrule
+1 & 0.625 & 0.781 & 1.562 & 2.034\\
+2 & 0.735 & 0.781 & 2.500 & 4.021\\
+4 & 0.769 & 0.781 & 2.941 & 6.501\\
+16 & 0.780 & 0.781 & 3.113 & 7.699\\
+64 & 0.781 & 0.781 & 3.124 & 7.783\\
+256 & 0.781 & 0.781 & 3.125 & 7.788\\
+\bottomrule\end{tabular}\end{table}

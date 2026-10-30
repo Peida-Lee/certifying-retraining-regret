@@ -1,0 +1,60 @@
+\section{Joint Residual Refinement}\label{app:joint-refinement-v92}
+The residual-energy first stage identifies small certifying spans. When its sufficient tail exceeds the requested precision, we refine the original completion domain with a reference-residual certificate. The two stages share the original candidate, ridge penalty, completion boxes and full-feature retrained comparator.
+
+\begin{proposition}[Joint reference-residual bound]\label{prop:joint-refinement-v92}
+Let $G_0\succ0$ be a uniform lower bound on $M_X$, and verify $T^\top G_0T\succeq\mu I$ for an invertible actual matrix $T$ and $\mu>0$. For any fixed reference $\vartheta$, put $g_\vartheta(X)=M_X\vartheta-r_X$. Then
+\begin{align}
+h_\beta(X)&=J_X(\beta)-J_X(\vartheta)\nonumber\\
+ &\quad+g_\vartheta(X)^\top M_X^{-1}g_\vartheta(X),\label{eq:reference-identity-v92}\\
+h_\beta(X)&\le P_\vartheta(X):=J_X(\beta)-J_X(\vartheta)\nonumber\\
+ &\quad+\mu^{-1}\|T^\top g_\vartheta(X)\|^2.\label{eq:joint-refinement-v92}
+\end{align}
+On an original completion subbox, $P_\vartheta$ is a polynomial of degree at most four in normalized cell coordinates $z\in[0,1]^d$.
+\end{proposition}
+\begin{proof}
+Completing the square around the exact full-feature ridge solution gives~\eqref{eq:reference-identity-v92}. The verified metric implies $M_X^{-1}\preceq\mu^{-1}TT^\top$, which gives~\eqref{eq:joint-refinement-v92}. Each row is affine in its uncertain cells. The objective difference is quadratic, $g_\vartheta$ is quadratic, and its squared transformed norm has degree at most four.
+\end{proof}
+
+The polynomial retains the dependence between the objective difference and the normal-equation residual. Write $x_{ij}=x^0_{ij}+d_a z_a$ for cell $a=(i,j)$, with $x^0$ an endpoint table and signed length $d_a$. Before applying $T^\top$, the constant gradient coefficient is $g_\vartheta(X^0)$; the linear coefficient is $w_i d_a[(x_i^{0\top}\vartheta-y_i)e_j+\vartheta_j x_i^0]$. The square coefficient is $w_i d_a^2\vartheta_j e_j$. For two distinct cells $a=(i,j)$ and $b=(i,k)$ in one row, their product coefficient is $w_i d_a d_b(\vartheta_k e_j+\vartheta_j e_k)$. Squaring these explicit coefficients constructs the joint polynomial with outward arithmetic.
+
+\paragraph{Lifted row residuals and box localizers.}
+For a row with several uncertain entries, introduce a normalized residual $u_i\in[0,1]$ through
+\[
+ x_i^\top\vartheta-y_i=\ell_i+s_i u_i,
+\]
+where $s_i>0$ and $[\ell_i,\ell_i+s_i]$ contains the exact residual range. We use dyadic endpoints and spans. Two outward-rounded affine inequalities encode this relation, together with their products by each normalized variable and its complement. The transformed normal residual is bilinear in cell coordinates and the corresponding $u_i$. Its moment basis therefore has at most $1+2d+m$ entries for $d$ uncertain cells in $m$ rows.
+
+Let $v_i$ contain the constant, the normalized cells in row $i$, and $u_i$. For each coordinate $q$ in that row, we add the localizing constraint
+\begin{equation}
+ \mathcal L_{i,q}(y)
+ :=\mathbb E_y\!\left[q(1-q)v_i v_i^\top\right]\succeq0.
+ \label{eq:row-localizer-v92}
+\end{equation}
+Here $\mathbb E_y$ denotes substitution of monomials by lifted moments. Every actual completion satisfies~\eqref{eq:row-localizer-v92}, since $q(1-q)\ge0$ and $v_i v_i^\top\succeq0$. For a row containing $k_i$ uncertain cells, this adds $k_i+1$ matrices of order $k_i+2$. These constraints retain the row's box geometry in the fourth-degree relaxation.
+
+\paragraph{A validated moment dual.}
+We use polynomial moment relaxations~\citep{lasserre2001}, modeled in CVXPY~\citep{diamond2016cvxpy}, with SCS numerical proposals~\citep{odonoghue2016scs}.
+Let $y_\alpha=z^\alpha$ for every required monomial and its factors, with $0\le y_\alpha\le1$. Product relations give $y_{\alpha+\gamma}\le y_\alpha,y_\gamma$ and $y_{\alpha+\gamma}\ge y_\alpha+y_\gamma-1$. Square tangents use $y_{2\alpha}\ge2t y_\alpha-t^2$ for $t\in\{0,1/4,1/2,3/4,1\}$. Write these inequalities as $Ay\le b$. The moment matrix $\mathcal M(y)$ indexed by the constant, linear and within-row quadratic gradient monomials satisfies $\mathcal M(y)\succeq0$ on every genuine completion.
+
+Enclose the polynomial coefficients above as $c_0,c$. For any nonnegative multiplier $\lambda$ and any matrix $R$, write
+\[
+ \langle RR^\top,\mathcal M(y)\rangle=s_0+s^\top y.
+\]
+Every allowed completion obeys the independently checkable upper bound
+\begin{equation}
+ P_\vartheta(X)\le c_0+\lambda^\top b+s_0
+       +\sum_j\max\{0,c_j-(A^\top\lambda)_j+s_j\}.
+ \label{eq:validated-moment-dual-v92}
+\end{equation}
+Indeed, add the nonnegative moment quadratic and the nonnegative inequality slack to the polynomial, then bound the remaining linear form on $[0,1]$. Numerical conic optimization proposes the multipliers. The implementation rounds $\lambda$ to nonnegative dyadics and stores a dyadic factor $R$, which establishes positive semidefiniteness directly. Outward evaluation of~\eqref{eq:validated-moment-dual-v92} includes the complete dual residual. The independent auditor reconstructs the original polynomial, actual metric, multiplier constraints and factor products as exact rationals.
+
+For the localized relaxation, each matrix in~\eqref{eq:row-localizer-v92} receives its own dyadic factor. Their inner products contribute additional constant and monomial coefficients to $s_0$ and $s$ in~\eqref{eq:validated-moment-dual-v92}. The same residual correction proves the resulting upper bound. The independent checker also reconstructs the residual range, affine links, and every localizing polynomial $q-q^2$.
+
+\paragraph{Reference and subdivision rules.}
+A fixed 64-start feasible search supplies a completed-table lower witness. An eight-step finite-pool minimax exchange proposes a reference, using 32 starts per exchange step and fixed random seeds. Each proposed reference receives the uniform polynomial certificate above. For an unresolved node, we bisect the cell maximizing relaxed moment variance times its polynomial coefficient sensitivity. The parent remains active until both covering children finish. The largest active upper, intersected with the first-stage upper, and the best feasible original-table lower give the global interval. Every reference fit, witness search, polynomial construction, conic solve and dual evaluation enters the refinement clock.
+
+The prespecified new-mask computation cap is 600 seconds, with completed-evidence checkpoints at 10, 60, 120, 300 and 600 seconds. All twenty new masks finish within 76.21 seconds. The original rank-three guarantee belongs to the structural first stage; this completion-domain refinement supplies additional accuracy when needed. Its computational cost depends on the unresolved cells and the moment relaxation.
+
+\input{sections/row_edge_refinement_v22}
+\input{sections/compact_profile_v32}
+\input{sections/algorithm_v92}

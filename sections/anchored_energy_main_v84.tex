@@ -1,0 +1,34 @@
+\subsection{Observed Anchors and Constructive Discovery}\label{sec:anchored-energy-v84}
+Let $T\in\R^{p\times p}$ be an invertible, numerically stored coordinate transformation: a parameter displacement $z$ represents the physical displacement $Tz$. Complete observations supply an aggregate quadratic anchor. Put $B=\lambda I+X_{\mathcal A}^\top W_{\mathcal A}X_{\mathcal A}$, $r_A=X_{\mathcal A}^\top W_{\mathcal A}y_{\mathcal A}$, $K=T^\top BT$, and $h=T^\top(B\beta-r_A)$. Verify $\mu I\preceq K\preceq\nu I$ for the actual $T$. For $z_0\in\operatorname{range}(Q)$ set $h_c=h-Kz_0$ and $e_c=W^{1/2}[X(\beta-Tz_0)-y]$.
+
+\begin{corollary}[Anchored residual energy]\label{cor:anchor-energy-v84}
+Partition the remaining rows into $\mathcal S,\mathcal N$ and require $X_{\mathcal S}TP=0$. Uniformly bound $\|W_{\mathcal N}^{1/2}X_{\mathcal N}TQ\|\le a$, $\|(e_c)_{\mathcal N}\|\le\epsilon$, $\|P^\top h_c\|\le d$, and
+\[
+ \|Q^\top h_c+(W_{\mathcal S}^{1/2}X_{\mathcal S}TQ)^\top(e_c)_{\mathcal S}\|\le G.
+\]
+With $c=(\nu-\mu)/2$, put
+\begin{align}
+ R_A&=\frac{G+a\epsilon+(c/\mu+a/(2\sqrt\mu))d+c\epsilon/(2\sqrt\mu)}{\mu},\nonumber\\
+ \eta_{\rm anch}&=[\epsilon+aR_A+(d+cR_A)/\sqrt\mu]^2.\label{eq:anchor-energy-v84}
+\end{align}
+Then $E(\operatorname{range}(TQ))\le\eta_{\rm anch}$ and $d_{\eta_{\rm anch}}\le\dim Q$. The corresponding original retained optimum gives $V_Q\le H^*\le V_Q+\eta_{\rm anch}$; every full optimizer's retained component lies within $R_A$ of $z_0$.
+\end{corollary}
+The proof uses $ZD^{-1}Z^\top\preceq I$ and $\|ZD^{-1}\|\le1/(2\sqrt\mu)$ for $D=K_{PP}+Z^\top Z$. The original candidate and full retrained comparator are preserved.
+
+Write $A=W_{\mathcal N}^{1/2}X_{\mathcal N}TQ$, $Z=W_{\mathcal N}^{1/2}X_{\mathcal N}TP$, and $e_N=(e_c)_{\mathcal N}$. Verify $\|Z\|^2\le\rho$ and $\|A^\top e_N\|\le b$. A verified radius $R\le R_A$ for both optima's retained components gives
+\begin{align}
+ \gamma^2&=\rho/(\mu+\rho),\nonumber\\
+ E_N(R)&=\min\{(\epsilon+aR)^2,\epsilon^2+2bR+a^2R^2\},\nonumber\\
+ \eta_C&=\left[\gamma\sqrt{E_N(R)}+(d+cR)/\sqrt\mu\right]^2.\label{eq:contraction-main-v89}
+\end{align}
+It gives $V_Q\le H^*\le V_Q+\eta_C$. The mixed moment also tightens $R$; Appendix~\ref{app:contraction-v88} gives its formula and proof. The choice $\gamma=1$, $R=R_A$ and the first residual envelope recovers~\eqref{eq:anchor-energy-v84}.
+
+\paragraph{Common-domain adaptation.}
+Let $R_c$ be the verified containing coordinate radius around the same retained reference. Aggregate discarded reference gradients and cross blocks give $G_P,C_R$ as in Theorem~\ref{thm:moment}. On this common domain use
+\begin{equation}
+ \eta_{\rm adapt}=\min\{\eta_C,(G_P+C_RR_c)^2/\mu\}.\label{eq:adaptive-v90}
+\end{equation}
+Both bounds enclose the same full-comparator problem. The single search keeps their smaller tail and pays for both verifications. Since $R_c$ is no larger than the independently centered moment radius, its sufficient tail is no larger than that moment tail. Appendix~\ref{app:contraction-v88} gives the containing-domain proof.
+
+\paragraph{A constructive rank bound.}
+Let $\theta_A=B^{-1}r_A$. Include the transformed centers and interval generators of the signal rows, and $T^{-1}(\beta-\theta_A)$, in the retained span. Taking $z_0=T^{-1}(\beta-\theta_A)$ makes $h_c=0$ and satisfies signal support. If signal row $i$ has $k_i$ unknowns, the required rank is at most $1+\sum_{i\in\mathcal S}(1+k_i)$, irrespective of nuisance rank and feature count. One signal row with one unknown therefore proposes at most three directions. Appendix~\ref{app:anchor-energy-v84} proves the construction and verifies its actual rounded implementation.

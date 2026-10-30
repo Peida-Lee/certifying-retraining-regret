@@ -1,0 +1,58 @@
+\section{Matched External Solvers and Regret Decomposition}\label{app:external-v90}
+All methods use the primary first mask 88211, unchanged $\beta$, $\lambda$, boxes, midpoint feasible witness and common cap. Input/candidate construction reuses its measured primary cost; each new external run measures its own anchor, cap, model construction and solver costs. SCIP 10.0.2 through PySCIPOpt 6.3.0 uses objective scale $10^6$, absolute objective tolerance $10^{-10}$, primal and dual feasibility tolerances $10^{-9}$ and one thread. The original polynomial regret formulation and exact identity audit are in Appendix~\ref{app:scip-followup}. Its tolerance-based numerical dual is listed separately from outward arithmetic. A second target-$10^{-5}$ queue is included in the source. Small indivisible-call overruns are included in actual total cost.
+
+\begin{table*}[t]\centering\small
+\caption{Same-instance endpoints. $L,U$ use $10^{-3}$ units; widths use $10^{-6}$. All costs are complete seconds.}
+\label{tab:external-endpoints-v90}
+\begin{tabular}{llrrrr}\toprule Data&Method&$L$&$U$&Width&Seconds\\\midrule
+Supercond. & Adaptive energy & 1.690289243 & 1.694199943 & 3.910700 & 7.096\\
+Supercond. & Centered moment & 1.690288699 & 1.725999809 & 35.711110 & 6.287\\
+Supercond. & SCIP numerical & 1.690299779 & 1.850295633 & 159.995854 & 9.992\\
+Parkinsons & Adaptive energy & 0.828699094 & 0.829603046 & 0.903953 & 3.913\\
+Parkinsons & Centered moment & 0.828699094 & 0.830236015 & 1.536921 & 4.102\\
+Parkinsons & SCIP numerical & 0.828699094 & 0.829491585 & 0.792491 & 9.977\\
+Wine Quality & Adaptive energy & 0.426867749 & 0.426989908 & 0.122158 & 4.808\\
+Wine Quality & Centered moment & 0.426867749 & 0.427020937 & 0.153188 & 4.744\\
+Wine Quality & SCIP numerical & 0.426867749 & 0.427110887 & 0.243138 & 9.990\\
+Yacht & Adaptive energy & 0.760845932 & 0.764142010 & 3.296078 & 5.251\\
+Yacht & Centered moment & 0.760845932 & 0.765150401 & 4.304469 & 5.590\\
+Yacht & SCIP numerical & 0.760845946 & 0.760847427 & 0.001482 & 9.969\\
+\bottomrule\end{tabular}\end{table*}
+\subsection{ZORRO model envelopes converted to the same regret}
+ZORRO~\citep{zhu2024zorro}, Theorem 4.2, encloses all possible optimal ridge models at the specified regularization. We implement its Appendix I equations (22), (23), (39) for observed responses and independently uncertain feature cells, with its Appendix J box splitting. The eigenvector transformation is rounded to a dyadic invertible matrix $B$; an outward inverse enclosure covers its actual inverse. Writing $M_0=X_c^\top X_c/n+\lambda I$, the real component is $w_R=M_0^{-1}X_c^\top y/n$ and the shared-symbol component uses the derivative of the exact ridge equations. Rounding residuals remain in the fixed-point forcing. High-order data monomials are collected before absolute coefficients are summed, following ZORRO's linearization.
+
+The resulting joint enclosure has $\theta=w_R+D\xi+B\operatorname{diag}(k)\zeta$, with the original data symbols $\xi$ shared with $X(\xi)$ and independent nondata symbols $\zeta$. Its nonnegative fixed-point radii satisfy an outward verified M-matrix inequality. For each possible optimal model,
+\begin{align*}
+ d(\xi,\zeta)&=\beta-w_R-D\xi-B\operatorname{diag}(k)\zeta,\\
+ h_\beta(X)&=g_X^\top(\beta-\theta_X^*)
+ \le\sup_{\xi,\zeta\in[-1,1]}g_{X(\xi)}^\top d(\xi,\zeta).
+\end{align*}
+We collect the adapter's degree-at-most-three polynomial coefficients across rows, preserve shared data symbols, bound every even monomial on $[0,1]$ and remaining monomials on $[-1,1]$. The smaller of this valid upper and the common cap is returned with the same initial feasible lower. This measures one explicit polynomial adapter of the model envelope. We use the paper's ridge equations; the inspected repository notebook is an implementation reference. The original $\lambda$ is unchanged throughout splitting.
+
+\begin{table*}[t]\centering\small
+\caption{ZORRO fixed-point/adapter controls on the same primary instances. Widths use $10^{-6}$ units. A complete cover is required to credit its model-derived upper. Incomplete cover returns the shared cap. Cost includes all attempted splits and the adapter.}
+\label{tab:zorro-v90}
+\begin{tabular}{lrrrrrr}\toprule Data&Complete cover&Attempts&Completed boxes&Unresolved boxes&Width&Seconds\\\midrule
+Supercond. & -- & 19 & 0 & 20 & 185.998 & 10.329\\
+Parkinsons & yes & 1 & 1 & 0 & 17.134 & 0.798\\
+Wine Quality & yes & 1 & 1 & 0 & 4.503 & 0.547\\
+Yacht & yes & 1 & 1 & 0 & 19.788 & 0.278\\
+\bottomrule\end{tabular}\end{table*}
+The complete unsplit envelopes for Parkinsons, Wine and Yacht take less than one complete second each. The Superconductivity queue attempts nineteen boxes and leaves twenty unresolved at the cap. The independent rational program reconstructs the three complete fixed-point systems and their shared-symbol regret adapters from the original row boxes. All three pass exact coefficient, nonnegative-radius and adapter-upper checks. Thirty-two sampled original normal-equation solutions per complete envelope additionally check the implementation.
+
+\subsection{Midpoint regret and uncertainty increment}
+The midpoint quantity is $h_\beta(X_c)$. We enclose it by a feasible comparator objective and a verified normal-equation residual correction. If $\widetilde\theta$ is its numerical ridge solution and $r_c=M_c\widetilde\theta-X_c^\top y/n$, then
+\[
+ J_c(\beta)-J_c(\widetilde\theta)\le h_\beta(X_c)
+ \le J_c(\beta)-J_c(\widetilde\theta)+\|T^\top r_c\|^2/\mu.
+\]
+Subtracting the midpoint interval from $[L,U]$ encloses the nonnegative uncertainty increment. Midpoint regret records the fixed candidate's representation cost; the increment records additional worst-completion cost for that same candidate. Componentwise medians below summarize five fixed masks; the source retains every paired interval.
+\begin{table}[t]\centering\small
+\caption{Median midpoint regret and median increment bounds, all in $10^{-6}$ normalized-objective units.}
+\label{tab:increments-v90}
+\begin{tabular}{lrrr}\toprule Data&Midpoint&Increment $L$&Increment $U$\\\midrule
+Supercond. & 1664.298 & 23.232 & 27.351\\
+Parkinsons & 817.937 & 10.773 & 11.677\\
+Wine Quality & 424.515 & 2.323 & 2.461\\
+Yacht & 744.339 & 17.220 & 19.789\\
+\bottomrule\end{tabular}\end{table}

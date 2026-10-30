@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying preprint when using these materials."
+title: "Certifying Retraining Regret through Residual Structure"
+authors:
+  - family-names: Li
+    given-names: Peida
+    affiliation: "School of Basic Medical Sciences, Peking University"
+version: "v92-r6"
+date-released: 2026-10-30
+repository-code: "https://github.com/Peida-Lee/certifying-retraining-regret"

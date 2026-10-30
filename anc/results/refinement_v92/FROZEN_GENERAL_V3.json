@@ -1,0 +1,17 @@
+{
+  "status": "FROZEN_BEFORE_GRID_RUN",
+  "grid": "All original 60 general-coarsening conditions: 3 datasets x 2 bin widths x 2 column patterns x 5 seeds",
+  "target": 3e-06,
+  "full_pipeline_cap_seconds": 1800,
+  "structural_first_stage": "Original rank 1,2,3 proposal selection, 2.5e-6 tail target, one second search",
+  "refinement": "64-start witness, eight-step robust reference, one root moment-reference update, largest-upper aggregate split",
+  "split": "Dyadic principal relaxed covariance direction; split at dyadic projected mean; complementary halfspaces; RLT with every coordinate and its complement",
+  "reference": "Half average of parent reference and quadratic minimizer under parent moments",
+  "root_solver_seconds": 60,
+  "child_solver_seconds": 40,
+  "max_evaluated_nodes": 33,
+  "coverage": "Retain parent until both complementary children finish; keep all raw receipts",
+  "acceptance": "Exact rational coefficient/metric/dual audit and full halfspace-cover audit; completed evidence within cap",
+  "development_case": "Diabetes, width 1/8, concentrated columns, seed 74111 was used in method development; remaining fixed-grid cases validate the same frozen rule",
+  "failure_policy": "Keep errors and unmet targets, continue all queued conditions"
+}

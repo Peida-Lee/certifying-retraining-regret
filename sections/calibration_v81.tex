@@ -1,0 +1,16 @@
+\subsection{Primary independent-reference acquisition}\label{app:calibration-v81}
+The twelve-condition grid uses feature means and ranges estimated solely from 512 independent reference records. Seed 81041 selects these records outside all specified excluded pools and all three target pools. The constants are frozen before target masks, midpoint candidates or certificates. Target records, mask/reveal seeds, rank-three methods, full rank 82, $\lambda=1/32$, $0.25\,\mathrm{K}^2$ tolerance and ten-second complete online budget are fixed across comparisons. A candidate is fitted to each normalized midpoint and then held fixed across its reveal trajectory. The same reference constants apply to all target conditions and methods.
+
+\begin{table}[t]\centering\small\setlength{\tabcolsep}{3pt}
+\caption{Independent calibration: shared coarse STOPs, search additions and target-cell savings over twelve conditions. V denotes a violating completion and U unresolved.}\label{tab:calibration-v81}
+\begin{tabular}{lrrrrr}\toprule Method&Coarse S&Extra S&V&U&Saved\\\midrule
+anchor&9&0&0&3&896\\
+gradient&9&1&1&1&960\\
+metric pod&9&1&1&1&960\\
+metric greedy&9&1&1&1&960\\
+full&9&0&1&2&896\\
+\bottomrule\end{tabular}\end{table}
+
+Nine conditions stop at the shared coarse bound. Each reduced proposal adds one STOP and one violation; full search adds the violation. All reduced methods save 960 target cells versus 896 for full search. The additional STOP occurs in pool 79011's concentrated 64-row case: upper bounds are 0.23499,0.23765,0.24194\,$\mathrm{K}^2$ for gradient, metric POD and metric greedy, versus 0.30834 for full search. First STOP times are 7.47,7.01,8.34 seconds. Pool 79023's concentrated case is unresolved for every method, and pool 79037's concentrated case is violating. 
+
+The reference contains 512\,$\times$\,81=41,472 observed feature cells. We report that reference size separately from gross target-cell savings. The reference statistics take 0.00574 seconds to compute, outside the online certificate clock. The operational interpretation assumes an existing independent reference; acquiring that reference solely for this small target task would add its measurement cost. Public CSV loading and imports also precede the online clock. Input/candidate/anchor construction is remeasured and identically charged to all methods; each pays its own proposal/verification/search/witness work. The full queue takes 123.13 seconds. Exact record exclusions, statistics reconstructed solely from reference values, eligible deadline endpoints, original-completion coverage and the fixed half-reveal policy pass the semantic audit.

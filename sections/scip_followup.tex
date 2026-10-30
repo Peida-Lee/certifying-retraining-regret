@@ -1,0 +1,16 @@
+\subsection{Additional general nonlinear-solver controls}\label{app:scip-followup}
+These additional controls use Concrete, Superconductivity, Airfoil and Power Plant, with mask 84111 for each task. We compare SCIP using all features, the same candidate, ridge penalty and 33 independent uncertain cells. These are the first masks in the fixed mask list. The original regret is represented as a joint maximum over cell deviations and the retraining displacement; observed rows are aggregated into their exact normal equations. Centering the displacement at the observed-anchor solution avoids cancellation between large fixed-row losses. A shared feasible midpoint witness initializes the incumbent and a shared gradient/observed-loss cap bounds the result.
+
+Each run uses one CPU thread, includes common input/anchor/witness and model construction within its total budget, and gives SCIP the remaining time. The main ten/thirty-second comparison scales the objective by $10^6$ and scales the $10^{-5}$ absolute-gap target accordingly. Ten-second unscaled runs check numerical scaling. Feasibility and dual-feasibility tolerances are $10^{-9}$. SCIP endpoints are numerical dual estimates under these tolerances. Our outward-arithmetic endpoints and independently checked original-table witnesses use the separate certification procedure.
+
+\begin{table*}[t]\centering\small\setlength{\tabcolsep}{5pt}
+\caption{All twelve SCIP runs. Widths are in $10^{-6}$ normalized squared-response units. The first two columns use objective scale $10^6$; the third uses scale 1. All initial solutions were accepted.}\label{tab:scip-followup}
+\begin{tabular}{lrrr}\toprule
+Data&10\,s scaled&30\,s scaled&10\,s unscaled\\\midrule
+Concrete & 9.583 & 9.583 & 7.980\\
+Supercond. & 36.305 & 36.305 & 151.492\\
+Airfoil & 7.012 & 7.012 & 7.012\\
+Power Plant & 6.194 & 6.194 & 6.195\\
+\bottomrule\end{tabular}\end{table*}
+
+Concrete, Airfoil and Power Plant reach the numerical width target; Superconductivity reaches a time limit at both budgets, with scaled width $36.305\times10^{-6}$. An independent eight-point Fraction audit reconstructs the original loss difference and the centered compressed objective separately, obtaining exact equality. It imports no SCIP model builder; float coefficient evaluations differ from the exact identity by about $10^{-19}$. These checks validate the compared objective independently of the solver's numerical dual guarantee.

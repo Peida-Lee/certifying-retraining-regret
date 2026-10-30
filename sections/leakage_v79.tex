@@ -1,0 +1,168 @@
+\subsection{Stable residual energy under signal-support leakage}
+\label{app:leakage-v79}
+The exact support condition in Theorem~\ref{thm:energy} admits a quantitative extension. Its radius controls the projection of the full optimizer for every completion and converges to the residual-energy radius as leakage vanishes.
+
+Let $[Q\ P]$ be orthogonal and write
+$\beta=Q\beta_Q+P\beta_D$ with $\|\beta_D\|\le d$.
+For $j\in\{\mathcal S,\mathcal N\}$ define
+\begin{align*}
+ A_j&=W_j^{1/2}X_jQ,\qquad Z_j=W_j^{1/2}X_jP,\\
+ e_j&=W_j^{1/2}(X_j\beta-y_j).
+\end{align*}
+Suppose uniformly over the compact nonempty completion domain that
+\begin{align*}
+ \|A_{\mathcal N}\|_{\op}&\le a,&\|e_{\mathcal N}\|&\le\epsilon,\\
+ \|A_{\mathcal S}\|_{\op}&\le\sigma,&\|e_{\mathcal S}\|&\le E,
+ &\|Z_{\mathcal S}\|_{\op}&\le b,\\
+ \lambda I+A_{\mathcal S}^\top A_{\mathcal S}&\succeq\kappa I,&
+ \|f_{\mathcal S}\|&\le G,
+\end{align*}
+where $f_{\mathcal S}=\lambda\beta_Q+A_{\mathcal S}^\top e_{\mathcal S}$,
+$\lambda,\kappa>0$, and weights are fixed and nonnegative.
+The residuals use the actual candidate. In particular, when $d>0$ the nuisance-residual bound includes $Z_{\mathcal N}\beta_D$.
+
+\begin{theorem}[Residual-energy stability under leakage]
+\label{thm:energy-leakage-v79}
+Define
+\begin{align}
+ \omega_b&=\frac{b}{\sqrt{\lambda+b^2}},\nonumber\\
+ \kappa_b&=\frac{\lambda(\kappa+b^2)}{\lambda+b^2},
+ \label{eq:leakage-contractions-v79}\\
+ R_{b,d}&=\frac{1}{\kappa_b}\left[
+ G+a\epsilon+\frac{\omega_b}{2}(aE+\sigma\epsilon)
+ +\omega_b^2\sigma E\right.\nonumber\\[-1mm]
+ &\hspace{30mm}\left.{}+(a\sqrt\lambda+\sigma b)d\right],
+ \label{eq:leakage-radius-v79}\\
+ \eta_{b,d}&=\left[\epsilon+aR_{b,d}
+ +\omega_b(E+\sigma R_{b,d})+\sqrt\lambda d\right]^2.
+ \label{eq:leakage-tail-v79}
+\end{align}
+For every completion $X$, its full maximizing displacement
+$v_X=M_X^{-1}g_X$ satisfies $\|Q^\top v_X\|\le R_{b,d}$.
+For either the radius-$R_{b,d}$ Euclidean ball or its containing coordinate cube $\mathcal B$, put
+\[
+ V_Q=\max_{s\in\mathcal B}\max_X
+ \{2g_X^\top Qs-s^\top Q^\top M_XQs\}.
+\]
+Then
+\[
+ V_Q\le H^*\le V_Q+\eta_{b,d}.
+\]
+Moreover, $E(\operatorname{range}(Q))\le\eta_{b,d}$ for the uniform pointwise error in Appendix~\ref{app:dimension-v78}.
+The constants have no dependence on the size or rank of $Z_{\mathcal N}$.
+At $b=d=0$, they recover $R=(G+a\epsilon)/\kappa$ and $\eta=(\epsilon+aR)^2$ exactly.
+\end{theorem}
+
+\begin{proof}
+Fix $X$ and suppress its subscript. The normal matrix in the $[Q\ P]$ coordinates has blocks
+\begin{align*}
+ B&=\lambda I+A_{\mathcal S}^\top A_{\mathcal S}
+                  +A_{\mathcal N}^\top A_{\mathcal N},\\
+ C&=A_{\mathcal S}^\top Z_{\mathcal S}
+                  +A_{\mathcal N}^\top Z_{\mathcal N},\\
+ D&=\lambda I+Z_{\mathcal S}^\top Z_{\mathcal S}
+                  +Z_{\mathcal N}^\top Z_{\mathcal N}.
+\end{align*}
+Write $K=B-CD^{-1}C^\top$. For every $s$, the Schur variational identity gives
+\begin{align*}
+ s^\top Ks=\min_t\bigl\{&\lambda\|s\|^2+\lambda\|t\|^2
+ +\|A_{\mathcal S}s+Z_{\mathcal S}t\|^2\\
+ &+\|A_{\mathcal N}s+Z_{\mathcal N}t\|^2\bigr\}.
+\end{align*}
+Dropping the last nonnegative term and eliminating $t$ yields
+\begin{align*}
+ K&\succeq\lambda I+
+ A_{\mathcal S}^\top
+ (I+Z_{\mathcal S}Z_{\mathcal S}^\top/\lambda)^{-1}A_{\mathcal S}\\
+ &\succeq\lambda I+\frac{\lambda}{\lambda+b^2}
+ A_{\mathcal S}^\top A_{\mathcal S}
+ \succeq\kappa_b I.
+\end{align*}
+This lower bound is positive for all $b\ge0$.
+
+The discarded block supplies the contractions
+\begin{align}
+ 0&\preceq Z_{\mathcal N}D^{-1}Z_{\mathcal N}^\top\preceq I,
+ \nonumber\\
+ \|Z_{\mathcal S}D^{-1/2}\|_{\op}&\le\omega_b,\nonumber\\
+ \|Z_{\mathcal N}D^{-1}Z_{\mathcal S}^\top\|_{\op}&\le\omega_b/2.
+ \label{eq:leakage-block-v79}
+\end{align}
+For the cross bound, set $D_0=\lambda I+Z_{\mathcal S}^\top Z_{\mathcal S}$ and $T=Z_{\mathcal N}D_0^{-1/2}$. Then
+\[
+ Z_{\mathcal N}D^{-1}Z_{\mathcal S}^\top
+ =T(I+T^\top T)^{-1}D_0^{-1/2}Z_{\mathcal S}^\top.
+\]
+The first factor has norm at most $1/2$ by its singular values $z/(1+z^2)$; the last factor has norm at most $\omega_b$. The remaining contractions follow from $D\succeq D_0$ and $D\succeq\lambda I+Z_{\mathcal N}^\top Z_{\mathcal N}$.
+
+The retained coordinate $s_X=Q^\top v_X$ solves
+\[
+ Ks_X=g_Q-CD^{-1}g_D,
+\]
+where $g_Q=f_{\mathcal S}+A_{\mathcal N}^\top e_{\mathcal N}$ and
+$g_D=Z_{\mathcal N}^\top e_{\mathcal N}+Z_{\mathcal S}^\top e_{\mathcal S}+\lambda\beta_D$.
+Expanding its right-hand side gives
+\begin{align*}
+ f_{\mathcal S}
+ &+A_{\mathcal N}^\top(I-Z_{\mathcal N}D^{-1}Z_{\mathcal N}^\top)e_{\mathcal N}\\
+ &-A_{\mathcal N}^\top Z_{\mathcal N}D^{-1}Z_{\mathcal S}^\top e_{\mathcal S}\\
+ &-A_{\mathcal S}^\top Z_{\mathcal S}D^{-1}Z_{\mathcal N}^\top e_{\mathcal N}\\
+ &-A_{\mathcal S}^\top Z_{\mathcal S}D^{-1}Z_{\mathcal S}^\top e_{\mathcal S}
+ -\lambda CD^{-1}\beta_D.
+\end{align*}
+Equation~\eqref{eq:leakage-block-v79} bounds the first four lines by
+$G+a\epsilon+\omega_b(aE+\sigma\epsilon)/2+\omega_b^2\sigma E$.
+Also
+\[
+ \lambda\|CD^{-1}\beta_D\|
+ \le(a\sqrt\lambda+\sigma b)d,
+\]
+using $\|Z_{\mathcal N}D^{-1}\|_{\op}\le1/\sqrt\lambda$ and
+$\|Z_{\mathcal S}D^{-1}\|_{\op}\le b/\lambda$.
+Together with $K\succeq\kappa_bI$, these bounds prove
+$\|s_X\|\le R_{b,d}$ for every completion.
+
+At fixed $X,s$, eliminating the discarded displacement adds $q(s)^\top D^{-1}q(s)$, where
+\[
+ q(s)=Z_{\mathcal N}^\top(e_{\mathcal N}-A_{\mathcal N}s)
+ +Z_{\mathcal S}^\top(e_{\mathcal S}-A_{\mathcal S}s)+\lambda\beta_D.
+\]
+The contractions give
+\[
+ \|D^{-1/2}q(s)\|
+ \le\epsilon+a\|s\|+\omega_b(E+\sigma\|s\|)+\sqrt\lambda d.
+\]
+At $s=s_X$, this gain is at most $\eta_{b,d}$ and $s_X\in\mathcal B$.
+Every retained displacement is a legal full displacement. Taking maxima proves the interval, and comparison at each fixed $X$ with its restricted optimum proves the uniform pointwise error bound.
+\end{proof}
+
+For fixed values of the other constants, $R_{b,d}$ and $\eta_{b,d}$ depend continuously on $(b,d)$ at zero. This extension preserves the discarded-block contraction responsible for the original residual-energy guarantee.
+
+\paragraph{An exact rational signal-leakage specialization.}
+Keep the construction in~\eqref{eq:family} with $\beta=Q=e_0$, and replace every signal row by
+\[
+ x_i=u_i e_0+\delta e_1,\qquad u_i\in[3/4,5/4],\quad y_i=2,
+\]
+where $\delta\ge0$. The nuisance rows, independent intervals, weights $1/(2m)$ and penalty $\lambda=1/2$ remain as specified by the construction. The original-row bounds are
+\begin{gather*}
+ \epsilon=d=0,\quad a=\alpha/\sqrt2,\\
+ \sigma=E=5/(4\sqrt2),\quad b=\delta/\sqrt2,
+\end{gather*}
+with $G=1/32$ and $\kappa=25/32$.
+Indeed, $f_{\mathcal S}=\tfrac12+(2m)^{-1}\sum_i(u_i^2-2u_i)$ lies in $[0,1/32]$.
+At positive $\delta$, the fixed candidate generally differs from the new midpoint ridge fit.
+
+For rational verification, replace $\omega_b/2$ by the upper bound $b/\sqrt\lambda$, $\omega_b^2$ by $b^2/\lambda$, and the tail factor $\omega_b$ by $b/\sqrt\lambda$. This gives the conservative exact constants
+\begin{align}
+ \kappa_\delta&=\frac{25+16\delta^2}{32(1+\delta^2)},\nonumber\\
+ \overline R_\delta&=
+ \frac{(1+20\alpha\delta+25\delta^2)(1+\delta^2)}{25+16\delta^2},
+ \label{eq:leakage-rational-radius-v79}\\
+ \overline\eta_\delta&=
+ \frac12\left[\alpha\overline R_\delta+
+ \frac{5\delta}{4}(1+\overline R_\delta)\right]^2.
+ \label{eq:leakage-rational-tail-v79}
+\end{align}
+They are rational for dyadic $\alpha,\delta$, and give
+$\overline R_0=1/25$ and $\overline\eta_0=\alpha^2/1250$.
+The frozen signal-leakage experiment uses these conservative constants.

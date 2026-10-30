@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "source_inputs": "four preselected v84first masks",
+  "imports_scip_builder": false,
+  "points": 8,
+  "reports": [
+    {
+      "dataset": "concrete",
+      "exact_original_identity": true,
+      "points": 2,
+      "max_numeric_coefficient_objective_difference": 1.9651164376299768e-19
+    },
+    {
+      "dataset": "superconductivity",
+      "exact_original_identity": true,
+      "points": 2,
+      "max_numeric_coefficient_objective_difference": 2.710505431213761e-20
+    },
+    {
+      "dataset": "airfoil",
+      "exact_original_identity": true,
+      "points": 2,
+      "max_numeric_coefficient_objective_difference": 7.030373462210693e-20
+    },
+    {
+      "dataset": "powerplant",
+      "exact_original_identity": true,
+      "points": 2,
+      "max_numeric_coefficient_objective_difference": 4.0657581468206416e-20
+    }
+  ],
+  "seconds": 7.1557360999286175
+}

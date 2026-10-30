@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "polynomial_identity_cases": 30,
+  "uniform_curvature_cases": 36,
+  "indefinite_rejections": 6,
+  "source": "synthetic original rows",
+  "raw_records_opened": false
+}

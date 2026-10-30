@@ -1,0 +1,189 @@
+{
+  "checks": [
+    {
+      "k": 1,
+      "case": 0,
+      "value_and_witness_unchanged": true
+    },
+    {
+      "k": 1,
+      "case": 1,
+      "value_and_witness_unchanged": true
+    },
+    {
+      "k": 1,
+      "case": 2,
+      "value_and_witness_unchanged": true
+    },
+    {
+      "k": 2,
+      "case": 0,
+      "value_and_witness_unchanged": true
+    },
+    {
+      "k": 2,
+      "case": 1,
+      "value_and_witness_unchanged": true
+    },
+    {
+      "k": 2,
+      "case": 2,
+      "value_and_witness_unchanged": true
+    },
+    {
+      "k": 4,
+      "case": 0,
+      "value_and_witness_unchanged": true
+    },
+    {
+      "k": 4,
+      "case": 1,
+      "value_and_witness_unchanged": true
+    },
+    {
+      "k": 4,
+      "case": 2,
+      "value_and_witness_unchanged": true
+    },
+    {
+      "k": 8,
+      "case": 0,
+      "value_and_witness_unchanged": true
+    },
+    {
+      "k": 8,
+      "case": 1,
+      "value_and_witness_unchanged": true
+    },
+    {
+      "k": 8,
+      "case": 2,
+      "value_and_witness_unchanged": true
+    }
+  ],
+  "density": [
+    {
+      "k": 4,
+      "n": 128,
+      "p": 17,
+      "uncertain_rows": 4,
+      "anchor_rows": 124,
+      "rank": 2,
+      "anchor_setup_seconds": 0.08752539998386055,
+      "search_setup_seconds": 0.06929830007720739,
+      "actual_solve_seconds": 1.2671305999392644,
+      "certificate_file": "planar_density_k4_certificate.json",
+      "status": "PASS",
+      "anchor": "observed",
+      "features": 17,
+      "lower": 7.857718852203459e-06,
+      "upper": 2.0474937841457896e-05,
+      "absolute_gap": 1.2617218989254437e-05,
+      "relative_gap": 1.6057101592170508,
+      "search_lower": 2.2461695285008828e-05,
+      "search_upper": 2.246169538353034e-05,
+      "search_error": 9.852151240012999e-14,
+      "tail_error": 1.545344272464062e-05,
+      "anchor_error": 0.0,
+      "B0_squared": 0.0009403228604391875,
+      "rho": 0.0,
+      "seconds": 1.2669809000799432,
+      "nodes": 164,
+      "points": 449,
+      "stop_reason": "tail_or_arithmetic_floor",
+      "budget_seconds": 2,
+      "absolute_tolerance": 1e-08,
+      "method": "residual_moment",
+      "basis_kind": "gradient",
+      "tail_gradient_norm": 0.0033675424523405086,
+      "tail_coupling_norm": 0.124540567048142
+    },
+    {
+      "k": 8,
+      "n": 128,
+      "p": 17,
+      "uncertain_rows": 4,
+      "anchor_rows": 124,
+      "rank": 2,
+      "anchor_setup_seconds": 0.13877019996289164,
+      "search_setup_seconds": 0.13136140001006424,
+      "actual_solve_seconds": 2.0021602999186143,
+      "certificate_file": "planar_density_k8_certificate.json",
+      "status": "PASS",
+      "anchor": "observed",
+      "features": 17,
+      "lower": 1.6535309097877312e-05,
+      "upper": 4.912504362640155e-05,
+      "absolute_gap": 3.2589734528524236e-05,
+      "relative_gap": 1.970917769702163,
+      "search_lower": 6.519892280955275e-05,
+      "search_upper": 6.51989244847035e-05,
+      "search_error": 1.6751507407770927e-12,
+      "tail_error": 5.0402697724398714e-05,
+      "anchor_error": 0.0,
+      "B0_squared": 0.0011132210595152787,
+      "rho": 0.0,
+      "seconds": 2.0018792001064867,
+      "nodes": 167,
+      "points": 451,
+      "stop_reason": "time_limit",
+      "budget_seconds": 2,
+      "absolute_tolerance": 1e-08,
+      "method": "residual_moment",
+      "basis_kind": "gradient",
+      "tail_gradient_norm": 0.005533354582685053,
+      "tail_coupling_norm": 0.22344598789437584
+    },
+    {
+      "k": 16,
+      "n": 128,
+      "p": 17,
+      "uncertain_rows": 4,
+      "anchor_rows": 124,
+      "rank": 2,
+      "anchor_setup_seconds": 0.25058880005963147,
+      "search_setup_seconds": 0.31213509989902377,
+      "actual_solve_seconds": 2.0042139000725,
+      "certificate_file": "planar_density_k16_certificate.json",
+      "status": "PASS",
+      "anchor": "observed",
+      "features": 17,
+      "lower": 3.5615708197690714e-05,
+      "upper": 0.00012309318425886135,
+      "absolute_gap": 8.747747606117063e-05,
+      "relative_gap": 2.456148718863397,
+      "search_lower": 0.00023153817217567494,
+      "search_upper": 0.00023199280728070963,
+      "search_error": 4.546351050346907e-07,
+      "tail_error": 0.00019962646389422864,
+      "anchor_error": 0.0,
+      "B0_squared": 0.001369281529531729,
+      "rho": 0.0,
+      "seconds": 2.0039061000570655,
+      "nodes": 93,
+      "points": 257,
+      "stop_reason": "time_limit",
+      "budget_seconds": 2,
+      "absolute_tolerance": 1e-08,
+      "method": "residual_moment",
+      "basis_kind": "gradient",
+      "tail_gradient_norm": 0.009145195837830317,
+      "tail_coupling_norm": 0.449194475854983
+    }
+  ],
+  "errors": [],
+  "existing_dense_tree_audit": {
+    "file": "planar_tight_diabetes_k10_planar_certificate.json",
+    "status": "PASS",
+    "p": 11,
+    "rank": 11,
+    "rows": 442,
+    "anchor_rows": 438,
+    "exact_points": 225,
+    "covered_nodes": 225,
+    "tail_and_metric_verified": true,
+    "original_witness_verified": true,
+    "tree_verified": true,
+    "seconds": 6.021513900021091
+  }
+}

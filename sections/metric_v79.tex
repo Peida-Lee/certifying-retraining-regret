@@ -1,0 +1,20 @@
+\subsection{Metric-matched proposals under complete budgets}\label{app:metric-v79}
+The approximation geometry affects a snapshot baseline. We compare eighteen conditions using solver-coordinate POD: for all 32 fixed legal sample tables, compute the full displacement $u_X=\beta-\theta_X$, transform $z_X=T^{-1}u_X$, and only then take the leading three left singular vectors. This differs from selecting physical-coordinate singular vectors before mapping.
+
+Metric greedy likewise uses solver coordinates. On each sample it solves the current reduced problem for $K_X=T^\top M_XT$ and $b_X=T^\top g_X$, selects the largest numerical residual/coercivity indicator $\|b_X-K_Xv\|^2/\mu$, and appends that selected table's transformed full-fit displacement with two-pass orthogonalization. It performs three full fits, versus 32 for POD; both charge pool construction, moments, reduced indicator solves, transformations and verification. The numerical proposal indicator is separate from the verified uniform moment tail. Both orthonormal numerical bases are rounded to $2^{-24}$ before the identical verifier.
+
+Each method receives a complete ten-second budget, including identical within-condition input/candidate/anchor charges and its own proposal, verification, search and full-model witness retraining costs. At one, five and ten seconds only completed endpoint events are credited; a late event is retained without retrospective credit. Before the common anchor is ready no finite endpoint is credited. Method order rotates, numerical libraries use one thread, and early tail/arithmetic-floor stops retain their current enclosures. The methods share each condition's masks and record pool.
+
+\begin{table}[t]\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Metric-matched comparison: median interval widths over three masks at the ten-second complete-budget checkpoint, in $10^{-6}$ units. Each proposed basis has rank three.}\label{tab:metric-v79}
+\begin{tabular}{llrrr}\toprule Data&Pattern&Gradient&Metric POD&Metric greedy\\\midrule
+Diabetes&Conc.&76.62&94.69&101.39\\
+Diabetes&Disp.&68.55&68.41&69.52\\
+Concrete&Conc.&6.38&7.26&7.39\\
+Concrete&Disp.&8.59&8.63&9.14\\
+Supercond.&Conc.&1.19&1.32&1.55\\
+Supercond.&Disp.&7.99&8.01&8.10\\
+\bottomrule\end{tabular}\end{table}
+At ten seconds, gradient intervals are narrower than metric POD in 16 of 18 conditions; metric POD is narrower in 2, with 0 exact ties. The median gradient/control width ratio is 0.918. At ten seconds, gradient intervals are narrower than metric greedy in 17 of 18 conditions; metric greedy is narrower in 1, with 0 exact ties. The median gradient/control width ratio is 0.920. 
+
+Metric POD wins by 0.80\%, 0.21\% in its winning pairs, measured relative to gradient width. Metric greedy wins by 0.33\% in its winning pairs, measured relative to gradient width. At one second all six Superconductivity conditions lack a completed common anchor, so their endpoints are uncredited for every method; all 18 conditions have finite endpoints by five seconds. The certificate applies to the actual proposed span and does not require one basis to dominate. All pairs, certified tails, stage costs and checkpoint endpoints are retained. An independent program reconstructs transformed displacements and POD spectra before truncation, replays all 54 metric-greedy selections, checks orthogonality and dyadic/physical-span mapping, and reclassifies all 162 checkpoints directly from completed events. These are proposal and aggregate/deadline checks; full outward search-tree verification remains separate.

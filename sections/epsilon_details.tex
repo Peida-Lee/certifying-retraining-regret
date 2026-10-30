@@ -1,0 +1,52 @@
+\subsection{Predeclared nonzero nuisance residuals}
+\label{app:epsilon}
+We keep the $m=64$, $p=65$, $\alpha=1/32$ construction, its independent feature intervals, $\lambda=1/2$, candidate $\beta=e_0$, and retained original direction $Q=e_0$ fixed. Only the nuisance responses change: $y_{64+j}=\alpha+\sigma_j\delta$, with 32 signs of each kind. The predeclared levels are $\delta\in\{0,2^{-15},2^{-14},2^{-13},2^{-12}\}$. They were frozen using the theoretical tail budget before the experiment. For positive $\delta$, the fixed candidate has nuisance midpoint-gradient entries $-3\sigma_j\delta/32$; the zero-residual control is the midpoint ridge fit. The retained direction is specified explicitly by the mechanism.
+
+The original-data conditions give $\epsilon^2=\delta^2/2$, $a^2=\alpha^2/2$, $G=1/32$, and $\kappa=25/32$. Consequently,
+\[
+R=\frac{1+16\alpha\delta}{25},\qquad
+\eta=\frac{(\delta+\alpha R)^2}{2}.
+\]
+Both $R$ and $\eta$ are exact rational numbers, although $\epsilon=\delta/\sqrt{2}$. The first four levels have $\eta<10^{-6}$; the fifth has $\eta=1.116456103\times10^{-6}$. All five remain in the reported queue. Tail and final-width budgets differ because the final lower bound includes an original-table feasible comparator.
+
+The actual dyadic ridge-anchor transform is $T=cI$ with $c=741455/524288$ and the saved numerical basis is $e_0$. Each coordinate root is $[-\widehat R,\widehat R]$, where $\widehat R=2^{-20}\lceil2^{20}R/c\rceil$. The tail theorem uses the full optimizer projection of magnitude at most $R$; the outward rounded root encloses that projection. Exact radii are listed below.
+
+For an additional original-target check, let $r_j=-\sigma_j\delta$ and $f_j=t_j^2/(64+t_j^2)$. After eliminating nuisance coefficients, the derivative of optimized regret with respect to $f_j$ is $(r_j-\alpha s_*)^2/128\ge0$. Thus all $t_j=16$ maximize the nuisance part. Balanced signs then cancel the retained linear perturbation, and all $u_i=3/4$ maximize the signal part. This yields
+\[
+H^*=\frac5{4000+512\alpha^2}+\frac{2\delta^2}{5},\qquad
+V_Q=\frac1{800+512\alpha^2}.
+\]
+These exact optima serve as extra checks after the certificate is constructed. Point and node bounds use the original-row oracle and the residual-energy theorem.
+
+Each condition uses the same $10$\,s search cap, absolute original-target tolerance $10^{-6}$, and zero relative tolerance. The numerical queue runs sequentially with one library thread on logical CPU4, reserving CPUs0--3. The reported times are single wall-clock observations and exclude process/import startup and JSON serialization. Setup includes input construction, anchor setup, and method setup. All conditions terminate at tolerance after 6 expanded nodes and 15 points (13 saved tree nodes).
+
+\begin{center}
+\small
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+$\delta$ & Input (s) & Anchor (s) & Method (s) & Setup (s) \\
+\midrule
+$0$ & 0.0002 & 0.4378 & 0.0130 & 0.4509 \\
+$2^{-15}$ & 0.0001 & 0.4412 & 0.0132 & 0.4545 \\
+$2^{-14}$ & 0.0001 & 0.4355 & 0.0143 & 0.4499 \\
+$2^{-13}$ & 0.0001 & 0.4671 & 0.0148 & 0.4820 \\
+$2^{-12}$ & 0.0001 & 0.5101 & 0.0150 & 0.5252 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{center}
+\small
+\begin{tabular}{@{}rrr@{}}
+\toprule
+$\delta$ & Original radius $R$ & Coordinate radius $\widehat R$ \\
+\midrule
+$0$ & $\tfrac{1}{25}$ & $\tfrac{29659}{1048576}$ \\[2pt]
+$2^{-15}$ & $\tfrac{65537}{1638400}$ & $\tfrac{29659}{1048576}$ \\[2pt]
+$2^{-14}$ & $\tfrac{32769}{819200}$ & $\tfrac{7415}{262144}$ \\[2pt]
+$2^{-13}$ & $\tfrac{3277}{81920}$ & $\tfrac{29661}{1048576}$ \\[2pt]
+$2^{-12}$ & $\tfrac{8193}{204800}$ & $\tfrac{14831}{524288}$ \\[2pt]
+\bottomrule
+\end{tabular}
+\end{center}
+An independent standard-library Fraction audit checks all five original tables and response patterns, candidates, actual transforms and roots, midpoint gradients, full-rank minors, residual energies, and tails. It independently checks every saved original-row point value, every node upper bound, complete binary coverage, the original-table feasible witness and ridge-loss difference, and the final upper obtained from the tree and original gradient cap. All five complete certificates pass. The largest perturbation reaches width $9.681819\times10^{-7}$ in $0.550$\,s total ($0.025$\,s search), despite its larger tail-only budget.
+

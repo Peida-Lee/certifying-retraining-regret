@@ -1,0 +1,52 @@
+\subsection{Row-edge duals and certificate screening}\label{app:edge-refinement-v22}
+For a small number of dense uncertain rows, we use Theorem~\ref{thm:row} to place the coupling certificate on a product of row edges. Let $m$ be the number of uncertain rows, fix a reference $\vartheta$, and write
+\begin{align*}
+ g_0&=G_0\vartheta-r_0,\\
+ \gamma_i(x_i)&=T^\top\!\left[w_i x_i(x_i^\top\vartheta-y_i)+g_0/m\right].
+\end{align*}
+Then $\sum_i\gamma_i=T^\top g_\vartheta(X)$. With
+\[
+ f_i(x_i)=w_i[(x_i^\top\beta-y_i)^2-(x_i^\top\vartheta-y_i)^2],
+\]
+the joint majorant has the form
+\[
+ P_\vartheta(X)=c+\sum_i f_i(x_i)+\mu^{-1}\Big\|\sum_i\gamma_i(x_i)\Big\|^2,
+\]
+where $c=J_0(\beta)-J_0(\vartheta)$ contains the complete rows and ridge term.
+
+\begin{proposition}[Row-edge coupling certificate]\label{prop:edge-dual-v22}
+Let $Q\succeq0$ have scalar block $Q_{00}=\alpha$, blocks $Q_{i0}=d_i$, diagonal blocks $Q_{ii}=H_i-\mu^{-1}I$, and off-diagonal row blocks $Q_{ij}=-\mu^{-1}I$. Define
+\[
+ R_i=f_i+\gamma_i^\top H_i\gamma_i+2d_i^\top\gamma_i,
+ \qquad b_i\ge\max_{x_i\in E_i}R_i(x_i),
+\]
+where $E_i$ is the union of the row box's edges. Then
+\[
+ H^*\le U:=c+\alpha+\sum_i b_i.
+\]
+\end{proposition}
+\begin{proof}
+For $v=(1,\gamma_1,\ldots,\gamma_m)$, direct expansion gives
+\begin{align*}
+ U-P_\vartheta(X)&=v^\top Qv+\sum_i[b_i-R_i(x_i)]\\
+ &\ge0\quad\text{on }\prod_iE_i.
+\end{align*}
+The row-face theorem places an original-regret maximizer in this product, and the joint majorant bounds its value.
+\end{proof}
+
+Each row feature is quadratic in its normalized cells. On one edge, $R_i$ is a quartic in one scalar. The numerical exchange method solves the coupling SDP on a finite set of row points and adds distinct violating points from the row oracles. Its reported upper uses the complete row-oracle bounds. The verifier reconstructs the exact polynomial coefficients and cross-row matrix blocks, checks a rational congruence of $Q$ with positive diagonal-dominance margins, and encloses every quartic maximum by integer Bernstein subdivision.
+
+The certificate also restricts the remaining search. For a target value $\tau<U$, every edge-domain completion with original regret exceeding $\tau$ must satisfy
+\begin{equation}
+ R_i(x_i)>b_i-(U-\tau)\quad\text{for every uncertain row }i.
+ \label{eq:edge-screen-v22}
+\end{equation}
+Indeed, a violation of one inequality makes the corresponding nonnegative slack at least $U-\tau$. An exact Bernstein upper below this cutoff excludes the entire edge segment. The retained segments cover every possible target violation.
+
+We partition this cover using the fixed-reference residuals $x_i^\top\vartheta-y_i$. A residual slab clips each edge to an interval, so the same quartic verifier applies. The numerical master proposes the row with largest residual variance and a dyadic split at its weighted mean, clipped to the inner 70\% of the available range. Both complementary children are verified before replacing their parent. The final original-regret upper is
+\[
+ \max\{\tau,\max_{B\in\mathcal L}U_B\},
+\]
+intersected with the verified root bound; $\mathcal L$ is the complete active cover. Every node retains the original candidate, feature intervals, ridge penalty and full-feature comparator.
+
+The dense-row protocol fixes the target $\varepsilon=10^{-8}$, uses $\tau=L+0.99\varepsilon$, and sets the complete cap at 1800 seconds. It uses a 4096-start feasible search, an eight-step reference exchange with 32 starts per step, up to 180 seconds for the root proposal and 90 seconds for each subsequent proposal, and at most 65 evaluated nodes. Exact bound evaluation, screening, reference construction and all completed child work enter the algorithm clock. A separate rational replay checks the original witness, matrix, exclusions and complete tree. The implementation and all four dense-row conditions use this common protocol.

@@ -1,0 +1,233 @@
+{
+  "status": "PASS",
+  "conditions": 18,
+  "method_runs": 54,
+  "checkpoints_checked": 162,
+  "finite_checkpoints": 144,
+  "selection_steps_replayed": 54,
+  "max_indicator_absolute_difference": 0.0,
+  "max_POD_rank3_spectral_error": 5.082197683525802e-21,
+  "max_physical_span_relative_residual": 1.673826599126862e-07,
+  "common_anchor_identical_within_condition": true,
+  "all_deadlines_reclassified_from_completed_events": true,
+  "seconds": 1.4800803000107408,
+  "scope": "Independent numerical proposal replay, spectrum, metric/physical spans, deadlines and aggregate arithmetic; no independent full outward search-tree audit.",
+  "cases": [
+    {
+      "condition": 0,
+      "dataset": "diabetes",
+      "spread": "concentrated",
+      "seed": 78011,
+      "metric_greedy_selected_indices": [
+        9,
+        15,
+        27
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 1,
+      "dataset": "diabetes",
+      "spread": "concentrated",
+      "seed": 78021,
+      "metric_greedy_selected_indices": [
+        25,
+        6,
+        27
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 2,
+      "dataset": "diabetes",
+      "spread": "concentrated",
+      "seed": 78031,
+      "metric_greedy_selected_indices": [
+        25,
+        6,
+        23
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 3,
+      "dataset": "diabetes",
+      "spread": "dispersed",
+      "seed": 78011,
+      "metric_greedy_selected_indices": [
+        19,
+        13,
+        26
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 4,
+      "dataset": "diabetes",
+      "spread": "dispersed",
+      "seed": 78021,
+      "metric_greedy_selected_indices": [
+        30,
+        5,
+        17
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 5,
+      "dataset": "diabetes",
+      "spread": "dispersed",
+      "seed": 78031,
+      "metric_greedy_selected_indices": [
+        10,
+        30,
+        12
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 6,
+      "dataset": "concrete",
+      "spread": "concentrated",
+      "seed": 78011,
+      "metric_greedy_selected_indices": [
+        15,
+        2,
+        27
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 7,
+      "dataset": "concrete",
+      "spread": "concentrated",
+      "seed": 78021,
+      "metric_greedy_selected_indices": [
+        8,
+        30,
+        20
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 8,
+      "dataset": "concrete",
+      "spread": "concentrated",
+      "seed": 78031,
+      "metric_greedy_selected_indices": [
+        6,
+        9,
+        15
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 9,
+      "dataset": "concrete",
+      "spread": "dispersed",
+      "seed": 78011,
+      "metric_greedy_selected_indices": [
+        23,
+        19,
+        12
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 10,
+      "dataset": "concrete",
+      "spread": "dispersed",
+      "seed": 78021,
+      "metric_greedy_selected_indices": [
+        5,
+        11,
+        21
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 11,
+      "dataset": "concrete",
+      "spread": "dispersed",
+      "seed": 78031,
+      "metric_greedy_selected_indices": [
+        2,
+        15,
+        30
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 12,
+      "dataset": "superconductivity",
+      "spread": "concentrated",
+      "seed": 78011,
+      "metric_greedy_selected_indices": [
+        18,
+        8,
+        4
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 13,
+      "dataset": "superconductivity",
+      "spread": "concentrated",
+      "seed": 78021,
+      "metric_greedy_selected_indices": [
+        10,
+        29,
+        14
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 14,
+      "dataset": "superconductivity",
+      "spread": "concentrated",
+      "seed": 78031,
+      "metric_greedy_selected_indices": [
+        21,
+        27,
+        12
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 15,
+      "dataset": "superconductivity",
+      "spread": "dispersed",
+      "seed": 78011,
+      "metric_greedy_selected_indices": [
+        27,
+        12,
+        16
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 16,
+      "dataset": "superconductivity",
+      "spread": "dispersed",
+      "seed": 78021,
+      "metric_greedy_selected_indices": [
+        10,
+        3,
+        29
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": 17,
+      "dataset": "superconductivity",
+      "spread": "dispersed",
+      "seed": 78031,
+      "metric_greedy_selected_indices": [
+        8,
+        6,
+        27
+      ],
+      "status": "PASS"
+    }
+  ]
+}

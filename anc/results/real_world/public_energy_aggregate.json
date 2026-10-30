@@ -1,0 +1,154 @@
+[
+  {
+    "dataset": "concrete",
+    "label": "Concrete",
+    "n": 1030,
+    "p": 9,
+    "tail_successes": 2,
+    "masks": 5,
+    "methods": {
+      "energy": {
+        "width_median": 9.434433553061404e-06,
+        "width_min": 8.916059403179947e-06,
+        "width_max": 9.645292849856635e-06,
+        "seconds_median": 0.20059049990959466,
+        "successes": 5
+      },
+      "moment_centered": {
+        "width_median": 6.471158854887984e-06,
+        "width_min": 6.320430971528085e-06,
+        "width_max": 6.7633671548438705e-06,
+        "seconds_median": 0.15972789993975312,
+        "successes": 5
+      },
+      "hybrid": {
+        "width_median": 6.832335372822847e-06,
+        "width_min": 6.58270746379001e-06,
+        "width_max": 7.018217619394421e-06,
+        "seconds_median": 0.19028010009787977,
+        "successes": 5
+      },
+      "full": {
+        "width_median": 1.5536200907889848e-05,
+        "width_min": 1.5104737420754827e-05,
+        "width_max": 1.585127866260438e-05,
+        "seconds_median": 10.000802499940619,
+        "successes": 0
+      }
+    }
+  },
+  {
+    "dataset": "superconductivity",
+    "label": "Supercond.",
+    "n": 1024,
+    "p": 82,
+    "tail_successes": 0,
+    "masks": 5,
+    "methods": {
+      "energy": {
+        "width_median": 9.936597472152585e-06,
+        "width_min": 9.795621895531108e-06,
+        "width_max": 9.986963691467469e-06,
+        "seconds_median": 2.380487200105563,
+        "successes": 5
+      },
+      "moment_centered": {
+        "width_median": 3.501546716743473e-05,
+        "width_min": 3.24172947002788e-05,
+        "width_max": 4.609547682102267e-05,
+        "seconds_median": 6.518804700230248,
+        "successes": 0
+      },
+      "hybrid": {
+        "width_median": 9.936597472152585e-06,
+        "width_min": 9.795621895531108e-06,
+        "width_max": 9.986963691467469e-06,
+        "seconds_median": 2.51311299984809,
+        "successes": 5
+      },
+      "full": {
+        "width_median": 0.0001746409517638871,
+        "width_min": 7.521109717234693e-05,
+        "width_max": 0.00021945517509455096,
+        "seconds_median": 10.034302900196053,
+        "successes": 0
+      }
+    }
+  },
+  {
+    "dataset": "airfoil",
+    "label": "Airfoil",
+    "n": 1503,
+    "p": 6,
+    "tail_successes": 5,
+    "masks": 5,
+    "methods": {
+      "energy": {
+        "width_median": 1.8485382638949222e-06,
+        "width_min": 1.7871126045700928e-06,
+        "width_max": 1.978894665490103e-06,
+        "seconds_median": 0.14939100004266948,
+        "successes": 5
+      },
+      "moment_centered": {
+        "width_median": 7.392268293478742e-07,
+        "width_min": 7.237095756208625e-07,
+        "width_max": 7.63074313827911e-07,
+        "seconds_median": 0.1237591999815777,
+        "successes": 5
+      },
+      "hybrid": {
+        "width_median": 7.371282763366589e-07,
+        "width_min": 7.330297811881437e-07,
+        "width_max": 7.758675496455716e-07,
+        "seconds_median": 0.1508567000273615,
+        "successes": 5
+      },
+      "full": {
+        "width_median": 7.011609615046341e-06,
+        "width_min": 6.973501733885086e-06,
+        "width_max": 7.441870482853129e-06,
+        "seconds_median": 0.06700259994249791,
+        "successes": 5
+      }
+    }
+  },
+  {
+    "dataset": "powerplant",
+    "label": "Power Plant",
+    "n": 2048,
+    "p": 5,
+    "tail_successes": 5,
+    "masks": 5,
+    "methods": {
+      "energy": {
+        "width_median": 2.832758656378092e-06,
+        "width_min": 2.7556094627794077e-06,
+        "width_max": 2.8531189533629285e-06,
+        "seconds_median": 0.15845480025745928,
+        "successes": 5
+      },
+      "moment_centered": {
+        "width_median": 1.2067138460483684e-06,
+        "width_min": 1.1721087400191812e-06,
+        "width_max": 1.2553835562589388e-06,
+        "seconds_median": 0.12731170014012605,
+        "successes": 5
+      },
+      "hybrid": {
+        "width_median": 1.1398783787660346e-06,
+        "width_min": 1.1268823661178366e-06,
+        "width_max": 1.1705921082090249e-06,
+        "seconds_median": 0.16486410005018115,
+        "successes": 5
+      },
+      "full": {
+        "width_median": 9.984423091268608e-06,
+        "width_min": 9.938393485864686e-06,
+        "width_max": 9.996717973755932e-06,
+        "seconds_median": 7.588280899915844,
+        "successes": 5
+      }
+    }
+  }
+]

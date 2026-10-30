@@ -1,0 +1,169 @@
+{
+  "status": "PASS",
+  "conditions": 60,
+  "certified": 60,
+  "audited": 60,
+  "max_gap": 2.999452723620341e-06,
+  "max_complete_seconds": 156.76177399419248,
+  "median_complete_seconds": 25.723595301620662,
+  "groups": [
+    {
+      "dataset": "diabetes",
+      "width": 0.03125,
+      "spread": "concentrated",
+      "conditions": 5,
+      "certified": 5,
+      "median_gap": 6.626483678815614e-08,
+      "max_gap": 1.1203381618356284e-07,
+      "median_seconds": 30.357923621311784,
+      "max_seconds": 32.12762953527272,
+      "median_audit_seconds": 16.079258451238275
+    },
+    {
+      "dataset": "diabetes",
+      "width": 0.03125,
+      "spread": "dispersed",
+      "conditions": 5,
+      "certified": 5,
+      "median_gap": 1.1678189686632885e-07,
+      "max_gap": 1.4723609298349027e-07,
+      "median_seconds": 14.093250332400203,
+      "max_seconds": 22.9570668078959,
+      "median_audit_seconds": 15.936890438199043
+    },
+    {
+      "dataset": "diabetes",
+      "width": 0.125,
+      "spread": "concentrated",
+      "conditions": 5,
+      "certified": 5,
+      "median_gap": 2.770069834225793e-06,
+      "max_gap": 2.999452723620341e-06,
+      "median_seconds": 152.94778484478593,
+      "max_seconds": 156.76177399419248,
+      "median_audit_seconds": 43.245772847905755
+    },
+    {
+      "dataset": "diabetes",
+      "width": 0.125,
+      "spread": "dispersed",
+      "conditions": 5,
+      "certified": 5,
+      "median_gap": 2.1312901056128794e-06,
+      "max_gap": 2.548657211377974e-06,
+      "median_seconds": 43.17271512001753,
+      "max_seconds": 45.79156159423292,
+      "median_audit_seconds": 14.774670166894794
+    },
+    {
+      "dataset": "concrete",
+      "width": 0.03125,
+      "spread": "concentrated",
+      "conditions": 5,
+      "certified": 5,
+      "median_gap": 6.555167810921849e-07,
+      "max_gap": 7.064466481312844e-07,
+      "median_seconds": 0.2887048255652189,
+      "max_seconds": 0.4415649399161339,
+      "median_audit_seconds": 1.2263003308326006
+    },
+    {
+      "dataset": "concrete",
+      "width": 0.03125,
+      "spread": "dispersed",
+      "conditions": 5,
+      "certified": 5,
+      "median_gap": 5.085913431866543e-07,
+      "max_gap": 7.896025185627911e-07,
+      "median_seconds": 0.28918726556003094,
+      "max_seconds": 0.31440466456115246,
+      "median_audit_seconds": 1.1959844250231981
+    },
+    {
+      "dataset": "concrete",
+      "width": 0.125,
+      "spread": "concentrated",
+      "conditions": 5,
+      "certified": 5,
+      "median_gap": 5.555811010308711e-10,
+      "max_gap": 7.84149312200812e-09,
+      "median_seconds": 37.59872750379145,
+      "max_seconds": 38.17671322263777,
+      "median_audit_seconds": 14.928802436217666
+    },
+    {
+      "dataset": "concrete",
+      "width": 0.125,
+      "spread": "dispersed",
+      "conditions": 5,
+      "certified": 5,
+      "median_gap": 3.305522368756362e-07,
+      "max_gap": 3.393465276495436e-07,
+      "median_seconds": 43.70956427976489,
+      "max_seconds": 44.49442069232464,
+      "median_audit_seconds": 14.84192413277924
+    },
+    {
+      "dataset": "superconductivity",
+      "width": 0.03125,
+      "spread": "concentrated",
+      "conditions": 5,
+      "certified": 5,
+      "median_gap": 3.3612020560158193e-07,
+      "max_gap": 5.405053973521525e-07,
+      "median_seconds": 3.437301531434059,
+      "max_seconds": 3.540940087288618,
+      "median_audit_seconds": 43.46001249179244
+    },
+    {
+      "dataset": "superconductivity",
+      "width": 0.03125,
+      "spread": "dispersed",
+      "conditions": 5,
+      "certified": 5,
+      "median_gap": 5.51880691269481e-07,
+      "max_gap": 8.589086870155217e-07,
+      "median_seconds": 3.3825138062238693,
+      "max_seconds": 3.515378823503852,
+      "median_audit_seconds": 43.14285818859935
+    },
+    {
+      "dataset": "superconductivity",
+      "width": 0.125,
+      "spread": "concentrated",
+      "conditions": 5,
+      "certified": 5,
+      "median_gap": 2.702424873975602e-06,
+      "max_gap": 2.9494422896048735e-06,
+      "median_seconds": 3.9208725448697805,
+      "max_seconds": 4.055076397955418,
+      "median_audit_seconds": 45.691784884780645
+    },
+    {
+      "dataset": "superconductivity",
+      "width": 0.125,
+      "spread": "dispersed",
+      "conditions": 5,
+      "certified": 5,
+      "median_gap": 1.1927715254402002e-06,
+      "max_gap": 1.5468745447716008e-06,
+      "median_seconds": 110.7683137897402,
+      "max_seconds": 111.87287307530642,
+      "median_audit_seconds": 114.7218989096582
+    }
+  ],
+  "runtime": {
+    "cpu": "Intel Xeon Gold 5320",
+    "packages": {
+      "clarabel": "0.11.1",
+      "cvxpy": "1.7.5",
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "scs": "3.3.1"
+    },
+    "python": "3.10.12",
+    "threads": 1
+  },
+  "raw_records_included": false,
+  "collected_beijing": "2026-10-30T08:43:17.223930+08:00"
+}

@@ -1,0 +1,209 @@
+\input{sections/anchored_energy_details_v84}
+
+\section{Residual-Energy Proof and Exact Separation}\label{app:energy}
+\input{sections/error_budgets_v81}
+\subsection{Original-data conditions and anchor extension}
+Theorem~\ref{thm:energy} assumes $\lambda>0$, nonnegative fixed weights, a compact nonempty completion domain, $Q^\top Q=I$ and $\beta\in\operatorname{span}(Q)$. Its signal-support condition holds for every completion, and the constants bound the stated supremums over the same domain. The box version needs the tail at the full optimum's projected point, whose norm is at most $R$; a box can contain additional points outside that ball, all of which remain feasible comparators.
+
+For a quadratic observed-row anchor, first remove its rows $\mathcal A$ and partition the remaining rows into $\mathcal S,\mathcal N$. With original weights and ridge counted once, put $B=\lambda I+\sum_{i\in\mathcal A}w_ix_ix_i^\top\succ0$, $r_A=\sum_{i\in\mathcal A}w_ix_iy_i$ and $g_A=B\beta-r_A$. The same proof applies when $P^\top BQ=0$ and $P^\top g_A=0$. Replace retained ridge terms in $\kappa$ and $f_{\mathcal S}$ by $Q^\top BQ$ and $Q^\top g_A$. Then the discarded contraction is $Z(B_D+Z^\top Z)^{-1}Z^\top\preceq I$, with $B_D=P^\top BP\succ0$. The general moment theorem covers arbitrary actual dense metrics and retains their gradient and cross terms.
+
+In the ridge-only variant, with a separately verified retained radius, a nonzero discarded candidate component can be represented by ridge pseudo-observations with residual $\sqrt\lambda P^\top\beta$. The energy tail becomes
+\[
+ \left(\sqrt{\epsilon^2+\lambda\|P^\top\beta\|^2}+aR\right)^2.
+\]
+The sharper original-data radius in the main theorem is not automatically preserved by this extension.
+
+\subsection{Moments, exact optima and genuine nuisance influence}
+For~\eqref{eq:family}, let $d=(2m)^{-1}\sum_i(u_i-1)^2$. Direct original moments give
+\begin{align*}
+ g_X&=de_0,\quad 0\leq d\leq1/32,\\
+ M_{00}&=\tfrac12+(2m)^{-1}\sum_i u_i^2+\alpha^2/2,\\
+ M_{0j}&=\alpha t_j/(2m),\qquad M_{jj}=\tfrac12+t_j^2/(2m),
+\end{align*}
+with every other nuisance off-diagonal zero. The Schur complement is
+\[
+ K=\tfrac12+(2m)^{-1}\sum_i u_i^2
+       +\frac{\alpha^2}{2m}\sum_j\frac1{1+t_j^2/m}.
+\]
+Thus $h_\beta(X)=d^2/K$, while the retained value is $d^2/M_{00}$. Simultaneously $d^2\leq1/1024$, $K\geq25/32+\alpha^2/10$ and $M_{00}\geq25/32+\alpha^2/2$. All bounds are attained by $u_i=3/4$, and $K$ additionally takes $t_j=2\sqrt m$, proving~\eqref{eq:family_optima}.
+
+At the midpoint $u_i=1$, so $g_X=0$ and $\beta=e_0$ is the unique full-feature ridge optimum. One signal row and all nuisance rows form a submatrix with determinant $u_i\prod_jt_j\ne0$. Every completed table has full column rank. Moreover
+\[
+ \frac{\partial K}{\partial t_j}
+ =-\frac{\alpha^2t_j}{m^2(1+t_j^2/m)^2}<0
+\]
+for $\alpha>0$. Consequently each uncertain nuisance coordinate strictly affects regret whenever $d>0$. Its individual endpoint effect scales as $1/m$; the joint effect of moving all nuisance endpoints is
+\[
+ \frac5{4000+512\alpha^2}-\frac1{800+256\alpha^2}>0,
+\]
+independently of $m$. The nuisance row norms grow with $\sqrt m$ to keep feature energies bounded below; this scaling is part of the construction.
+
+At $\alpha=1/32$, $H^*=10/8001$, $V_{e_0}=2/1601$, omitted regret $8/12809601$, and energy tail $1/1280000$. The full retained displacement is at most $1/25$. With $T=I$, the general moment choices $G_r=0,C_r=\alpha,\mu=1/2,U_0=1/512$ give tail $\alpha^2/128$. The residual-energy result uses both the tighter radius and the contraction by the actual discarded ridge-plus-data block. Numerical generic envelopes may be looser still; their actual verified values are reported.
+
+\subsection{Recovery and covariance comparisons}
+The first-order signal generator is zero because its midpoint residual is $-1$ and $\beta_0=1$. Its second-order generator is a nonzero multiple of $T^\top e_0$. On nuisance rows, residuals and the uncertain-coordinate candidate coefficients are zero. The proposal Gram therefore has rank one. For the scalar actual dyadic ridge-anchor transformation, its retained span maps exactly to $e_0$; the implementation verifies this actual matrix identity.
+
+Endpoint averaging gives the feature second moment
+\[
+ \overline C=\begin{bmatrix}
+ 17/32+\alpha^2/2&b^\top\\ b&(5/4)I_m
+ \end{bmatrix},\quad b_j=3\alpha/(4\sqrt m).
+\]
+The nuisance block has $m$ eigenvalues $5/4$. Interlacing gives at least $m$ eigenvalues of $\overline C$ at least $5/4$. Ridge whitening multiplies by 2, so the endpoint-average min-max bound implies $\rho\geq5/2$ at ranks $r\leq m-1$. Since $\theta_0=0$, $B_0^2=2+\alpha^2/2$, and the spectral tail ledger is at least $(5/7)(2+\alpha^2/2)\geq10/7$.
+
+The discounted upper itself has a stronger obstruction. With $\gamma\leq2/7$, evaluate it at retained coordinate zero and $u_i=3/4$:
+\[
+ U_\gamma\geq41/32-\gamma(2+\alpha^2/2)
+ \geq159/224-\alpha^2/7.
+\]
+At $\alpha=1/32$ this is $5087/7168>0.709$, while $H^*\approx0.00125$. Independent original-objective caps can tighten final software output; this comparison isolates the spectral-discount component.
+
+The midpoint second moment is
+\[
+ C_c=\begin{bmatrix}1/2+\alpha^2/2&b^\top\\b&(9/8)I_m\end{bmatrix}.
+\]
+For $0<\alpha<\sqrt{5/4}$ put $\Delta=5/8-\alpha^2/2$. Its leading eigenvector's active component satisfies
+\[
+ q_{+,0}^2=\tfrac12\left(1-\frac\Delta{\sqrt{\Delta^2+4\|b\|^2}}\right)
+ \leq\frac{9\alpha^2/16}{\Delta^2}.
+\]
+All remaining eigenvectors above the smallest eigenvalue are pure nuisance vectors. For any leading Gram-PCA span of rank $1\leq r\leq m$, $\|Q_c^\top e_0\|^2=q_{+,0}^2$. Using $g_X=de_0$ and $M_X\succeq I/2$,
+\[
+ V_{\rm PCA}\leq\frac1{512}\frac{9\alpha^2/16}{(5/8-\alpha^2/2)^2}.
+\]
+This equals $9/3271682$ at $\alpha=1/32$. The construction uses uncentered weighted feature second moments, matching the midpoint-Gram proposal. It makes no statement for every possible covariance-based algorithm or for sample-mean-centered PCA.
+
+\input{sections/structure_table}
+\input{sections/nuisance_scale_v80}
+\input{sections/leakage_v79}
+\input{sections/leakage_experiment_v79}
+\input{sections/auto_energy_v80}
+\input{sections/multirank_v82}
+\input{sections/intrinsic_dimension_v83}
+
+
+
+\input{sections/spectral_v79}
+\section{Observed-Anchor and Moment-Tail Details}\label{app:new}
+\subsection{A safe metric surrogate for the sharp spectral theorem}
+Let $\bar\theta$ be a dyadic approximation to $G_0^{-1}r_0$, $b=T^\top(G_0\bar\theta-r_0)$, and $\bar C=J_{\mathcal A}(\beta)-J_{\mathcal A}(\bar\theta)$. For $\theta=\bar\theta+Tz$, the anchor difference is $\bar C-2b^\top z-z^\top Kz$. By~\eqref{eq:actual_metric},
+\[
+ \begin{gathered}
+ \bar C-2b^\top z-z^\top Kz\leq C_{\rm safe}-\mu\|z-z_0\|^2,\\
+ z_0=-b/\mu,\qquad C_{\rm safe}=\bar C+\|b\|^2/\mu.
+ \end{gathered}
+\]
+Use $\theta_c=\bar\theta+Tz_0$ and $B_c^2=\sum_{i\notin\mathcal A}w_i\max_x|x^\top\theta_c-y_i|^2$. Scaling by $\sqrt\mu$ gives the spectral-discount upper. At a surrogate optimum, $\|z-z_0\|^2\leq B_c^2/(4\mu)$. The surrogate exceeds the exact anchor by $z^\top(K-\mu I)z$, bounded by
+\[
+ \eta_{\rm metric}=(\nu-\mu)\left(2\|b\|^2/\mu^2+B_c^2/(2\mu)\right).
+\]
+The total spectral certificate error is at most search error plus $\rho B_c^2/(1+\rho)+\eta_{\rm metric}$. The moment method retains $K$ in its query, so its corresponding anchor approximation is exactly zero.
+
+\subsection{Computable moment constants and basis proposal}
+For a projected coordinate $v$, each uncertain-row contribution to $v^\top\widehat g_X$ is $\ell_i(x)a_i(x)$, where $\ell_i(x)=v^\top T^\top x$. The identity $\ell a=((\ell+a)/2)^2-((\ell-a)/2)^2$ permits the planar oracle or original-box-edge reference to maximize it and its negative exactly. Sum these row ranges with the fixed-anchor coordinate before taking the sum of squared coordinate maxima. This gives $G_r$ and an analogous original bound $U_0\geq\sup_X\|\widehat g_X\|^2/\mu$.
+
+Write $P=I-\Pi$, $u_i=T^\top c_i$, and $\delta_i=T^\top(x_i-c_i)$. Let $d_{Pi}=\sum_j s_{ij}\|PT^\top e_j\|$ and $d_{Ri}=\sum_j s_{ij}\|R^\top T^\top e_j\|$. Then
+\[
+ \begin{aligned}
+ \sup_X\|P\widehat M_XR\|_{\op}&\leq\|P\widehat M_cR\|_F\\
+ &\quad+\sum_iw_i\bigl[d_{Pi}\|R^\top u_i\|\\
+ &\qquad+\|Pu_i\|d_{Ri}+d_{Pi}d_{Ri}\bigr].
+ \end{aligned}
+\]
+Choose $C_r$ as an outward upper enclosure of the right-hand side. Norms and products are rounded outward. The first term includes the exact fixed-anchor cross block as well as midpoint rows.
+
+For a proposal, collect first-order uncertainty-gradient generators
+\[
+ w_is_{ij}\{\beta_jT^\top c_i+(c_i^\top\beta-y_i)T^\top e_j\}
+\]
+and second-order generators $w_is_{ij}s_{il}\beta_lT^\top e_j$. Numerical leading eigenvectors of their Gram sum are rounded to a $2^{-24}$ grid. The actual Gram and inverse define the projector. The proposal covariance determines no certificate by itself. Full rank uses $R=I$ and a zero tail exactly.
+
+For the retained Gram $H=R^\top R$, a positive Gershgorin lower bound supplies $\mu_H$. Otherwise, an exact inverse verifies full column rank and gives $\mu_H=1/\|H^{-1}\|_\infty$, rounded downward. Since $H$ is a Gram matrix and $H^{-1}$ is symmetric, $\lambda_{\min}(H)=1/\|H^{-1}\|_2\geq1/\|H^{-1}\|_\infty$. This also certifies nonorthogonal proposals whose Gram is not diagonally dominant.
+
+\subsection{Root, interpolation and center-gradient bounds}
+For the moment method, $\|s\|\leq\sqrt{U_0/(\mu\mu_H)}$ follows from $\|Rs\|^2=s^\top Hs$ and $\widehat M_X\succeq\mu I$. A valid curvature diagonal is $(R^\top KR)_{jj}+\sum_{i\notin\mathcal A}w_i\max_x(x^\top TR_j)^2$. At low rank the implementation combines corner interpolation and a center-gradient bound. At high rank it uses the latter to avoid $2^p$ root corners. For each fixed completion, concavity gives $f_X(s)\leq f_X(c)+\nabla f_X(c)^\top(s-c)$. An interval enclosing all completion gradients at $c$ therefore bounds the envelope on the box. Both methods inherit the parent upper and the original cap $U_0$.
+
+The total moment error is search plus $\eta_r$, before feasible-witness and $U_0$ tightening. If the retained objective converges while the target is finer than $\eta_r$, the implementation returns a tail-or-arithmetic-floor status. An adaptive production implementation may then increase rank or arithmetic precision; the fixed experiments preserve their specified rank cap.
+
+\subsection{A limit on uniform spectral compression}
+Let $K_{\rm avg}=\mu^{-1}T^\top[\sum_{i\notin\mathcal A}w_i(c_ic_i^\top+\diag(s_i^2))]T$. For any retained rank $r<p$,
+\[
+ \sup_X\|E_X\|_{\op}^2/\mu\geq\lambda_{r+1}(K_{\rm avg}).
+\]
+Indeed, averaging independent symmetric endpoints produces $K_{\rm avg}$. For a fixed discarded projector, the supremum dominates the largest eigenvalue of the projected average. The min-max principle gives the displayed rank restriction. This limits a uniform covariance-tail guarantee; it need not limit the complementary residual-moment bound. The computable average-eigenvalue diagnostic describes this spectral obstruction; the certified tail uses outward bounds.
+
+
+\section{Proof and Implementation Details}
+\subsection{Quadratic elimination and the root}
+For non-anchor weighted residual vector $d_X$, use the Euclidean norm after including $\sqrt{w_i}$ in every row. The exact discarded optimum is $t=(I+E_X^\top E_X)^{-1}E_X^\top(d_X-A_Xs)$. Substitution gives the inverse identity in the main proof. For $S\succeq I$, diagonalize $S$ to see that every eigenvalue of $S^{-1}-(S+\rho I)^{-1}$ is $\rho/(\sigma(\sigma+\rho))\leq\rho/(1+\rho)$. This supplies the tail constant without a bound on $\beta$ or on the retained parameter.
+
+For a fixed completion, the retained discounted objective has Hessian $-2(I+cA_X^\top A_X)$ and maximizer $c(I+cA_X^\top A_X)^{-1}A_X^\top d_X$. The scalar inequality $c\sigma/(1+c\sigma^2)\leq\sqrt c/2$ gives the radius simultaneously for every completion. A maximizing pair exists by compactness of the completion domain and uniform coercivity in the comparator. Hence a ball of that radius contains at least one global maximizer of the row-maximized function.
+
+\subsection{Exact row queries and degeneracies}
+Orient each nonzero planar generator into a common half-plane, sort by the sign of cross products, and start at the center minus the oriented generator sum. Traverse the oriented generators and then their negatives. This visits the boundary in $2k$ steps, including collinear subdivisions. For a quadratic $At^2+Bt+C$ on $[0,1]$, examine $t=0,1$ and, when $A<0$ and $0<B<-2A$, the stationary point $t=-B/(2A)$. The rank-one image is a single complete segment; zero generators can be dropped. Exact rational orientation and stationary values remove geometric tolerances.
+
+The row-face theorem can also be proved directly by holding the second residual fixed. A box cut by one scalar equality has an extreme-point representation with at most one interior coordinate. The convex first-residual square has a maximizing extreme point. The argument includes zero rows, proportional residuals and constant row objectives.
+
+\subsection{Verifying a rounded learned subspace}
+Let $R$ have full column rank and $H=R^\top R$. The orthogonal projector is $\Pi=RH^{-1}R^\top$. The ridge-only controls use $\lambda=1/64$ and exact scale 8. That implementation parameterizes $\theta=+8Rz$; replacing $z$ by its negative recovers the main theorem's convention. Its exact retained objective is
+\[
+\begin{aligned}
+ &\lambda\|\beta\|^2-z^\top Hz\\
+ &+\frac1n\sum_i\max_{x_i}\{(x_i^\top\beta-y_i)^2-
+              \gamma(8x_i^\top Rz-y_i)^2\}.
+\end{aligned}
+\]
+If $H\succeq\mu_HI$, the root box radius satisfies $\mu_H R_0^2\geq\gamma B_0^2/4$. Curvature diagonals replace 1 in the main formula by $H_{jj}$. The interpolation identity is unchanged because it preserves all cross terms.
+
+For protected uncertain coordinates $U$, the learned columns have exact zero entries on $U$ and the coordinate vectors of $U$ are included in $R$. Thus $(I-\Pi)e_j=0$ for every uncertain direction. With $K_c=n^{-1}\sum_i(8c_i)(8c_i)^\top$, the discarded covariance is $(I-\Pi)K_c(I-\Pi)$ for every original completion. Round a full eigenvector test matrix to a dyadic invertible $S$ and enclose $A=(I-\Pi)S$. Gershgorin bounds give
+\[
+ S^\top S\succeq\mu_SI\succ0,\qquad A^\top K_cA\preceq\nu I.
+\]
+Writing an arbitrary vector as $x=Sz$ proves a spectral upper $\rho=\nu/\mu_S$. The inverse of $H$ is computed exactly as a rational matrix and enclosed before interval products. A fully retained model uses $R=I,\rho=0$ exactly. The rank cap is 3; if no rank meets the requested tail budget, the smallest rank within numerical verification slack of the best available bound is returned and the unmet budget is flagged explicitly.
+
+\subsection{Arithmetic and independent checks}
+Each input float is interpreted as its exact binary value. Elementary float64 interval operations round outward with nextafter; finite sums add conservative accumulation bounds. The sparse-row public and residual-energy comparisons use original-box-edge queries with outward scalar-quadratic bounds. The integrated planar adapter replaces those queries in observed-anchor and moment solvers for the dense-row study, enclosing coefficient uncertainty by a uniform perturbation bound. It preserves original-box witnesses. The sweep records the best edge and reconstructs its original-box witness once, preserving the stated sorting-plus-linear-query arithmetic complexity. The ridge-only controls instead use exact Fraction planar row values, individually rounded outward on a $2^{-80}$ grid before summation, with independent original-edge checks on a $2^{-112}$ grid. Independent checks use exact Fraction or dyadic-integer arithmetic on the original rows, reconstructing the actual metric, rounded projector and witness objective separately from the solvers.
+
+Solver-independent audits verify complete 6- and 66-feature automatic search trees, including query values, root geometry, curvature, binary coverage and leaf uppers. Generic-baseline checks reconstruct local gradient ranges, Gram bounds and the fixed-row fallback. The retained suite covers five complete synthetic/public trees, 26 general row cases and four sharpness controls.
+
+\input{sections/method_details}
+\section{Nonzero-Residual Mechanism Details}
+\input{sections/epsilon_details}
+\paragraph{Task-oriented guarantees.} Table~\ref{tab:related_guarantees} compares the certified quantity, completion domain and full-dimensional comparator.\label{app:sensitivity-v79}
+\input{sections/related_details}
+\input{sections/closest_main_v81}
+\section{Intrinsic Dimension, Baselines and Costs}
+\input{sections/dimension_v78}
+\input{sections/input_baseline_v78}
+\input{sections/cost_v78}
+\input{sections/metric_v79}
+\input{sections/calibration_v81}
+\input{sections/calibrated_sensitivity_v83}
+\input{sections/protocol_overview_v80}
+\section{Dense Row Geometry and Additional Controls}\label{app:extensions}
+\input{sections/diagnostics_v77}
+\input{sections/scope_figure_v79}
+\input{sections/planar_v77}
+\input{sections/robust_v77}
+\input{sections/reproduction_v77}
+\input{sections/verification_ledger}
+\input{sections/real_world_settings}
+\input{sections/precision_controls}
+\input{sections/scip_followup}
+\input{sections/external_details_v90}
+\input{sections/refined_external_details_v91}
+\input{sections/independent_decision_details_v91}
+\section{General-Coarsening Experiments and Components}\label{app:general-public}
+The sixty-condition study uses midpoint ridge candidates, $\lambda=1/32$, 128 uncertain cells and all original features. Its first-stage tail and final-width targets are $2.5\times10^{-6}$ and $3\times10^{-6}$, respectively. A one-second structural search is followed, when needed, by the geometry-based choice of moment or compressed-row refinement in Appendix~\ref{app:compact-profile}, within a 9000-second complete algorithm cap. Complete runs use one pinned logical CPU of an Intel Xeon Gold 5320 with single-thread numerical libraries.
+\input{sections/confirmation_table}
+\input{sections/additional_components}
+
+\section{End-to-End Precision and the Fixed-Point Contract}\label{app:complete-v91}
+At a fixed retained rank, valid row-query enclosures, a verified containing root, valid node uppers and the verified additive tail yield $L\le H^*\le U$ at every search cap and tail floor. A requested width is attained when the recorded total error meets that request. For rank-adaptive completeness, permit the full physical span with $R=I$ and an invertible verified $T$; $T=I$ is always available. Positive ridge supplies a uniform coercivity constant, and bounded row boxes supply a finite original upper $U_0$ and containing displacement radius. The discarded error is exactly zero.
+
+For target $\delta>0$, choose a finite grid for which the curvature-interpolation error is at most $\delta/2$. Enclose every required row sum and regularization term to overall query error at most $\delta/4$ on either side, increasing arithmetic precision as required. The maximum grid lower comes from a feasible original table and comparator. The largest interpolated upper exceeds it by at most $\delta/2+2(\delta/4)=\delta$. The number of grid points is finite by the complexity bound in Section~6. This establishes attainability with sufficient search and arithmetic precision. The fixed-rank implementation records its tail and arithmetic floor separately; rank enrichment is an explicit option in this proposition.
+
+\subsection{Executable fixed-point predictor contract}\label{app:fixed-point-v91}
+The experiment specifies signed eight-bit coefficient integers $b_j$ decoded as $b_j/16$, and signed sixteen-bit feature integers $q_{ij}$ decoded as $q_{ij}/1024$. The coefficient range is $[-8,127/16]$; the input range is $[-32,32767/1024]$. Prediction uses the signed thirty-two-bit sum $s_i=\sum_jq_{ij}b_j$ and decoding $s_i/16384$. All twenty primary candidates and midpoint tables satisfy this representation. The executable check verifies exact agreement with decoded real arithmetic and bounds every partial accumulation by $\sum_j\max\{|1024L_{ij}|,|1024U_{ij}|\}|b_j|<2^{31}$. The contract supplies a concrete fixed-grid auditing task; candidates with eight fractional bits and unrounded candidates are separate candidate-precision conditions. Continuous-box regret certificates also cover all legal encoded completions.
+
+\input{sections/joint_refinement_v92}

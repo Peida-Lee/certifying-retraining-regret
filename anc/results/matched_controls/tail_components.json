@@ -1,0 +1,162 @@
+[
+  {
+    "dataset": "superconductivity",
+    "seed": 88211,
+    "original": 7.107002863373139e-06,
+    "contraction": 5.2177132845902485e-06,
+    "refined_radius": 5.2177132845902485e-06,
+    "mixed_envelope": 4.120024206637769e-06
+  },
+  {
+    "dataset": "superconductivity",
+    "seed": 88212,
+    "original": 7.624716057686728e-06,
+    "contraction": 5.626171697300636e-06,
+    "refined_radius": 5.626171697300636e-06,
+    "mixed_envelope": 4.45252271974408e-06
+  },
+  {
+    "dataset": "superconductivity",
+    "seed": 88213,
+    "original": 7.476270052135432e-06,
+    "contraction": 5.54690978718367e-06,
+    "refined_radius": 5.54690978718367e-06,
+    "mixed_envelope": 4.478754707199207e-06
+  },
+  {
+    "dataset": "superconductivity",
+    "seed": 88214,
+    "original": 7.3701942931425105e-06,
+    "contraction": 5.2379058029349685e-06,
+    "refined_radius": 5.2379058029349685e-06,
+    "mixed_envelope": 3.967438659629221e-06
+  },
+  {
+    "dataset": "superconductivity",
+    "seed": 88215,
+    "original": 8.002843901420545e-06,
+    "contraction": 5.867476190440122e-06,
+    "refined_radius": 5.867476190440122e-06,
+    "mixed_envelope": 4.602180244516612e-06
+  },
+  {
+    "dataset": "parkinsons",
+    "seed": 88211,
+    "original": 2.9432862672827236e-06,
+    "contraction": 9.684780513837307e-07,
+    "refined_radius": 9.684780513837307e-07,
+    "mixed_envelope": 9.535775864754968e-07
+  },
+  {
+    "dataset": "parkinsons",
+    "seed": 88212,
+    "original": 3.202459916729722e-06,
+    "contraction": 9.529188096801718e-07,
+    "refined_radius": 9.529188096801718e-07,
+    "mixed_envelope": 9.036821836988634e-07
+  },
+  {
+    "dataset": "parkinsons",
+    "seed": 88213,
+    "original": 2.917607844070835e-06,
+    "contraction": 9.027708552337324e-07,
+    "refined_radius": 9.027708552337324e-07,
+    "mixed_envelope": 8.763778261358273e-07
+  },
+  {
+    "dataset": "parkinsons",
+    "seed": 88214,
+    "original": 3.0656808876792077e-06,
+    "contraction": 9.269967928778762e-07,
+    "refined_radius": 9.269967928778762e-07,
+    "mixed_envelope": 9.00490436218909e-07
+  },
+  {
+    "dataset": "parkinsons",
+    "seed": 88215,
+    "original": 3.211317346670299e-06,
+    "contraction": 9.808987276624405e-07,
+    "refined_radius": 9.808987276624405e-07,
+    "mixed_envelope": 9.596595665392775e-07
+  },
+  {
+    "dataset": "wine_white",
+    "seed": 88211,
+    "original": 1.8637694666269844e-06,
+    "contraction": 1.4022277414237515e-07,
+    "refined_radius": 1.3953338913912714e-07,
+    "mixed_envelope": 1.322210080112565e-07
+  },
+  {
+    "dataset": "wine_white",
+    "seed": 88212,
+    "original": 1.8384271272747147e-06,
+    "contraction": 1.415055019383582e-07,
+    "refined_radius": 1.409766829511082e-07,
+    "mixed_envelope": 1.3446528146877066e-07
+  },
+  {
+    "dataset": "wine_white",
+    "seed": 88213,
+    "original": 1.9460718795564617e-06,
+    "contraction": 1.5305933949069503e-07,
+    "refined_radius": 1.515397076763586e-07,
+    "mixed_envelope": 1.3956597763009793e-07
+  },
+  {
+    "dataset": "wine_white",
+    "seed": 88214,
+    "original": 1.8667075163663617e-06,
+    "contraction": 1.4300492589766397e-07,
+    "refined_radius": 1.4158481067724083e-07,
+    "mixed_envelope": 1.298541135914258e-07
+  },
+  {
+    "dataset": "wine_white",
+    "seed": 88215,
+    "original": 1.966959099575671e-06,
+    "contraction": 1.5628789473696495e-07,
+    "refined_radius": 1.5530503765630757e-07,
+    "mixed_envelope": 1.459986596151183e-07
+  },
+  {
+    "dataset": "yacht",
+    "seed": 88211,
+    "original": 3.177117218915594e-05,
+    "contraction": 3.840894101002043e-06,
+    "refined_radius": 3.6189664832008002e-06,
+    "mixed_envelope": 3.323038623827309e-06
+  },
+  {
+    "dataset": "yacht",
+    "seed": 88212,
+    "original": 3.028666855749964e-05,
+    "contraction": 4.410820236175209e-06,
+    "refined_radius": 4.0972720309036886e-06,
+    "mixed_envelope": 3.84493660311737e-06
+  },
+  {
+    "dataset": "yacht",
+    "seed": 88213,
+    "original": 2.7230381435663855e-05,
+    "contraction": 4.131997381410485e-06,
+    "refined_radius": 3.8948658835672925e-06,
+    "mixed_envelope": 2.787511343043053e-06
+  },
+  {
+    "dataset": "yacht",
+    "seed": 88214,
+    "original": 2.8754973795410786e-05,
+    "contraction": 3.643451776917994e-06,
+    "refined_radius": 3.448540413590752e-06,
+    "mixed_envelope": 2.716511422820843e-06
+  },
+  {
+    "dataset": "yacht",
+    "seed": 88215,
+    "original": 3.204304193553845e-05,
+    "contraction": 4.1898989317544064e-06,
+    "refined_radius": 3.8792753857080825e-06,
+    "mixed_envelope": 2.7339296702482595e-06
+  }
+]

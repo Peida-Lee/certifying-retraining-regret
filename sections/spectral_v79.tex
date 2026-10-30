@@ -1,0 +1,37 @@
+\section{Sharp Spectral Tail and Affine Compression}\label{app:spectral-v79}
+Separate an arbitrary fixed anchor, formed from fully observed rows and ridge, from the remaining rows. Let its Gram and response moment be $G_0\succ0,r_0$, and set
+\begin{equation}
+ \theta_0=G_0^{-1}r_0,\quad T=G_0^{-1/2},\quad
+ C=(\beta-\theta_0)^\top G_0(\beta-\theta_0).
+\end{equation}
+For remaining rows write $u_i(x)=Tx$, $a_i(x)=x^\top\beta-y_i$, and $d_i(x)=x^\top\theta_0-y_i$. Let $Q$ be an orthonormal retained basis and $P$ an orthonormal complement. The weighted retained and discarded row matrices have rows $\sqrt{w_i}u_i(x)^\top Q$ and $\sqrt{w_i}u_i(x)^\top P$, denoted $A_X,E_X$.
+
+Suppose $\|E_X\|_\op^2\leq\rho$ uniformly over legal completions. Define
+\begin{align}
+ B_0^2&=\sum_iw_i\left(|c_i^\top\theta_0-y_i|
+               +\sum_j s_{ij}|\theta_{0j}|\right)^2,\\
+ \gamma&=(1+\rho)^{-1},\nonumber\\
+ F_c(s)&=C-\|s\|^2\nonumber\\[-2mm]
+ &+\sum_iw_i\max_x\{a_i(x)^2-c(d_i(x)-u_i(x)^\top Qs)^2\}.
+\end{align}
+All sums here are over the non-anchor rows, which may themselves include fixed observations.
+
+\begin{theorem}[Sharp spectral-tail certificate]\label{thm:tail}
+Let $L_r=\max_s F_1(s)$ and $U_r=\max_s F_\gamma(s)$. Then
+\begin{equation}
+ L_r\leq H^*\leq U_r,\qquad
+ 0\leq U_r-L_r\leq\frac{\rho}{1+\rho}B_0^2.\label{eq:tail}
+\end{equation}
+The tail factor is sharp over original interval-valued ridge problems. If a search upper $U$ and a tested point with value $f$ satisfy $U-f\leq\delta$, the row-maximizing table $\widehat X$ at that point satisfies
+\begin{equation}
+ 0\leq U-h_\beta(\widehat X)
+       \leq\delta+\frac{\rho}{1+\rho}B_0^2.\label{eq:witness}
+\end{equation}
+Thus a single retained upper problem supplies both the full-domain upper and a near-worst original-table witness.
+\end{theorem}
+The proof is in Appendix~\ref{app:method-details}.
+
+
+\subsection{Automatic Bases and Verified Rounding}
+Covariance envelopes or uncertainty-gradient generators propose retained spans. Every proposed vector is rounded to a dyadic matrix $R$; its actual Gram $H=R^\top R$ and projector $\Pi=RH^{-1}R^\top$ are verified. The retained penalty uses $H$. Outward spectral bounds on the actual projected covariance supply $\rho$, and full rank uses $R=I,\rho=0$. The appendix gives the general envelope and protected-uncertainty construction.
+

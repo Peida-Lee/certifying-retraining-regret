@@ -1,0 +1,110 @@
+[
+  {
+    "alpha": 0.01,
+    "method": "coarse",
+    "stops": 0,
+    "saved_cells": 0
+  },
+  {
+    "alpha": 0.01,
+    "method": "contraction_energy",
+    "stops": 5,
+    "saved_cells": 165
+  },
+  {
+    "alpha": 0.01,
+    "method": "adaptive_energy",
+    "stops": 5,
+    "saved_cells": 165
+  },
+  {
+    "alpha": 0.01,
+    "method": "moment_centered",
+    "stops": 0,
+    "saved_cells": 0
+  },
+  {
+    "alpha": 0.01,
+    "method": "SCIP",
+    "stops": 0,
+    "saved_cells": 0
+  },
+  {
+    "alpha": 0.01,
+    "method": "ZORRO_refined",
+    "stops": 0,
+    "saved_cells": 0
+  },
+  {
+    "alpha": 0.02,
+    "method": "coarse",
+    "stops": 0,
+    "saved_cells": 0
+  },
+  {
+    "alpha": 0.02,
+    "method": "contraction_energy",
+    "stops": 13,
+    "saved_cells": 429
+  },
+  {
+    "alpha": 0.02,
+    "method": "adaptive_energy",
+    "stops": 13,
+    "saved_cells": 429
+  },
+  {
+    "alpha": 0.02,
+    "method": "moment_centered",
+    "stops": 5,
+    "saved_cells": 165
+  },
+  {
+    "alpha": 0.02,
+    "method": "SCIP",
+    "stops": 0,
+    "saved_cells": 0
+  },
+  {
+    "alpha": 0.02,
+    "method": "ZORRO_refined",
+    "stops": 0,
+    "saved_cells": 0
+  },
+  {
+    "alpha": 0.05,
+    "method": "coarse",
+    "stops": 0,
+    "saved_cells": 0
+  },
+  {
+    "alpha": 0.05,
+    "method": "contraction_energy",
+    "stops": 15,
+    "saved_cells": 495
+  },
+  {
+    "alpha": 0.05,
+    "method": "adaptive_energy",
+    "stops": 15,
+    "saved_cells": 495
+  },
+  {
+    "alpha": 0.05,
+    "method": "moment_centered",
+    "stops": 10,
+    "saved_cells": 330
+  },
+  {
+    "alpha": 0.05,
+    "method": "SCIP",
+    "stops": 2,
+    "saved_cells": 66
+  },
+  {
+    "alpha": 0.05,
+    "method": "ZORRO_refined",
+    "stops": 0,
+    "saved_cells": 0
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "dataset": "superconductivity",
+    "pool": 0,
+    "seed": 91411,
+    "midpoint_lower": 0.0023974940618022643,
+    "midpoint_upper": 0.0023974940618238455,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  },
+  {
+    "dataset": "superconductivity",
+    "pool": 0,
+    "seed": 91412,
+    "midpoint_lower": 0.0023985358148355357,
+    "midpoint_upper": 0.002398535814857131,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  },
+  {
+    "dataset": "superconductivity",
+    "pool": 0,
+    "seed": 91413,
+    "midpoint_lower": 0.0023961617927076777,
+    "midpoint_upper": 0.0023961617927292555,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  },
+  {
+    "dataset": "superconductivity",
+    "pool": 0,
+    "seed": 91414,
+    "midpoint_lower": 0.002394529429894317,
+    "midpoint_upper": 0.002394529429915895,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  },
+  {
+    "dataset": "superconductivity",
+    "pool": 0,
+    "seed": 91415,
+    "midpoint_lower": 0.002394600392687955,
+    "midpoint_upper": 0.002394600392709529,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  },
+  {
+    "dataset": "superconductivity",
+    "pool": 1,
+    "seed": 91411,
+    "midpoint_lower": 0.0023497250050921524,
+    "midpoint_upper": 0.002349725005112495,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  },
+  {
+    "dataset": "superconductivity",
+    "pool": 1,
+    "seed": 91412,
+    "midpoint_lower": 0.002348823288593121,
+    "midpoint_upper": 0.0023488232886134707,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  },
+  {
+    "dataset": "superconductivity",
+    "pool": 1,
+    "seed": 91413,
+    "midpoint_lower": 0.002349772742485819,
+    "midpoint_upper": 0.0023497727425061616,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  },
+  {
+    "dataset": "superconductivity",
+    "pool": 1,
+    "seed": 91414,
+    "midpoint_lower": 0.002349699592822652,
+    "midpoint_upper": 0.0023496995928429945,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  },
+  {
+    "dataset": "superconductivity",
+    "pool": 1,
+    "seed": 91415,
+    "midpoint_lower": 0.002350505859258989,
+    "midpoint_upper": 0.0023505058592793284,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  },
+  {
+    "dataset": "superconductivity",
+    "pool": 2,
+    "seed": 91411,
+    "midpoint_lower": 0.0027512578137919813,
+    "midpoint_upper": 0.0027512578138126327,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  },
+  {
+    "dataset": "superconductivity",
+    "pool": 2,
+    "seed": 91412,
+    "midpoint_lower": 0.002761789724088425,
+    "midpoint_upper": 0.00276178972410909,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  },
+  {
+    "dataset": "superconductivity",
+    "pool": 2,
+    "seed": 91413,
+    "midpoint_lower": 0.002753522186157632,
+    "midpoint_upper": 0.0027535221861783006,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  },
+  {
+    "dataset": "superconductivity",
+    "pool": 2,
+    "seed": 91414,
+    "midpoint_lower": 0.002765084055941547,
+    "midpoint_upper": 0.002765084055962209,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  },
+  {
+    "dataset": "superconductivity",
+    "pool": 2,
+    "seed": 91415,
+    "midpoint_lower": 0.0027605692600695913,
+    "midpoint_upper": 0.0027605692600902567,
+    "actual_retained_rank": 3,
+    "signal_unknown_columns": 1
+  }
+]

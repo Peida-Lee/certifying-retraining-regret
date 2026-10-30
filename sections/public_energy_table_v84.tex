@@ -1,0 +1,9 @@
+\begin{table*}[t]\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Four real-world tasks, all features and five masks retained. All regret quantities use $10^{-6}$ normalized-objective units. $h_c$ is midpoint regret; the increment column bounds the median of $H^*-h_c$. Widths are marginal medians; gain is the median paired width reduction against M. A is adaptive energy and M independently centered moments. All methods have ten-second complete budgets.}
+\label{tab:public-energy-v84}
+\begin{tabular}{lrrrrrrr}\toprule Data&$p$&$h_c$&Increment bounds&A width&M width&Full width&Gain\\\midrule
+Supercond. & 82 & 1664.298 & [23.232, 27.351] & 4.119 & 37.438 & 186.00 & 89.7\%\\
+Parkinsons & 20 & 817.937 & [10.773, 11.677] & 0.862 & 1.403 & 30.10 & 38.4\%\\
+Wine Quality & 12 & 424.515 & [2.323, 2.461] & 0.122 & 0.153 & 12.49 & 20.3\%\\
+Yacht & 7 & 744.339 & [17.220, 19.789] & 2.669 & 3.723 & 58.99 & 25.3\%\\
+\bottomrule\end{tabular}\end{table*}

@@ -1,0 +1,19 @@
+\subsection{Certified planar row oracle for dense uncertainty}
+For a fixed retained vector, each original row contributes a difference of squared affine residuals. Its box image is a planar zonotope. We sort rationally oriented generators by cross products and inspect both endpoints and any concave interior maximizer on every boundary segment. A maintained original-box preimage supplies an exact rational feasible witness. Zero generators and collinear faces are included. Interval coefficients are enclosed using the exact midpoint optimum plus a uniform coefficient-radius perturbation bound; the rounded witness is re-evaluated with interval arithmetic. The planar adapter supplies row queries to both observed-anchor and residual-moment searches.
+
+All twelve comparisons against independent box-edge enumeration at $k\in\{1,2,4,8\}$ agree exactly, including degenerate and interior cases. On three-repeat single-row microbenchmarks, the certified planar adapter takes median $0.693$, $0.920$, and $1.329$ ms for $k=4,8,16$; the vectorized interval box enumeration takes $15.059$ and $580.989$ ms for $k=4,8$. These timings concern row geometry.
+
+A full-feature Diabetes instance has four rows uncertain in every feature. The density sweep uses one synthetic design with $n=128$, all sixteen features and its intercept, and four rows with $k\in\{4,8,16\}$ uncertain coordinates. The same candidate, ridge penalty and continuous intervals define the original-regret objective in every condition. The complete row-edge method of Appendix~\ref{app:edge-refinement-v22} certifies all four instances to the common $10^{-8}$ precision target.
+
+\begin{table*}[t]\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Dense-row certification with all model features retained. Bounds and widths use $10^{-6}$ original-objective units; the width target is $0.01$ in these units. Endpoints are rounded outward and widths use the original certificates. The common 1800-second algorithm cap includes input construction, reference and witness searches, screening, conic proposals and exact bound evaluation. Independent replay is timed separately.}\label{tab:dense-edge-v22}
+\begin{tabular}{lrrrrrrrr}\toprule Setting&$n$&$p$&Cells&Lower&Upper&Width&Algorithm (s)&Audit (s)\\\midrule
+Diabetes & 442 & 11 & 40 & 2.016236 & 2.026137 & 0.00990 & 37.11 & 1.27\\
+Synthetic, $k=4$ & 128 & 17 & 16 & 7.857718 & 7.867619 & 0.00990 & 61.05 & 2.40\\
+Synthetic, $k=8$ & 128 & 17 & 32 & 17.765885 & 17.775786 & 0.00990 & 96.12 & 3.58\\
+Synthetic, $k=16$ & 128 & 17 & 64 & 39.909574 & 39.919475 & 0.00990 & 812.99 & 96.50\\
+\bottomrule\end{tabular}\end{table*}
+
+All four independent audits reconstruct the original polynomial, the metric, the feasible completed-table witness, every coupling certificate, every screened exclusion and the complete residual partition. Certificate-guided screening reduces the row-edge search while preserving every possible target violation. The final upper remains valid for full-feature retraining.
+
+A best-edge sweep in the planar query reconstructs the witness once, using $O(k\log k)$ rational comparisons and $O(k)$ further arithmetic operations. The reported row-query timings include witness copying during the sweep; rational bit complexity is separate.

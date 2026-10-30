@@ -1,0 +1,45 @@
+\subsection{A Sharper Contraction Certificate}\label{app:contraction-v88}
+The observed-anchor bound admits a finite-scale refinement that uses the actual discarded row energy while retaining its scale-independent limit. Use the notation of Corollary~\ref{cor:anchor-energy-v84}, with $A=V_{\mathcal N}Q$, $Z=V_{\mathcal N}P$ and $e=(e_c)_{\mathcal N}$. Verify uniform bounds
+\[
+ \|Z\|^2\le\rho,\qquad \|A^\top e\|\le b.
+\]
+Define
+\begin{align*}
+ \gamma^2&=\frac{\rho}{\mu+\rho},\\
+ t&=\min\left\{\frac1{2\sqrt\mu},\frac{\sqrt\rho}{\mu}\right\},\\
+ q&=\min\{a\epsilon,b+a\gamma^2\epsilon\},\\
+ N_C&=G+q+(c/\mu+at)d+ct\epsilon,\\
+ R_C&=\min\{R_A,N_C/\mu\}.
+\end{align*}
+An independently verified bound $\|h_c+V^\top e_c\|\le B$ additionally permits $R=\min\{R_C,B/\mu\}$. Both the full optimizer and the retained optimizer have retained norm at most $R$. Put
+\begin{align}
+ E_N(R)&=\min\{(\epsilon+aR)^2,\epsilon^2+2bR+a^2R^2\},\nonumber\\
+ \eta_C&=\left[\gamma\sqrt{E_N(R)}+\frac{d+cR}{\sqrt\mu}\right]^2.\label{eq:contraction-v88}
+\end{align}
+Then $E(\operatorname{range}(TQ))\le\eta_C$ and the same containing search domain gives $V_Q\le H^*\le V_Q+\eta_C$. The factor $\gamma\le1$ adapts to the observed nuisance energy; its limiting value recovers the original contraction guarantee.
+
+\paragraph{Proof.}
+Since $D=K_{PP}+Z^\top Z\succeq\mu I+Z^\top Z$,
+\[
+ ZD^{-1}Z^\top\preceq Z(\mu I+Z^\top Z)^{-1}Z^\top\preceq\gamma^2I.
+\]
+Consequently $\|D^{-1/2}Z^\top\|\le\gamma$ and $\|ZD^{-1}\|\le t$. In the retained Schur right-hand side,
+\[
+ \|A^\top(I-ZD^{-1}Z^\top)e\|\le\min\{a\epsilon,b+a\gamma^2\epsilon\}.
+\]
+The remaining two terms are bounded by $ct\epsilon$ and $(c/\mu+at)d$. The Schur coercivity bound gives $R_C$. Full coercivity gives $B/\mu$; the retained-only optimum obeys both corresponding bounds. Finally,
+\[
+ \|e-Au\|^2\le\epsilon^2+2b\|u\|+a^2\|u\|^2
+\]
+and the triangle inequality gives the other term in $E_N$. Applying the refined contraction to the discarded gain proves~\eqref{eq:contraction-v88}.
+
+\paragraph{Verified row-space implementation.}
+For the actual rational projector, each discarded row norm has its maximum at an original-box vertex. Their sum supplies $\rho_{\rm tr}$. A second bound uses $Z=Z_0+\Delta Z$:
+\begin{align*}
+ \rho_{\rm op}&=\bigl(\sqrt{\bar\lambda(Z_0Z_0^\top)}+\sqrt{\overline{\|\Delta Z\|_F^2}}\bigr)^2,\\
+ \rho&=\min\{\rho_{\rm tr},\rho_{\rm op}\}.
+\end{align*}
+The center Gram has only as many rows as the nuisance set. A rounded eigenvector test matrix, its actual Gram lower bound and outward Gershgorin arithmetic verify $\bar\lambda$. Original-box vertex norms bound the perturbation trace. Exact quadratic product ranges are summed before bounding $\|A^\top e\|$ in the actual retained Gram. This preserves cancellation across rows in the mixed moment. Upward square roots, a dyadic containing radius and the existing exact row oracle complete the certificate. All costs enter the energy method's complete clock.
+
+\paragraph{Common-domain adaptive certificate.}
+At the retained reference $z_0$, let $B\ge\sup_X\|\widehat g_{X,\rm ref}\|$. Strong convexity bounds both full and restricted displacement norms by $B/\mu$. Together with the structural radius $R_C$, this gives the containing coordinate radius $R_c=\lceil\min\{R_C,B/\mu\}/\sqrt{\mu_H}\rceil_{2^{-24}}$. The ordinary centered-moment radius is $R_M=\lceil B/(\mu\sqrt{\mu_H})\rceil_{2^{-24}}$, so $R_c\le R_M$. With the same actual projector and reference, Schur elimination bounds the discarded gain by $(G_P+C_RR_c)^2/\mu$. The contraction bound is also valid on the same original retained objective and containing root. Taking their minimum proves~\eqref{eq:adaptive-v90}, and its sufficient tail is at most $(G_P+C_RR_M)^2/\mu$. The dyadic containing box can include extra retained comparators; each remains feasible for the full problem. Independently verified table witnesses and the common cap tighten final endpoints. The tail comparison concerns the shared domain; completed search and witness quality determine final widths.
